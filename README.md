@@ -2,6 +2,8 @@
 
 
 ## To run the ASP.Net Core MVC application with React do this:
+
+## `cd reactfe` and `npm install` to download node packages
 ### In the `.cshtml` file, create a div with an id where you want to insert the react component
 ![alt text](image.png)
 ### In React, in  `App.tsx` you have to define where to render the components using this command: `ReactDOM.render(<YourComponent />, document.getElementById('id'))`
