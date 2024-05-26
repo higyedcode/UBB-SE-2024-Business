@@ -1,0 +1,100 @@
+@RestApi-ISS_HostAddress = http://localhost:5049
+@RestApi_ISS_HostAddress = http://localhost:5049
+
+GET {{RestApi_ISS_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
+
+
+POST {{RestApi-ISS_HostAddress}}/api/review/add
+Content-Type: application/json
+
+{
+  //AddReviewRequest
+
+GET {{RestApi-ISS_HostAddress}}/api/bankaccount
+
+###
+
+POST {{RestApi-ISS_HostAddress}}/api/bankaccount
+Content-Type: application/json
+
+{
+  //BankAccount
+}
+
+###
+
+GET {{RestApi-ISS_HostAddress}}/api/bankaccount/0
+
+###
+
+DELETE {{RestApi-ISS_HostAddress}}/api/bankaccount/0
+
+###
+
+PUT {{RestApi-ISS_HostAddress}}/api/bankaccount/0
+Content-Type: application/json
+
+{
+  //BankAccount
+}
+
+###
+
+POST {{RestApi-ISS_HostAddress}}/api/bankaccount
+Content-Type: application/json
+
+{
+  //BankAccount
+>>>>>>> 0c3f6aaea50b365d27407121d435afea6f07cc95
+}
+
+###
+
+
+GET {{RestApi-ISS_HostAddress}}/api/review/getallReviews
+
+GET {{RestApi-ISS_HostAddress}}/api/bankaccount
+
+###
+
+GET {{RestApi-ISS_HostAddress}}/api/bankaccount/0
+
+###
+
+DELETE {{RestApi-ISS_HostAddress}}/api/bankaccount/0
+
+###
+
+PUT {{RestApi-ISS_HostAddress}}/api/bankaccount/0
+Content-Type: application/json
+
+{
+  //BankAccount
+}
+
+
+###
+
+POST {{RestApi-ISS_HostAddress}}/api/faq/AddSubmittedQuestion
+Content-Type: application/json
+
+{
+  //FAQ
+}
+
+###
+
+PUT {{RestApi-ISS_HostAddress}}/api/faq/FilterFAQs?searchText=string
+
+###
+
+GET {{RestApi-ISS_HostAddress}}/api/faq/GetAllFAQs
+
+###
+
+GET {{RestApi-ISS_HostAddress}}/api/faq/GetSubmittedQuestions
+
+###

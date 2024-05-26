@@ -1,0 +1,27 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <RootNamespace>ISS_Frontend</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Remove="wwwroot\js\bundle.js" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\js\bundle.js" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.SpaServices.Extensions" Version="8.0.5" />
+  </ItemGroup>
+
+ <!-- Add post-build event -->
+  <Target Name="PostBuild" AfterTargets="Build">
+    <Exec Command="cd $(ProjectDir)reactfe &amp;&amp; npm run build" />
+  </Target>
+
+</Project>

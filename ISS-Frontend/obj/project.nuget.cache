@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "dgSpecHash": "+zNZtKNEZ8+3117vWYdfyR1mkwud1CFhSQLtNu3pxG7qR/Kscz7p7ljpZ9y2V3OVDa6xvQdv+D/H+xWczIVY9Q==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\higye\\OneDrive\\Desktop\\UBB Anul 2\\Sem2\\ISSP\\ISS-Frontend\\ISS-Frontend.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\higye\\.nuget\\packages\\microsoft.aspnetcore.spaservices.extensions\\8.0.5\\microsoft.aspnetcore.spaservices.extensions.8.0.5.nupkg.sha512",
+    "C:\\Users\\higye\\.nuget\\packages\\microsoft.extensions.fileproviders.abstractions\\8.0.0\\microsoft.extensions.fileproviders.abstractions.8.0.0.nupkg.sha512",
+    "C:\\Users\\higye\\.nuget\\packages\\microsoft.extensions.fileproviders.physical\\8.0.0\\microsoft.extensions.fileproviders.physical.8.0.0.nupkg.sha512",
+    "C:\\Users\\higye\\.nuget\\packages\\microsoft.extensions.filesystemglobbing\\8.0.0\\microsoft.extensions.filesystemglobbing.8.0.0.nupkg.sha512",
+    "C:\\Users\\higye\\.nuget\\packages\\microsoft.extensions.primitives\\8.0.0\\microsoft.extensions.primitives.8.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}
