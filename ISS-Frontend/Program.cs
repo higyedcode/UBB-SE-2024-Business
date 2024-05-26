@@ -1,8 +1,13 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Http.Headers;
 using Microsoft.Net.Http.Headers;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
+using ISS_Frontend.Data;
 
 var builder = WebApplication.CreateBuilder(args);
+builder.Services.AddDbContext<ISS_FrontendContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("ISS_FrontendContext") ?? throw new InvalidOperationException("Connection string 'ISS_FrontendContext' not found.")));
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
