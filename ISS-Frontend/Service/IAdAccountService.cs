@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 
+
 namespace ISS_Frontend.Service
 {
     public interface IAdAccountService

@@ -1,0 +1,64 @@
+﻿@model ISS_Frontend.Entity.AdAccount
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>AdAccount</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="AdAccountId" />
+            <div class="form-group">
+                <label asp-for="NameOfCompany" class="control-label"></label>
+                <input asp-for="NameOfCompany" class="form-control" />
+                <span asp-validation-for="NameOfCompany" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DomainOfActivity" class="control-label"></label>
+                <input asp-for="DomainOfActivity" class="form-control" />
+                <span asp-validation-for="DomainOfActivity" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SiteUrl" class="control-label"></label>
+                <input asp-for="SiteUrl" class="form-control" />
+                <span asp-validation-for="SiteUrl" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Password" class="control-label"></label>
+                <input asp-for="Password" class="form-control" />
+                <span asp-validation-for="Password" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TaxIdentificationNumber" class="control-label"></label>
+                <input asp-for="TaxIdentificationNumber" class="form-control" />
+                <span asp-validation-for="TaxIdentificationNumber" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="HeadquartersLocation" class="control-label"></label>
+                <input asp-for="HeadquartersLocation" class="form-control" />
+                <span asp-validation-for="HeadquartersLocation" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AuthorisingInstituion" class="control-label"></label>
+                <input asp-for="AuthorisingInstituion" class="form-control" />
+                <span asp-validation-for="AuthorisingInstituion" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

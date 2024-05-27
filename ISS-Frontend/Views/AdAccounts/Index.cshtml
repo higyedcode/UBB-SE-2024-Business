@@ -1,0 +1,182 @@
+﻿@using ISS_Frontend.Entity
+@model IEnumerable<ISS_Frontend.Entity.AdAccount>
+
+@{
+    ViewData["Title"] = "My account";
+    var ads = ViewBag.Ads as List<ISS_Frontend.Entity.Ad>;
+    var adSets = ViewBag.AdSet as List<AdSet>;
+    var campaigns = ViewBag.Campaigns as List<Campaign>;
+}
+
+<h1>My account</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.NameOfCompany)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DomainOfActivity)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SiteUrl)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Password)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TaxIdentificationNumber)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.HeadquartersLocation)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AuthorisingInstituion)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.NameOfCompany)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DomainOfActivity)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SiteUrl)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Password)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TaxIdentificationNumber)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.HeadquartersLocation)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AuthorisingInstituion)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.AdAccountId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.AdAccountId">Details</a> 
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+<br />
+<h3>My Ads</h3>
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Ad ID</th>
+            <th>Ad Account ID</th>
+            <th>Ad Set ID</th>
+            <th>Product Name</th>            
+            <th>Description</th>
+            <th>Website Link</th>
+        </tr>
+    </thead>
+    <tbody>
+        @if (ads != null && ads.Count > 0)
+        {
+            foreach (var ad in ads)
+            {
+                <tr>
+                    <td>@ad.AdId</td>
+                    <td>@ad.AdAccountId</td>
+                    <td>@ad.AdSetId</td>
+                    <td>@ad.ProductName</td>                    
+                    <td>@ad.Description</td>
+                    <td><a href="@ad.WebsiteLink" target="_blank">@ad.WebsiteLink</a></td>
+                </tr>
+            }
+        }
+        else
+        {
+            <tr>
+                <td colspan="7" class="text-center">No ads available.</td>
+            </tr>
+        }
+    </tbody>
+</table>
+<br />
+<h3>My AdSets</h3>
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Ad Set ID</th>
+            <th>Ad Account ID</th>
+            <th>Campaign ID</th>
+            <th>Name</th>
+            <th>Target Audience</th>
+            <th>Ads</th>
+        </tr>
+    </thead>
+    <tbody>
+        @if (adSets != null && adSets.Count > 0)
+        {
+            foreach (var adSet in adSets)
+            {
+                <tr>
+                    <td>@adSet.AdSetId</td>
+                    <td>@adSet.AdAccountId</td>
+                    <td>@adSet.CampaignId</td>
+                    <td>@adSet.Name</td>
+                    <td>@adSet.TargetAudience</td>                    
+                </tr>
+            }
+        }
+        else
+        {
+            <tr>
+                <td colspan="6" class="text-center">No ad sets available.</td>
+            </tr>
+        }
+    </tbody>
+</table>
+<br />
+<h3>My Campaigns</h3>
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Campaign ID</th>
+            <th>Campaign Name</th>
+            <th>Start Date</th>
+            <th>Duration</th>
+            <th>Ad Account ID</th>
+            <th>Ad Sets</th>
+        </tr>
+    </thead>
+    <tbody>
+        @if (campaigns != null && campaigns.Count > 0)
+        {
+            foreach (var campaign in campaigns)
+            {
+                <tr>
+                    <td>@campaign.CampaignId</td>
+                    <td>@campaign.CampaignName</td>
+                    <td>@campaign.StartDate.ToShortDateString()</td>
+                    <td>@campaign.Duration</td>
+                    <td>@campaign.AdAccountId</td>                    
+                </tr>
+            }
+        }
+        else
+        {
+            <tr>
+                <td colspan="6" class="text-center">No campaigns available.</td>
+            </tr>
+        }
+    </tbody>
+</table>

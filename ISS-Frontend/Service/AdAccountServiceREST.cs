@@ -1,9 +1,9 @@
-﻿using ISS_Frontend.Entity;
-using ISS_Frontend.Service;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Net.Http;
 using System.Net.Http.Json;
+using ISS_Frontend.Service;
+using ISS_Frontend.Entity;
 
 public class LoginRequest
 {
@@ -42,6 +42,7 @@ public class AdAccountServiceRest : IAdAccountService
     public void Login(string email, string password)
     {
         var loginRequest = new LoginRequest { Username = email, Password = password };
+
 
         var response = httpClient.PostAsJsonAsync("api/AdAccount/login", loginRequest).Result;
 
