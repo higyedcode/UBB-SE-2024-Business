@@ -38,7 +38,7 @@ namespace ISS_Frontend.Controllers
             accounts.Add(loggedInAdAccount);
 
             ViewBag.Ads = adAccountService.GetAdsForCurrentUser();
-            ViewBag.AdSet = adAccountService.GetAdSetsForCurrentUser();
+                ViewBag.AdSet = adAccountService.GetAdSetsForCurrentUser();
             ViewBag.Campaigns = adAccountService.GetCampaignsForCurrentUser();
             return View(accounts);
         }
@@ -81,7 +81,7 @@ namespace ISS_Frontend.Controllers
             {
                 adAccountService.Login(model.NameOfCompany, model.Password);
                 loggedInAdAccount = adAccountService.GetAccount();
-                return RedirectToAction(nameof(Index));
+                return RedirectToAction("Index", "AdAccounts");
             }
             return RedirectToAction(nameof(Index));
         }
@@ -95,8 +95,8 @@ namespace ISS_Frontend.Controllers
         {
             
                 adAccountService.AddAdAccount(adAccount);
-                return RedirectToAction(nameof(Index));
-            
+                return RedirectToAction("Index", "AdAccounts");
+
         }
 
         // GET: AdAccounts/Edit/5        
@@ -140,8 +140,8 @@ namespace ISS_Frontend.Controllers
                         throw;
                     }
                 }
-                return RedirectToAction(nameof(Index));
-                        
+            return RedirectToAction("Index", "AdAccounts");
+
         }
 
        

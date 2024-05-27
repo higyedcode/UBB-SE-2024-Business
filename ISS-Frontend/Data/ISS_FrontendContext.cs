@@ -18,5 +18,6 @@ namespace ISS_Frontend.Data
         public DbSet<ISS_Frontend.Models.BankAccount> BankAccount { get; set; } = default!;
         public DbSet<ISS_Frontend.Entity.Product> Product { get; set; } = default!;
         public DbSet<ISS_Frontend.Entity.AdAccount> AdAccount { get; set; } = default!;
+        public DbSet<ISS_Frontend.Entity.Ad> Ad { get; set; } = default!;
     }
 }

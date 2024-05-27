@@ -74,6 +74,7 @@
 </table>
 <br />
 <h3>My Ads</h3>
+<a asp-action="Create" asp-controller="Ads">Create a new add</a>
 <table class="table table-bordered">
     <thead>
         <tr>
@@ -97,6 +98,11 @@
                     <td>@ad.ProductName</td>                    
                     <td>@ad.Description</td>
                     <td><a href="@ad.WebsiteLink" target="_blank">@ad.WebsiteLink</a></td>
+                    <td>
+                        <a asp-action="Edit" asp-controller="Ads" asp-route-name="@ad.ProductName">Edit</a> |
+                        <a asp-action="Details" asp-controller="Ads" asp-route-name="@ad.ProductName">Details</a> |
+                        <a asp-action="Remove" asp-controller="Ads" asp-route-name="@ad.ProductName">Remove</a>
+                    </td>
                 </tr>
             }
         }
@@ -110,7 +116,7 @@
 </table>
 <br />
 <h3>My AdSets</h3>
-
+<a asp-action="Create" asp-controller="AdSet">Create a new add set</a>
 <table class="table table-bordered">
     <thead>
         <tr>
@@ -119,7 +125,7 @@
             <th>Campaign ID</th>
             <th>Name</th>
             <th>Target Audience</th>
-            <th>Ads</th>
+            <th>Actions</th>
         </tr>
     </thead>
     <tbody>
@@ -132,7 +138,12 @@
                     <td>@adSet.AdAccountId</td>
                     <td>@adSet.CampaignId</td>
                     <td>@adSet.Name</td>
-                    <td>@adSet.TargetAudience</td>                    
+                    <td>@adSet.TargetAudience</td>
+                    <td>
+                        <a asp-action="Edit" asp-controller="Ads" asp-route-name="@adSet.Name">Edit</a> |
+                        <a asp-action="Details" asp-controller="Ads" asp-route-name="@adSet.AdAccountId">Details</a> |
+                        <a asp-action="Remove" asp-controller="Ads"  asp-route-name="@adSet.AdAccountId">Remove</a>
+                    </td>
                 </tr>
             }
         }
@@ -146,7 +157,7 @@
 </table>
 <br />
 <h3>My Campaigns</h3>
-
+<a asp-action="Create" asp-controller="Campaign">Create a new campaign</a>
 <table class="table table-bordered">
     <thead>
         <tr>
@@ -155,7 +166,7 @@
             <th>Start Date</th>
             <th>Duration</th>
             <th>Ad Account ID</th>
-            <th>Ad Sets</th>
+            <th>Actions</th>
         </tr>
     </thead>
     <tbody>
@@ -168,7 +179,13 @@
                     <td>@campaign.CampaignName</td>
                     <td>@campaign.StartDate.ToShortDateString()</td>
                     <td>@campaign.Duration</td>
-                    <td>@campaign.AdAccountId</td>                    
+                    <td>@campaign.AdAccountId</td>
+                    <td>
+                        @* <a asp-action="Edit" asp-controller="Ads" asp-route-name="@adSet.Name">Edit</a> |
+                        <a asp-action="Details" asp-controller="Ads" asp-route-name="@adSet.AdAccountId">Details</a> |
+                        <a asp-action="Remove" asp-controller="Ads" asp-route-name="@adSet.AdAccountId">Remove</a> *@
+                    </td>
+                    
                 </tr>
             }
         }
