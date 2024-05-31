@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using ISS_Frontend.Data;
 using ISS_Frontend.Entity;
@@ -10,74 +11,74 @@ using ISS_Frontend.Service;
 
 namespace ISS_Frontend.Controllers
 {
-    public class ReviewClassesController : Controller
+    public class FAQsController : Controller
     {
         private readonly ISS_FrontendContext _context;
-        private readonly IReviewService _reviewService;
+        private readonly IFAQService _faqService;
 
-        public ReviewClassesController(ISS_FrontendContext context)
+        public FAQsController(ISS_FrontendContext context)
         {
             _context = context;
             HttpClient httpClient = new HttpClient();
-            _reviewService = new ReviewService(httpClient);
+            _faqService = new FAQService(httpClient);
             httpClient.BaseAddress = new Uri("http://localhost:5049/");
         }
 
-        // GET: ReviewClasses
+        // GET: FAQs
         public IActionResult Index()
         {
-            var reviews = _reviewService.GetAllReviews();
-            return View(reviews);
+            var faqs = _faqService.GetAllFAQs();
+            return View(faqs);
         }
 
-        // GET: ReviewClasses/Details/5
+        // GET: FAQs/Details/5
         public IActionResult Details(int id)
         {
-            var reviewClass = _reviewService.GetReviewById(id);
-            if (reviewClass == null)
+            var fAQ = _faqService.GetFAQById(id);
+            if (fAQ == null)
             {
                 return NotFound();
             }
 
-            return View(reviewClass);
+            return View(fAQ);
         }
 
-        // GET: ReviewClasses/Create
+        // GET: FAQs/Create
         public IActionResult Create()
         {
             return View();
         }
 
-        // POST: ReviewClasses/Create
+        // POST: FAQs/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult Create([Bind("Id,User,Review")] ReviewClass reviewClass)
+        public IActionResult Create([Bind("Id,Question,Answer,Topic")] FAQ fAQ)
         {
             if (ModelState.IsValid)
             {
-                _reviewService.AddReview(reviewClass);
+                _faqService.AddSubmittedQuestion(fAQ);
                 return RedirectToAction(nameof(Index));
             }
-            return View(reviewClass);
+            return View(fAQ);
         }
 
-        // GET: ReviewClasses/Edit/5
+        // GET: FAQs/Edit/5
         public IActionResult Edit(int id)
         {
-            var reviewClass = _reviewService.GetReviewById(id);
-            if (reviewClass == null)
+            var fAQ = _faqService.GetFAQById(id);
+            if (fAQ == null)
             {
                 return NotFound();
             }
-            return View(reviewClass);
+            return View(fAQ);
         }
 
-        // POST: ReviewClasses/Edit/5
+        // POST: FAQs/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult Edit(int id, [Bind("Id,User,Review")] ReviewClass reviewClass)
+        public IActionResult Edit(int id, [Bind("Id,Question,Answer,Topic")] FAQ fAQ)
         {
-            if (id != reviewClass.Id)
+            if (id != fAQ.Id)
             {
                 return NotFound();
             }
@@ -86,11 +87,11 @@ namespace ISS_Frontend.Controllers
             {
                 try
                 {
-                    _reviewService.UpdateReview(reviewClass);
+                    _faqService.UpdateFAQ(id, fAQ);
                 }
                 catch (Exception)
                 {
-                    if (!ReviewClassExists(reviewClass.Id))
+                    if (!FAQExists(fAQ.Id))
                     {
                         return NotFound();
                     }
@@ -101,33 +102,33 @@ namespace ISS_Frontend.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            return View(reviewClass);
+            return View(fAQ);
         }
 
-        // GET: ReviewClasses/Delete/5
+        // GET: FAQs/Delete/5
         public IActionResult Delete(int id)
         {
-            var reviewClass = _reviewService.GetReviewById(id);
-            if (reviewClass == null)
+            var fAQ = _faqService.GetFAQById(id);
+            if (fAQ == null)
             {
                 return NotFound();
             }
 
-            return View(reviewClass);
+            return View(fAQ);
         }
 
-        // POST: ReviewClasses/Delete/5
+        // POST: FAQs/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public IActionResult DeleteConfirmed(int id)
         {
-            _reviewService.DeleteReview(id);
+            _faqService.DeleteFAQ(id);
             return RedirectToAction(nameof(Index));
         }
 
-        private bool ReviewClassExists(int id)
+        private bool FAQExists(int id)
         {
-            return _reviewService.GetReviewById(id) != null;
+            return _faqService.GetFAQById(id) != null;
         }
     }
 }
