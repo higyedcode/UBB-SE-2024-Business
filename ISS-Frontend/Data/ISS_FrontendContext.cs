@@ -21,5 +21,8 @@ namespace ISS_Frontend.Data
         public DbSet<ISS_Frontend.Entity.Ad> Ad { get; set; } = default!;
         public DbSet<ISS_Frontend.Entity.ReviewClass> ReviewClass { get; set; } = default!;
         public DbSet<ISS_Frontend.Entity.FAQ> FAQ { get; set; } = default!;
+        public DbSet<ISS_Frontend.Models.AdvertisementStatistics> AdStatistics { get; set; } = default!;
+        public DbSet<ISS_Frontend.Models.User> User { get; set; } = default!;
+        public DbSet<ISS_Frontend.Models.ExportRequest> ExportRequest { get; set; } = default!;
     }
 }
