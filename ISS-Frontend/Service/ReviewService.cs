@@ -23,7 +23,7 @@ namespace ISS_Frontend.Service
 
         public List<ReviewClass> GetAllReviews()
         {
-            var response = httpClient.GetAsync("api/Reviews").Result;
+            var response = httpClient.GetAsync("api/Review/getallReviews").Result;
             if (response.IsSuccessStatusCode)
             {
                 return response.Content.ReadFromJsonAsync<List<ReviewClass>>().Result;
@@ -57,7 +57,7 @@ namespace ISS_Frontend.Service
 
         public void AddReview(ReviewClass review)
         {
-            var response = httpClient.PostAsJsonAsync("api/Reviews", review).Result;
+            var response = httpClient.PostAsJsonAsync("api/Review/add", review).Result;
             if (!response.IsSuccessStatusCode)
             {
                 throw new Exception($"Failed to add review: {response.ReasonPhrase}");
