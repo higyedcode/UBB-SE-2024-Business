@@ -4,6 +4,7 @@ using Microsoft.Net.Http.Headers;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using ISS_Frontend.Data;
+using ISS_Frontend.Service;
 
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddDbContext<ISS_FrontendContext>(options =>
@@ -15,6 +16,16 @@ builder.Services.AddControllersWithViews();
 builder.Services.AddSpaStaticFiles(configuration => {
     configuration.RootPath = "reactfe/build";
 });
+
+builder.Services.AddHttpClient<IProductService, ProductService>(client =>
+{
+    client.BaseAddress = new Uri("http://localhost:5049/");
+});
+builder.Services.AddHttpClient<IBankAccountService, BankAccountService>(client =>
+{
+    client.BaseAddress = new Uri("http://localhost:5049/");
+});
+builder.Services.AddScoped<IPaymentFormService, PaymentFormService>();
 
 var app = builder.Build();
 
@@ -36,6 +47,17 @@ app.UseAuthorization();
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
+
+app.MapControllerRoute(
+    name: "MainPage",
+    pattern: "MainPage",
+    defaults: new { controller = "PaymentsAndBillings", action = "MainPage" });
+
+app.MapControllerRoute(
+    name:"BankAccountDetails",
+    pattern:"BankAccountDetails",
+    defaults: new { controller = "PaymentsAndBillings", action = "BankAccountDetails" });
+
 
 var spaPath = "/app";
 if (app.Environment.IsDevelopment())

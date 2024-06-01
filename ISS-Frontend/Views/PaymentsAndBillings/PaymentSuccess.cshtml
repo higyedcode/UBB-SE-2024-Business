@@ -1,0 +1,12 @@
+﻿@model ISS_Frontend.Entity.Product
+
+@{
+    ViewData["Title"] = "PaymentSuccess";
+}
+
+<h1>Payment Successful</h1>
+
+<p>Your payment for the product @Model.Name was successful.</p>
+<p>
+    <a asp-action="Index" class="btn btn-primary">Continue Shopping</a>
+</p>
