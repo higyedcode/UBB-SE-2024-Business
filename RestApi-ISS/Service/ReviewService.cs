@@ -19,6 +19,11 @@ namespace Backend.Services
             this.reviewRepository = new ReviewRepository();
         }
 
+        public ReviewService(ReviewRepository reviewRepository)
+        {
+            this.reviewRepository = reviewRepository;
+        }
+
         public static ReviewService Instance
         {
             get { return TheInstance; }
@@ -29,16 +34,15 @@ namespace Backend.Services
             return this.reviewRepository.GetReviewList();
         }
 
-        public void AddReview(string review)
+        public void AddReview(string user, string review)
         {
-            string user = "Dan Oliver";
             ReviewClass reviewToAdd = new (user, review);
             this.reviewRepository.AddReview(reviewToAdd);
         }
 
         List<ReviewClass> IServiceReview.GetAllReviews()
         {
-            throw new System.NotImplementedException();
+            return this.reviewRepository.GetReviewList();
         }
     }
 }

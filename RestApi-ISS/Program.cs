@@ -1,6 +1,10 @@
+using Backend.Models;
+using Backend.Repositories;
+using Backend.Services;
 using Iss.Database;
 using Iss.Repository;
 using Iss.Service;
+using Iss.Services;
 using Microsoft.EntityFrameworkCore;
 using RestApi_ISS.Repository;
 using RestApi_ISS.Service;
@@ -30,9 +34,11 @@ builder.Services.AddScoped<InterfaceBankAccountService, BankAccountService>();
 
 builder.Services.AddScoped<DataEncryptionService>();
 
-
 builder.Services.AddScoped<IProductRepository, ProductRepository>();
 builder.Services.AddScoped<IProductService, ProductService>();
+
+builder.Services.AddScoped<ReviewRepository, ReviewRepository>();
+builder.Services.AddScoped<IServiceReview, ReviewService>();
 
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();

@@ -7,6 +7,6 @@ namespace Iss.Services
     {
         List<ReviewClass> GetAllReviews();
 
-        void AddReview(string review);
+        void AddReview(string user, string review);
     }
 }
