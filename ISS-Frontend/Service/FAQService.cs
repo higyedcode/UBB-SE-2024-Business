@@ -26,6 +26,7 @@ namespace ISS_Frontend.Service
 
         public void AddSubmittedQuestion(FAQ newQuestion)
         {
+            var response = httpClient.PostAsJsonAsync("api/FAQ/AddSubmittedQuestion", newQuestion).Result;
             this.submittedQuestions.Add(newQuestion);
         }
 
@@ -47,7 +48,7 @@ namespace ISS_Frontend.Service
 
         public List<FAQ> GetAllFAQs()
         {
-            var response = httpClient.GetAsync("api/FAQ").Result;
+            var response = httpClient.GetAsync("api/FAQ/GetAllFAQs").Result;
             if (response.IsSuccessStatusCode)
             {
                 return response.Content.ReadFromJsonAsync<List<FAQ>>().Result;
