@@ -30,6 +30,8 @@
         public ReviewRepository()
         {
             this.reviewList = new List<ReviewClass>();
+            ReviewClass reviewClass = new ReviewClass("Ana", "test");
+            reviewList.Add(reviewClass);
             /*string binDirectory = "\\bin";
             string basePath = AppDomain.CurrentDomain.BaseDirectory;
             string pathUntilBin;
@@ -48,9 +50,10 @@
 
         public void AddReview(ReviewClass newR)
         {
-            databaseContext.Review.Add(newR);
+            this.reviewList.Add(newR);
+            /*databaseContext.Review.Add(newR);
             databaseContext.SaveChanges();
-            /*this.reviewList.Add(newR);
+            this.reviewList.Add(newR);
             this.SaveToXml();*/
         }
 

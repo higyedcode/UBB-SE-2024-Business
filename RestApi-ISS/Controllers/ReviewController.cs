@@ -41,7 +41,7 @@ namespace RestApi_ISS.Controllers
                     return BadRequest("Invalid review request.");
                 }
 
-                reviewService.AddReview(addReviewRequest.Review);
+                reviewService.AddReview(addReviewRequest.User, addReviewRequest.Review);
                 return Ok("Review added successfully.");
             }
             catch (Exception ex)
