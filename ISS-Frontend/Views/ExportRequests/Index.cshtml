@@ -1,0 +1,179 @@
+﻿@model IEnumerable<ISS_Frontend.Models.ExportRequest>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Stats)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.User)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FontSize)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FontIndex)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ColorIndex)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ImpressionsChecked)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ClicksChecked)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BuysChecked)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TimeChecked)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CtrChecked)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DateChecked)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SignatureChecked)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.RecipientChecked)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.RecipientInput)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EmailButtonChecked)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DownloadButtonChecked)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.OutputPath)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EmailRecipient)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SenderEmail)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SenderPassword)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SmtpServer)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SmtpPort)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EnableSsl)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Subject)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Message)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Stats.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.User.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FontSize)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FontIndex)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ColorIndex)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ImpressionsChecked)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ClicksChecked)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BuysChecked)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TimeChecked)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CtrChecked)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DateChecked)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SignatureChecked)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RecipientChecked)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RecipientInput)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EmailButtonChecked)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DownloadButtonChecked)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.OutputPath)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EmailRecipient)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SenderEmail)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SenderPassword)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SmtpServer)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SmtpPort)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EnableSsl)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Subject)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Message)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
