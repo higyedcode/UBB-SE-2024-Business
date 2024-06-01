@@ -40,6 +40,9 @@ builder.Services.AddScoped<IProductService, ProductService>();
 builder.Services.AddScoped<ReviewRepository, ReviewRepository>();
 builder.Services.AddScoped<IServiceReview, ReviewService>();
 
+builder.Services.AddScoped<IFAQRepository, FAQRepository>();
+builder.Services.AddScoped<IFAQService, FAQService>();
+
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();

@@ -51,6 +51,7 @@ namespace RestApi_ISS.Service
         public void AddSubmittedQuestion(FAQ newQuestion)
         {
             this.submittedQuestions.Add(newQuestion);
+            this.fAQRepository.AddFAQ(newQuestion);
         }
 
         public void DeleteFAQ(int id)
