@@ -24,5 +24,7 @@ namespace ISS_Frontend.Data
         public DbSet<ISS_Frontend.Models.AdvertisementStatistics> AdStatistics { get; set; } = default!;
         public DbSet<ISS_Frontend.Models.User> User { get; set; } = default!;
         public DbSet<ISS_Frontend.Models.ExportRequest> ExportRequest { get; set; } = default!;
+        public DbSet<ISS_Frontend.Entity.AdSet> AdSet { get; set; } = default!;
+        public DbSet<ISS_Frontend.Entity.Campaign> Campaign { get; set; } = default!;
     }
 }

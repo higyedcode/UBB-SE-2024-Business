@@ -1,3 +1,6 @@
 ISS-Frontend/bin/
 ISS-Frontend/.vs/
 ISS-Frontend/obj/
+ISS-Frontend/ISS-Frontend.csproj.user
+RestApi-ISS/Database/DatabaseContext.cs
+RestApi-ISS/Database/DatabaseContext.cs
