@@ -27,6 +27,8 @@ builder.Services.AddHttpClient<IBankAccountService, BankAccountService>(client =
 });
 builder.Services.AddScoped<IPaymentFormService, PaymentFormService>();
 
+builder.Services.AddScoped<IExportRequestService, ExportRequestService>();
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
