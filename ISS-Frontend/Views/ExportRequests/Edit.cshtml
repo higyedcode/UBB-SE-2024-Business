@@ -15,12 +15,12 @@
             <input type="hidden" asp-for="Id" />
             <div class="form-group">
                 <label asp-for="AdvertisementStatisticsId" class="control-label"></label>
-                <select asp-for="AdvertisementStatisticsId" class="form-control" asp-items="ViewBag.AdvertisementStatisticsId"></select>
+                <select asp-for="AdvertisementStatisticsId" class="form-control" asp-items="@(ViewData["AdvertisementStatisticsId"] as SelectList)"></select>
                 <span asp-validation-for="AdvertisementStatisticsId" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="UserId" class="control-label"></label>
-                <select asp-for="UserId" class="form-control" asp-items="ViewBag.UserId"></select>
+                <select asp-for="UserId" class="form-control" asp-items="@(ViewData["UserId"] as SelectList)"></select>
                 <span asp-validation-for="UserId" class="text-danger"></span>
             </div>
             <div class="form-group">
@@ -29,74 +29,9 @@
                 <span asp-validation-for="FontSize" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="FontIndex" class="control-label"></label>
-                <input asp-for="FontIndex" class="form-control" />
-                <span asp-validation-for="FontIndex" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="ColorIndex" class="control-label"></label>
-                <input asp-for="ColorIndex" class="form-control" />
-                <span asp-validation-for="ColorIndex" class="text-danger"></span>
-            </div>
-            <div class="form-group form-check">
-                <label class="form-check-label">
-                    <input class="form-check-input" asp-for="ImpressionsChecked" /> @Html.DisplayNameFor(model => model.ImpressionsChecked)
-                </label>
-            </div>
-            <div class="form-group form-check">
-                <label class="form-check-label">
-                    <input class="form-check-input" asp-for="ClicksChecked" /> @Html.DisplayNameFor(model => model.ClicksChecked)
-                </label>
-            </div>
-            <div class="form-group form-check">
-                <label class="form-check-label">
-                    <input class="form-check-input" asp-for="BuysChecked" /> @Html.DisplayNameFor(model => model.BuysChecked)
-                </label>
-            </div>
-            <div class="form-group form-check">
-                <label class="form-check-label">
-                    <input class="form-check-input" asp-for="TimeChecked" /> @Html.DisplayNameFor(model => model.TimeChecked)
-                </label>
-            </div>
-            <div class="form-group form-check">
-                <label class="form-check-label">
-                    <input class="form-check-input" asp-for="CtrChecked" /> @Html.DisplayNameFor(model => model.CtrChecked)
-                </label>
-            </div>
-            <div class="form-group form-check">
-                <label class="form-check-label">
-                    <input class="form-check-input" asp-for="DateChecked" /> @Html.DisplayNameFor(model => model.DateChecked)
-                </label>
-            </div>
-            <div class="form-group form-check">
-                <label class="form-check-label">
-                    <input class="form-check-input" asp-for="SignatureChecked" /> @Html.DisplayNameFor(model => model.SignatureChecked)
-                </label>
-            </div>
-            <div class="form-group form-check">
-                <label class="form-check-label">
-                    <input class="form-check-input" asp-for="RecipientChecked" /> @Html.DisplayNameFor(model => model.RecipientChecked)
-                </label>
-            </div>
-            <div class="form-group">
-                <label asp-for="RecipientInput" class="control-label"></label>
-                <input asp-for="RecipientInput" class="form-control" />
-                <span asp-validation-for="RecipientInput" class="text-danger"></span>
-            </div>
-            <div class="form-group form-check">
-                <label class="form-check-label">
-                    <input class="form-check-input" asp-for="EmailButtonChecked" /> @Html.DisplayNameFor(model => model.EmailButtonChecked)
-                </label>
-            </div>
-            <div class="form-group form-check">
-                <label class="form-check-label">
-                    <input class="form-check-input" asp-for="DownloadButtonChecked" /> @Html.DisplayNameFor(model => model.DownloadButtonChecked)
-                </label>
-            </div>
-            <div class="form-group">
-                <label asp-for="OutputPath" class="control-label"></label>
-                <input asp-for="OutputPath" class="form-control" />
-                <span asp-validation-for="OutputPath" class="text-danger"></span>
+                <label asp-for="ImpressionsChecked" class="control-label"></label>
+                <input asp-for="ImpressionsChecked" class="form-control" />
+                <span asp-validation-for="ImpressionsChecked" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="EmailRecipient" class="control-label"></label>
@@ -104,39 +39,9 @@
                 <span asp-validation-for="EmailRecipient" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="SenderEmail" class="control-label"></label>
-                <input asp-for="SenderEmail" class="form-control" />
-                <span asp-validation-for="SenderEmail" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="SenderPassword" class="control-label"></label>
-                <input asp-for="SenderPassword" class="form-control" />
-                <span asp-validation-for="SenderPassword" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="SmtpServer" class="control-label"></label>
-                <input asp-for="SmtpServer" class="form-control" />
-                <span asp-validation-for="SmtpServer" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="SmtpPort" class="control-label"></label>
-                <input asp-for="SmtpPort" class="form-control" />
-                <span asp-validation-for="SmtpPort" class="text-danger"></span>
-            </div>
-            <div class="form-group form-check">
-                <label class="form-check-label">
-                    <input class="form-check-input" asp-for="EnableSsl" /> @Html.DisplayNameFor(model => model.EnableSsl)
-                </label>
-            </div>
-            <div class="form-group">
                 <label asp-for="Subject" class="control-label"></label>
                 <input asp-for="Subject" class="form-control" />
                 <span asp-validation-for="Subject" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Message" class="control-label"></label>
-                <input asp-for="Message" class="form-control" />
-                <span asp-validation-for="Message" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <input type="submit" value="Save" class="btn btn-primary" />
@@ -150,5 +55,7 @@
 </div>
 
 @section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
 }
