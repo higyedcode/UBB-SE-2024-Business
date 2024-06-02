@@ -5,10 +5,27 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using ISS_Frontend.Data;
 using ISS_Frontend.Service;
+using Celebration_Of_Capitalism___The_Finale.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddDbContext<ISS_FrontendContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("ISS_FrontendContext") ?? throw new InvalidOperationException("Connection string 'ISS_FrontendContext' not found.")));
+
+// Dependency Injection (merge-sensitive)
+builder.Services.AddSingleton<COCUserService>();
+builder.Services.AddSingleton<COCProductService>();
+builder.Services.AddSingleton<COCReviewService>();
+builder.Services.AddSingleton<COCFavouriteProductService>();
+builder.Services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+
+// Session Management (merge-sensitive)
+builder.Services.AddDistributedMemoryCache();
+builder.Services.AddSession(options =>
+{
+	options.IdleTimeout = TimeSpan.FromDays(1);
+	options.Cookie.HttpOnly = true;
+	options.Cookie.IsEssential = true;
+});
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
@@ -45,6 +62,9 @@ app.UseStaticFiles();
 app.UseRouting();
 
 app.UseAuthorization();
+
+// Session management (merge-sensitive)
+app.UseSession();
 
 app.MapControllerRoute(
     name: "default",
