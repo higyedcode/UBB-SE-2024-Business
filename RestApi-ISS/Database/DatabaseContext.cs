@@ -8,6 +8,7 @@ using Iss.Entity;
 using Microsoft.EntityFrameworkCore;
 using Backend.Models;
 using RestApi_ISS.Entity;
+using Iss.User;
 
 namespace Iss.Database
 {
@@ -101,5 +102,7 @@ namespace Iss.Database
                 .Property(i => i.Id)
                 .ValueGeneratedOnAdd();
         }
+        public DbSet<Iss.User.User> User { get; set; } = default!;
+        public DbSet<Iss.User.AppUser> AppUser { get; set; } = default!;
     }
 }
