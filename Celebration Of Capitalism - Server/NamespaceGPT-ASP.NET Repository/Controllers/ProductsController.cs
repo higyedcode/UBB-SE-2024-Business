@@ -27,14 +27,14 @@ namespace NamespaceGPT_ASP.NET_Repository.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<ProductDTO>>> GetProduct()
         {
-            return await context.Product.Select(element => BaseToDTOConverters.Converter_ProductToDTO(element)).ToListAsync();
+            return await context.COCProduct.Select(element => BaseToDTOConverters.Converter_ProductToDTO(element)).ToListAsync();
         }
 
         // GET: api/Products/5
         [HttpGet("{id}")]
         public async Task<ActionResult<ProductDTO>> GetProduct(int id)
         {
-            var product = await context.Product.FindAsync(id);
+            var product = await context.COCProduct.FindAsync(id);
 
             if (product == null)
             {
@@ -82,7 +82,7 @@ namespace NamespaceGPT_ASP.NET_Repository.Controllers
         public async Task<ActionResult<ProductDTO>> PostProduct(ProductDTO productDTO)
         {
             var productRef = DTOToBaseConverters.Converter_DTOToProduct(productDTO);
-            context.Product.Add(productRef);
+            context.COCProduct.Add(productRef);
             await context.SaveChangesAsync();
 
             productDTO.Id = productRef.Id;
@@ -93,13 +93,13 @@ namespace NamespaceGPT_ASP.NET_Repository.Controllers
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteProduct(int id)
         {
-            var product = await context.Product.FindAsync(id);
+            var product = await context.COCProduct.FindAsync(id);
             if (product == null)
             {
                 return NotFound();
             }
 
-            context.Product.Remove(product);
+            context.COCProduct.Remove(product);
             await context.SaveChangesAsync();
 
             return NoContent();
@@ -107,7 +107,7 @@ namespace NamespaceGPT_ASP.NET_Repository.Controllers
 
         private bool ProductExists(int id)
         {
-            return context.Product.Any(e => e.Id == id);
+            return context.COCProduct.Any(e => e.Id == id);
         }
     }
 }

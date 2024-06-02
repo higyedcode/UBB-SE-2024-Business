@@ -27,14 +27,14 @@ namespace NamespaceGPT_ASP.NET_Repository.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<ReviewDTO>>> GetReview()
         {
-            return await context.Review.Select(element => BaseToDTOConverters.Converter_ReviewToDTO(element)).ToListAsync();
+            return await context.COCReview.Select(element => BaseToDTOConverters.Converter_ReviewToDTO(element)).ToListAsync();
         }
 
         // GET: api/Reviews/5
         [HttpGet("{id}")]
         public async Task<ActionResult<ReviewDTO>> GetReview(int id)
         {
-            var review = await context.Review.FindAsync(id);
+            var review = await context.COCReview.FindAsync(id);
 
             if (review == null)
             {
@@ -82,7 +82,7 @@ namespace NamespaceGPT_ASP.NET_Repository.Controllers
         public async Task<ActionResult<ReviewDTO>> PostReview(ReviewDTO reviewDTO)
         {
             var reviewRef = DTOToBaseConverters.Converter_DTOToReview(reviewDTO);
-            context.Review.Add(reviewRef);
+            context.COCReview.Add(reviewRef);
             await context.SaveChangesAsync();
 
             reviewDTO.Id = reviewRef.Id;
@@ -93,13 +93,13 @@ namespace NamespaceGPT_ASP.NET_Repository.Controllers
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteReview(int id)
         {
-            var review = await context.Review.FindAsync(id);
+            var review = await context.COCReview.FindAsync(id);
             if (review == null)
             {
                 return NotFound();
             }
 
-            context.Review.Remove(review);
+            context.COCReview.Remove(review);
             await context.SaveChangesAsync();
 
             return NoContent();
@@ -107,7 +107,7 @@ namespace NamespaceGPT_ASP.NET_Repository.Controllers
 
         private bool ReviewExists(int id)
         {
-            return context.Review.Any(e => e.Id == id);
+            return context.COCReview.Any(e => e.Id == id);
         }
     }
 }

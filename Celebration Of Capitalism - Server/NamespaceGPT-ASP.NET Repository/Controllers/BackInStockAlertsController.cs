@@ -23,18 +23,18 @@ namespace NamespaceGPT_ASP.NET_Repository.Controllers
             this.context = context;
         }
 
-        // GET: api/BackInStockAlerts
+        // GET: api/COCBackInStockAlerts
         [HttpGet]
         public async Task<ActionResult<IEnumerable<BackInStockAlertDTO>>> GetBackInStockAlerts()
         {
-            return await context.BackInStockAlerts.Select(element => BaseToDTOConverters.Converter_BackInStockAlertToDTO(element)).ToListAsync();
+            return await context.COCBackInStockAlerts.Select(element => BaseToDTOConverters.Converter_BackInStockAlertToDTO(element)).ToListAsync();
         }
 
-        // GET: api/BackInStockAlerts/5
+        // GET: api/COCBackInStockAlerts/5
         [HttpGet("{id}")]
         public async Task<ActionResult<BackInStockAlertDTO>> GetBackInStockAlert(int id)
         {
-            var backInStockAlert = await context.BackInStockAlerts.FindAsync(id);
+            var backInStockAlert = await context.COCBackInStockAlerts.FindAsync(id);
 
             if (backInStockAlert == null)
             {
@@ -44,7 +44,7 @@ namespace NamespaceGPT_ASP.NET_Repository.Controllers
             return BaseToDTOConverters.Converter_BackInStockAlertToDTO(backInStockAlert);
         }
 
-        // PUT: api/BackInStockAlerts/5
+        // PUT: api/COCBackInStockAlerts/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]
         public async Task<IActionResult> PutBackInStockAlert(int id, BackInStockAlertDTO backInStockAlertDTO)
@@ -76,30 +76,30 @@ namespace NamespaceGPT_ASP.NET_Repository.Controllers
             return NoContent();
         }
 
-        // POST: api/BackInStockAlerts
+        // POST: api/COCBackInStockAlerts
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
         public async Task<ActionResult<BackInStockAlertDTO>> PostBackInStockAlert(BackInStockAlertDTO backInStockAlertDTO)
         {
             var backInStockAlertRef = DTOToBaseConverters.Converter_DTOToBackInStockAlert(backInStockAlertDTO);
-            context.BackInStockAlerts.Add(backInStockAlertRef);
+            context.COCBackInStockAlerts.Add(backInStockAlertRef);
             await context.SaveChangesAsync();
 
             backInStockAlertDTO.Id = backInStockAlertRef.Id;
             return CreatedAtAction("GetBackInStockAlert", new { id = backInStockAlertRef.Id }, backInStockAlertDTO);
         }
 
-        // DELETE: api/BackInStockAlerts/5
+        // DELETE: api/COCBackInStockAlerts/5
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteBackInStockAlert(int id)
         {
-            var backInStockAlert = await context.BackInStockAlerts.FindAsync(id);
+            var backInStockAlert = await context.COCBackInStockAlerts.FindAsync(id);
             if (backInStockAlert == null)
             {
                 return NotFound();
             }
 
-            context.BackInStockAlerts.Remove(backInStockAlert);
+            context.COCBackInStockAlerts.Remove(backInStockAlert);
             await context.SaveChangesAsync();
 
             return NoContent();
@@ -107,7 +107,7 @@ namespace NamespaceGPT_ASP.NET_Repository.Controllers
 
         private bool BackInStockAlertExists(int id)
         {
-            return context.BackInStockAlerts.Any(e => e.Id == id);
+            return context.COCBackInStockAlerts.Any(e => e.Id == id);
         }
     }
 }

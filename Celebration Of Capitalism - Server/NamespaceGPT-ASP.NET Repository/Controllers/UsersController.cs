@@ -27,14 +27,14 @@ namespace NamespaceGPT_ASP.NET_Repository.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<UserDTO>>> GetAppUser()
         {
-            return await context.AppUser.Select(element => BaseToDTOConverters.Converter_UserToDTO(element)).ToListAsync();
+            return await context.COCUser.Select(element => BaseToDTOConverters.Converter_UserToDTO(element)).ToListAsync();
         }
 
         // GET: api/Users/5
         [HttpGet("{id}")]
         public async Task<ActionResult<UserDTO>> GetUser(long id)
         {
-            var user = await context.AppUser.FindAsync(id);
+            var user = await context.COCUser.FindAsync(id);
 
             if (user == null)
             {
@@ -81,8 +81,8 @@ namespace NamespaceGPT_ASP.NET_Repository.Controllers
         [HttpPost]
         public async Task<ActionResult<UserDTO>> PostUser(UserDTO userDTO)
         {
-            User userRef = DTOToBaseConverters.Converter_DTOToUser(userDTO);
-            context.AppUser.Add(userRef);
+            COCUser userRef = DTOToBaseConverters.Converter_DTOToUser(userDTO);
+            context.COCUser.Add(userRef);
             await context.SaveChangesAsync();
 
             userDTO.Id = userRef.Id;
@@ -93,13 +93,13 @@ namespace NamespaceGPT_ASP.NET_Repository.Controllers
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteUser(long id)
         {
-            var user = await context.AppUser.FindAsync(id);
+            var user = await context.COCUser.FindAsync(id);
             if (user == null)
             {
                 return NotFound();
             }
 
-            context.AppUser.Remove(user);
+            context.COCUser.Remove(user);
             await context.SaveChangesAsync();
 
             return NoContent();
@@ -107,7 +107,7 @@ namespace NamespaceGPT_ASP.NET_Repository.Controllers
 
         private bool UserExists(long id)
         {
-            return context.AppUser.Any(e => e.Id == id);
+            return context.COCUser.Any(e => e.Id == id);
         }
     }
 }

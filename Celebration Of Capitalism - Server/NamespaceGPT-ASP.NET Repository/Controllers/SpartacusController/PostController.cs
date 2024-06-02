@@ -30,14 +30,14 @@ namespace NamespaceGPT_ASP.NET_Repository.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<PostDTO>>> GetPosts()
         {
-            return await context.Post.Select(element => BaseToDTOConverters.Converter_PostToDTO(element)).ToListAsync();
+            return await context.SpartacusPost.Select(element => BaseToDTOConverters.Converter_PostToDTO(element)).ToListAsync();
         }
 
         // GET: api/Posts/5
         [HttpGet("{id}")]
         public async Task<ActionResult<PostDTO>> GetPost(int id)
         {
-            var post = await context.Post.FindAsync(id);
+            var post = await context.SpartacusPost.FindAsync(id);
 
             if (post == null)
             {
@@ -85,8 +85,8 @@ namespace NamespaceGPT_ASP.NET_Repository.Controllers
         [HttpPost]
         public async Task<ActionResult<PostDTO>> PostPost(PostDTO postDTO)
         {
-            Post postRef = DTOToBaseConverters.Converter_DTOToPost(postDTO);
-            context.Post.Add(postRef);
+            SpartacusPost postRef = DTOToBaseConverters.Converter_DTOToPost(postDTO);
+            context.SpartacusPost.Add(postRef);
             await context.SaveChangesAsync();
 
             postDTO.Id = postRef.Id;
@@ -97,13 +97,13 @@ namespace NamespaceGPT_ASP.NET_Repository.Controllers
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeletePost(int id)
         {
-            var post = await context.Post.FindAsync(id);
+            var post = await context.SpartacusPost.FindAsync(id);
             if (post == null)
             {
                 return NotFound();
             }
 
-            context.Post.Remove(post);
+            context.SpartacusPost.Remove(post);
             await context.SaveChangesAsync();
 
             return NoContent();
@@ -111,7 +111,7 @@ namespace NamespaceGPT_ASP.NET_Repository.Controllers
 
         private bool PostExists(int id)
         {
-            return context.Post.Any(e => e.Id == id);
+            return context.SpartacusPost.Any(e => e.Id == id);
         }
     }
 }

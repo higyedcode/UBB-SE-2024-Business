@@ -27,14 +27,14 @@ namespace NamespaceGPT_ASP.NET_Repository.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<MarketplaceDTO>>> GetMarketplace()
         {
-            return await context.Marketplace.Select(element => BaseToDTOConverters.Converter_MarketplaceToDTO(element)).ToListAsync();
+            return await context.COCMarketplace.Select(element => BaseToDTOConverters.Converter_MarketplaceToDTO(element)).ToListAsync();
         }
 
         // GET: api/Marketplaces/5
         [HttpGet("{id}")]
         public async Task<ActionResult<MarketplaceDTO>> GetMarketplace(int id)
         {
-            var marketplace = await context.Marketplace.FindAsync(id);
+            var marketplace = await context.COCMarketplace.FindAsync(id);
 
             if (marketplace == null)
             {
@@ -82,7 +82,7 @@ namespace NamespaceGPT_ASP.NET_Repository.Controllers
         public async Task<ActionResult<MarketplaceDTO>> PostMarketplace(MarketplaceDTO marketplaceDTO)
         {
             var marketplaceRef = DTOToBaseConverters.Converter_DTOToMarketplace(marketplaceDTO);
-            context.Marketplace.Add(marketplaceRef);
+            context.COCMarketplace.Add(marketplaceRef);
             await context.SaveChangesAsync();
 
             marketplaceDTO.Id = marketplaceRef.Id;
@@ -93,13 +93,13 @@ namespace NamespaceGPT_ASP.NET_Repository.Controllers
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteMarketplace(int id)
         {
-            var marketplace = await context.Marketplace.FindAsync(id);
+            var marketplace = await context.COCMarketplace.FindAsync(id);
             if (marketplace == null)
             {
                 return NotFound();
             }
 
-            context.Marketplace.Remove(marketplace);
+            context.COCMarketplace.Remove(marketplace);
             await context.SaveChangesAsync();
 
             return NoContent();
@@ -107,7 +107,7 @@ namespace NamespaceGPT_ASP.NET_Repository.Controllers
 
         private bool MarketplaceExists(int id)
         {
-            return context.Marketplace.Any(e => e.Id == id);
+            return context.COCMarketplace.Any(e => e.Id == id);
         }
     }
 }

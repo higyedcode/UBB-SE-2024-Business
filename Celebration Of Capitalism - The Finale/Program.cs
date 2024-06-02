@@ -10,10 +10,10 @@ namespace Celebration_Of_Capitalism___The_Finale
             var builder = WebApplication.CreateBuilder(args);
 
             // Add services to the container.
-            builder.Services.AddSingleton<UserService>();
-            builder.Services.AddSingleton<ProductService>();
-            builder.Services.AddSingleton<ReviewService>();
-            builder.Services.AddSingleton<FavouriteProductService>();
+            builder.Services.AddSingleton<COCUserService>();
+            builder.Services.AddSingleton<COCProductService>();
+            builder.Services.AddSingleton<COCReviewService>();
+            builder.Services.AddSingleton<COCFavouriteProductService>();
 			builder.Services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
 
 			builder.Services.AddControllersWithViews();
@@ -43,7 +43,7 @@ namespace Celebration_Of_Capitalism___The_Finale
 
             app.MapControllerRoute(
                 name: "default",
-                pattern: "{controller=Login}/{action=Index}/{id?}");
+                pattern: "{controller=COCLogin}/{action=Index}/{id?}");
 
             app.Run();
         }

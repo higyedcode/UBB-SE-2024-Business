@@ -28,14 +28,14 @@ namespace NamespaceGPT_ASP.NET_Repository.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<CommentDTO>>> GetComment()
         {
-            return await context.Comment.Select(element => BaseToDTOConverters.Converter_CommentToDTO(element)).ToListAsync();
+            return await context.SpartacusComment.Select(element => BaseToDTOConverters.Converter_CommentToDTO(element)).ToListAsync();
         }
 
         // GET: api/Comments/5
         [HttpGet("{id}")]
         public async Task<ActionResult<CommentDTO>> GetComment(int id)
         {
-            var comment = await context.Comment.FindAsync(id);
+            var comment = await context.SpartacusComment.FindAsync(id);
 
             if (comment == null)
             {
@@ -79,7 +79,7 @@ namespace NamespaceGPT_ASP.NET_Repository.Controllers
         [HttpPost]
         public async Task<ActionResult<CommentDTO>> PostComment(CommentDTO comment)
         {
-            context.Comment.Add(DTOToBaseConverters.Converter_DTOToComment(comment));
+            context.SpartacusComment.Add(DTOToBaseConverters.Converter_DTOToComment(comment));
             await context.SaveChangesAsync();
 
             return CreatedAtAction("GetComment", new { id = comment.Id }, comment);
@@ -89,13 +89,13 @@ namespace NamespaceGPT_ASP.NET_Repository.Controllers
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteComment(int id)
         {
-            var comment = await context.Comment.FindAsync(id);
+            var comment = await context.SpartacusComment.FindAsync(id);
             if (comment == null)
             {
                 return NotFound();
             }
 
-            context.Comment.Remove(comment);
+            context.SpartacusComment.Remove(comment);
             await context.SaveChangesAsync();
 
             return NoContent();
@@ -103,7 +103,7 @@ namespace NamespaceGPT_ASP.NET_Repository.Controllers
 
         private bool CommentExists(int id)
         {
-            return context.Comment.Any(e => e.Id == id);
+            return context.SpartacusComment.Any(e => e.Id == id);
         }
     }
 }

@@ -27,14 +27,14 @@ namespace NamespaceGPT_ASP.NET_Repository.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<AdRecommendationDTO>>> GetAdRecommendation()
         {
-            return await context.AdRecommendation.Select(element => BaseToDTOConverters.Converter_AdRecommendationToDTO(element)).ToListAsync();
+            return await context.COCAdRecommendation.Select(element => BaseToDTOConverters.Converter_AdRecommendationToDTO(element)).ToListAsync();
         }
 
         // GET: api/AdRecommendations/5
         [HttpGet("{id}")]
         public async Task<ActionResult<AdRecommendationDTO>> GetAdRecommendation(int id)
         {
-            var adRecommendation = await context.AdRecommendation.FindAsync(id);
+            var adRecommendation = await context.COCAdRecommendation.FindAsync(id);
 
             if (adRecommendation == null)
             {
@@ -82,8 +82,8 @@ namespace NamespaceGPT_ASP.NET_Repository.Controllers
         [HttpPost]
         public async Task<ActionResult<AdRecommendationDTO>> PostAdRecommendation(AdRecommendationDTO adRecommendationDTO)
         {
-            AdRecommendation adRecommendationRef = DTOToBaseConverters.Converter_DTOToAdRecommendation(adRecommendationDTO);
-            context.AdRecommendation.Add(adRecommendationRef);
+            COCAdRecommendation adRecommendationRef = DTOToBaseConverters.Converter_DTOToAdRecommendation(adRecommendationDTO);
+            context.COCAdRecommendation.Add(adRecommendationRef);
             await context.SaveChangesAsync();
 
             adRecommendationDTO.Id = adRecommendationRef.Id;
@@ -94,13 +94,13 @@ namespace NamespaceGPT_ASP.NET_Repository.Controllers
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteAdRecommendation(int id)
         {
-            var adRecommendation = await context.AdRecommendation.FindAsync(id);
+            var adRecommendation = await context.COCAdRecommendation.FindAsync(id);
             if (adRecommendation == null)
             {
                 return NotFound();
             }
 
-            context.AdRecommendation.Remove(adRecommendation);
+            context.COCAdRecommendation.Remove(adRecommendation);
             await context.SaveChangesAsync();
 
             return NoContent();
@@ -108,7 +108,7 @@ namespace NamespaceGPT_ASP.NET_Repository.Controllers
 
         private bool AdRecommendationExists(int id)
         {
-            return context.AdRecommendation.Any(e => e.Id == id);
+            return context.COCAdRecommendation.Any(e => e.Id == id);
         }
     }
 }

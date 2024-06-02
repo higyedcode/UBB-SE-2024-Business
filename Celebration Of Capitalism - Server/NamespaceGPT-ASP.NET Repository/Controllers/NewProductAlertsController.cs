@@ -23,18 +23,18 @@ namespace NamespaceGPT_ASP.NET_Repository.Controllers
             this.context = context;
         }
 
-        // GET: api/NewProductAlerts
+        // GET: api/COCNewProductAlerts
         [HttpGet]
         public async Task<ActionResult<IEnumerable<NewProductAlertDTO>>> GetNewProductAlerts()
         {
-            return await context.NewProductAlerts.Select(element => BaseToDTOConverters.Converter_NewProductAlertToDTO(element)).ToListAsync();
+            return await context.COCNewProductAlerts.Select(element => BaseToDTOConverters.Converter_NewProductAlertToDTO(element)).ToListAsync();
         }
 
-        // GET: api/NewProductAlerts/5
+        // GET: api/COCNewProductAlerts/5
         [HttpGet("{id}")]
         public async Task<ActionResult<NewProductAlertDTO>> GetNewProductAlert(int id)
         {
-            var newProductAlert = await context.NewProductAlerts.FindAsync(id);
+            var newProductAlert = await context.COCNewProductAlerts.FindAsync(id);
 
             if (newProductAlert == null)
             {
@@ -44,7 +44,7 @@ namespace NamespaceGPT_ASP.NET_Repository.Controllers
             return BaseToDTOConverters.Converter_NewProductAlertToDTO(newProductAlert);
         }
 
-        // PUT: api/NewProductAlerts/5
+        // PUT: api/COCNewProductAlerts/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]
         public async Task<IActionResult> PutNewProductAlert(int id, NewProductAlertDTO newProductAlertDTO)
@@ -76,30 +76,30 @@ namespace NamespaceGPT_ASP.NET_Repository.Controllers
             return NoContent();
         }
 
-        // POST: api/NewProductAlerts
+        // POST: api/COCNewProductAlerts
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
         public async Task<ActionResult<NewProductAlertDTO>> PostNewProductAlert(NewProductAlertDTO newProductAlertDTO)
         {
             var newProductAlertRef = DTOToBaseConverters.Converter_DTOToNewProductAlert(newProductAlertDTO);
-            context.NewProductAlerts.Add(newProductAlertRef);
+            context.COCNewProductAlerts.Add(newProductAlertRef);
             await context.SaveChangesAsync();
 
             newProductAlertDTO.Id = newProductAlertRef.Id;
             return CreatedAtAction("GetNewProductAlert", new { id = newProductAlertRef.Id }, newProductAlertDTO);
         }
 
-        // DELETE: api/NewProductAlerts/5
+        // DELETE: api/COCNewProductAlerts/5
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteNewProductAlert(int id)
         {
-            var newProductAlert = await context.NewProductAlerts.FindAsync(id);
+            var newProductAlert = await context.COCNewProductAlerts.FindAsync(id);
             if (newProductAlert == null)
             {
                 return NotFound();
             }
 
-            context.NewProductAlerts.Remove(newProductAlert);
+            context.COCNewProductAlerts.Remove(newProductAlert);
             await context.SaveChangesAsync();
 
             return NoContent();
@@ -107,7 +107,7 @@ namespace NamespaceGPT_ASP.NET_Repository.Controllers
 
         private bool NewProductAlertExists(int id)
         {
-            return context.NewProductAlerts.Any(e => e.Id == id);
+            return context.COCNewProductAlerts.Any(e => e.Id == id);
         }
     }
 }

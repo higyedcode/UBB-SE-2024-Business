@@ -9,6 +9,9 @@ using Microsoft.EntityFrameworkCore;
 using Backend.Models;
 using RestApi_ISS.Entity;
 
+using NamespaceGPT.Data.Models;
+using NamespaceGPT_ASP.NET_Repository.Models.SpartacusModels;
+
 namespace Iss.Database
 {
     public class DatabaseContext : DbContext
@@ -22,6 +25,30 @@ namespace Iss.Database
         public DbSet<Request> Request { get; set; }
         public DbSet<BankAccount> BankAccount { get; set; }
         public DbSet<FAQ> FAQ { get; set; }
+        public DbSet<Product> Product { get; set; }
+        public DbSet<ReviewClass> Review { get; set; }
+
+        // CELEBRATION OF CAPITALISM
+        public DbSet<COCUser> COCUser { get; set; } = null!;
+        public DbSet<COCAdRecommendation> COCAdRecommendation { get; set; } = null!;
+        public DbSet<COCBackInStockAlert> COCBackInStockAlerts { get; set; } = null!;
+        public DbSet<COCFavouriteProduct> COCFavouriteProduct { get; set; } = null!;
+        public DbSet<COCListing> COCListing { get; set; } = null!;
+        public DbSet<COCMarketplace> COCMarketplace { get; set; } = null!;
+        public DbSet<COCNewProductAlert> COCNewProductAlerts { get; set; } = null!;
+        public DbSet<COCPriceDropAlert> COCPriceDropAlerts { get; set; } = null!;
+        public DbSet<COCProduct> COCProduct { get; set; } = null!;
+        public DbSet<COCReview> COCReview { get; set; } = null!;
+        public DbSet<COCUserActivity> COCUserActivity { get; set; } = null!;
+        public DbSet<COCSale> COCSale { get; set; } = default!;
+
+        // SPARTACUS
+        public DbSet<SpartacusAccount> SpartacusAccount { get; set; } = null!;
+        public DbSet<SpartacusBusiness> SpartacusBusiness { get; set; } = null!;
+        public DbSet<SpartacusComment> SpartacusComment { get; set; } = null!;
+        public DbSet<SpartacusFAQ> SpartacusFAQ { get; set; } = default!;
+        public DbSet<SpartacusPost> SpartacusPost { get; set; } = null!;
+        public DbSet<SpartacusReview> SpartacusReview { get; set; } = null!;
 
         public DatabaseContext()
         {
@@ -30,13 +57,11 @@ namespace Iss.Database
             : base(options)
         {
         }
-        public DbSet<Product> Product { get; set; }
-
-        public DbSet<ReviewClass> Review { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("Data Source = .\\SQLEXPRESS; Initial Catalog = db_ISS; Integrated Security = True; TrustServerCertificate=True;");
+            // optionsBuilder.UseSqlServer("Data Source = .\\SQLEXPRESS; Initial Catalog = db_ISS; Integrated Security = True; TrustServerCertificate=True;");
+            optionsBuilder.UseSqlServer("Data Source=DESKTOP-MAIN;Initial Catalog=FinalVersionDatabase;Integrated Security=true;TrustServerCertificate=Yes;Encrypt=False;");
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)

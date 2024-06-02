@@ -27,14 +27,14 @@ namespace NamespaceGPT_ASP.NET_Repository.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<FavouriteProductDTO>>> GetFavouriteProduct()
         {
-            return await context.FavouriteProduct.Select(element => BaseToDTOConverters.Converter_FavouriteProductToDTO(element)).ToListAsync();
+            return await context.COCFavouriteProduct.Select(element => BaseToDTOConverters.Converter_FavouriteProductToDTO(element)).ToListAsync();
         }
 
         // GET: api/FavouriteProducts/5
         [HttpGet("{id}")]
         public async Task<ActionResult<FavouriteProductDTO>> GetFavouriteProduct(int id)
         {
-            var favouriteProduct = await context.FavouriteProduct.FindAsync(id);
+            var favouriteProduct = await context.COCFavouriteProduct.FindAsync(id);
 
             if (favouriteProduct == null)
             {
@@ -82,7 +82,7 @@ namespace NamespaceGPT_ASP.NET_Repository.Controllers
         public async Task<ActionResult<FavouriteProductDTO>> PostFavouriteProduct(FavouriteProductDTO favouriteProductDTO)
         {
             var favouriteProductRef = DTOToBaseConverters.Converter_DTOToFavouriteProduct(favouriteProductDTO);
-            context.FavouriteProduct.Add(favouriteProductRef);
+            context.COCFavouriteProduct.Add(favouriteProductRef);
             await context.SaveChangesAsync();
 
             favouriteProductDTO.Id = favouriteProductRef.Id;
@@ -93,13 +93,13 @@ namespace NamespaceGPT_ASP.NET_Repository.Controllers
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteFavouriteProduct(int id)
         {
-            var favouriteProduct = await context.FavouriteProduct.FindAsync(id);
+            var favouriteProduct = await context.COCFavouriteProduct.FindAsync(id);
             if (favouriteProduct == null)
             {
                 return NotFound();
             }
 
-            context.FavouriteProduct.Remove(favouriteProduct);
+            context.COCFavouriteProduct.Remove(favouriteProduct);
             await context.SaveChangesAsync();
 
             return NoContent();
@@ -107,7 +107,7 @@ namespace NamespaceGPT_ASP.NET_Repository.Controllers
 
         private bool FavouriteProductExists(int id)
         {
-            return context.FavouriteProduct.Any(e => e.Id == id);
+            return context.COCFavouriteProduct.Any(e => e.Id == id);
         }
     }
 }

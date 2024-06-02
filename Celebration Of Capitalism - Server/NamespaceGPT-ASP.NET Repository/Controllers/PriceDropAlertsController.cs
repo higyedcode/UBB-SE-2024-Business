@@ -23,18 +23,18 @@ namespace NamespaceGPT_ASP.NET_Repository.Controllers
             this.context = context;
         }
 
-        // GET: api/PriceDropAlerts
+        // GET: api/COCPriceDropAlerts
         [HttpGet]
         public async Task<ActionResult<IEnumerable<PriceDropAlertDTO>>> GetPriceDropAlerts()
         {
-            return await context.PriceDropAlerts.Select(element => BaseToDTOConverters.Converter_PriceDropAlertToDTO(element)).ToListAsync();
+            return await context.COCPriceDropAlerts.Select(element => BaseToDTOConverters.Converter_PriceDropAlertToDTO(element)).ToListAsync();
         }
 
-        // GET: api/PriceDropAlerts/5
+        // GET: api/COCPriceDropAlerts/5
         [HttpGet("{id}")]
         public async Task<ActionResult<PriceDropAlertDTO>> GetPriceDropAlert(int id)
         {
-            var priceDropAlert = await context.PriceDropAlerts.FindAsync(id);
+            var priceDropAlert = await context.COCPriceDropAlerts.FindAsync(id);
 
             if (priceDropAlert == null)
             {
@@ -44,7 +44,7 @@ namespace NamespaceGPT_ASP.NET_Repository.Controllers
             return BaseToDTOConverters.Converter_PriceDropAlertToDTO(priceDropAlert);
         }
 
-        // PUT: api/PriceDropAlerts/5
+        // PUT: api/COCPriceDropAlerts/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]
         public async Task<IActionResult> PutPriceDropAlert(int id, PriceDropAlertDTO priceDropAlertDTO)
@@ -76,30 +76,30 @@ namespace NamespaceGPT_ASP.NET_Repository.Controllers
             return NoContent();
         }
 
-        // POST: api/PriceDropAlerts
+        // POST: api/COCPriceDropAlerts
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
         public async Task<ActionResult<PriceDropAlertDTO>> PostPriceDropAlert(PriceDropAlertDTO priceDropAlertDTO)
         {
             var priceDropAlertRef = DTOToBaseConverters.Converter_DTOToPriceDropAlert(priceDropAlertDTO);
-            context.PriceDropAlerts.Add(priceDropAlertRef);
+            context.COCPriceDropAlerts.Add(priceDropAlertRef);
             await context.SaveChangesAsync();
 
             priceDropAlertDTO.Id = priceDropAlertRef.Id;
             return CreatedAtAction("GetPriceDropAlert", new { id = priceDropAlertRef.Id }, priceDropAlertDTO);
         }
 
-        // DELETE: api/PriceDropAlerts/5
+        // DELETE: api/COCPriceDropAlerts/5
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeletePriceDropAlert(int id)
         {
-            var priceDropAlert = await context.PriceDropAlerts.FindAsync(id);
+            var priceDropAlert = await context.COCPriceDropAlerts.FindAsync(id);
             if (priceDropAlert == null)
             {
                 return NotFound();
             }
 
-            context.PriceDropAlerts.Remove(priceDropAlert);
+            context.COCPriceDropAlerts.Remove(priceDropAlert);
             await context.SaveChangesAsync();
 
             return NoContent();
@@ -107,7 +107,7 @@ namespace NamespaceGPT_ASP.NET_Repository.Controllers
 
         private bool PriceDropAlertExists(int id)
         {
-            return context.PriceDropAlerts.Any(e => e.Id == id);
+            return context.COCPriceDropAlerts.Any(e => e.Id == id);
         }
     }
 }

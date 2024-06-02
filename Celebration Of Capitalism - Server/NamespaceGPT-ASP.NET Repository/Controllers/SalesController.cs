@@ -27,14 +27,14 @@ namespace NamespaceGPT_ASP.NET_Repository.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<SaleDTO>>> GetSale()
         {
-            return await context.Sale.Select(element => BaseToDTOConverters.Converter_SaleToDTO(element)).ToListAsync();
+            return await context.COCSale.Select(element => BaseToDTOConverters.Converter_SaleToDTO(element)).ToListAsync();
         }
 
         // GET: api/Sales/5
         [HttpGet("{id}")]
         public async Task<ActionResult<SaleDTO>> GetSale(int id)
         {
-            var sale = await context.Sale.FindAsync(id);
+            var sale = await context.COCSale.FindAsync(id);
 
             if (sale == null)
             {
@@ -79,10 +79,10 @@ namespace NamespaceGPT_ASP.NET_Repository.Controllers
         // POST: api/Sales
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
-        public async Task<ActionResult<Sale>> PostSale(SaleDTO saleDTO)
+        public async Task<ActionResult<COCSale>> PostSale(SaleDTO saleDTO)
         {
             var saleRef = DTOToBaseConverters.Converter_DTOToSale(saleDTO);
-            context.Sale.Add(saleRef);
+            context.COCSale.Add(saleRef);
             await context.SaveChangesAsync();
 
             saleDTO.Id = saleRef.Id;
@@ -93,13 +93,13 @@ namespace NamespaceGPT_ASP.NET_Repository.Controllers
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteSale(int id)
         {
-            var sale = await context.Sale.FindAsync(id);
+            var sale = await context.COCSale.FindAsync(id);
             if (sale == null)
             {
                 return NotFound();
             }
 
-            context.Sale.Remove(sale);
+            context.COCSale.Remove(sale);
             await context.SaveChangesAsync();
 
             return NoContent();
@@ -107,7 +107,7 @@ namespace NamespaceGPT_ASP.NET_Repository.Controllers
 
         private bool SaleExists(int id)
         {
-            return context.Sale.Any(e => e.Id == id);
+            return context.COCSale.Any(e => e.Id == id);
         }
     }
 }

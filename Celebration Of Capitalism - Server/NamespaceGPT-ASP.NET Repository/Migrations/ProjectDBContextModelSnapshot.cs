@@ -22,7 +22,333 @@ namespace NamespaceGPT_ASP.NET_Repository.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
-            modelBuilder.Entity("NamespaceGPT.Data.Models.Account", b =>
+            modelBuilder.Entity("NamespaceGPT.Data.Models.COCAdRecommendation", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("ListingId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ListingId");
+
+                    b.ToTable("COCAdRecommendation");
+                });
+
+            modelBuilder.Entity("NamespaceGPT.Data.Models.COCBackInStockAlert", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("MarketplaceId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("ProductId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("UserId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("MarketplaceId");
+
+                    b.HasIndex("ProductId");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("COCBackInStockAlerts");
+                });
+
+            modelBuilder.Entity("NamespaceGPT.Data.Models.COCFavouriteProduct", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("ProductId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("UserId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ProductId");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("COCFavouriteProduct");
+                });
+
+            modelBuilder.Entity("NamespaceGPT.Data.Models.COCListing", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("MarketplaceId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Price")
+                        .HasColumnType("int");
+
+                    b.Property<int>("ProductId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("MarketplaceId");
+
+                    b.HasIndex("ProductId");
+
+                    b.ToTable("COCListing");
+                });
+
+            modelBuilder.Entity("NamespaceGPT.Data.Models.COCMarketplace", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Country")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("MarketplaceName")
+                        .IsRequired()
+                        .HasMaxLength(64)
+                        .HasColumnType("nvarchar(64)");
+
+                    b.Property<string>("WebsiteURL")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("COCMarketplace");
+                });
+
+            modelBuilder.Entity("NamespaceGPT.Data.Models.COCNewProductAlert", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int?>("COCMarketplaceId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("ProductId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("UserId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("COCMarketplaceId");
+
+                    b.HasIndex("ProductId");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("COCNewProductAlerts");
+                });
+
+            modelBuilder.Entity("NamespaceGPT.Data.Models.COCPriceDropAlert", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int?>("COCMarketplaceId")
+                        .HasColumnType("int");
+
+                    b.Property<decimal>("NewPrice")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<decimal>("OldPrice")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<int>("ProductId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("UserId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("COCMarketplaceId");
+
+                    b.HasIndex("ProductId");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("COCPriceDropAlerts");
+                });
+
+            modelBuilder.Entity("NamespaceGPT.Data.Models.COCProduct", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Attributes")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Brand")
+                        .IsRequired()
+                        .HasMaxLength(64)
+                        .HasColumnType("nvarchar(64)");
+
+                    b.Property<string>("Category")
+                        .IsRequired()
+                        .HasMaxLength(64)
+                        .HasColumnType("nvarchar(64)");
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ImageURL")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasMaxLength(64)
+                        .HasColumnType("nvarchar(64)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("COCProduct");
+                });
+
+            modelBuilder.Entity("NamespaceGPT.Data.Models.COCReview", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("ProductId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Rating")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Title")
+                        .IsRequired()
+                        .HasMaxLength(64)
+                        .HasColumnType("nvarchar(64)");
+
+                    b.Property<int>("UserId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ProductId");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("COCReview");
+                });
+
+            modelBuilder.Entity("NamespaceGPT.Data.Models.COCSale", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("ListingId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("UserId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ListingId");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("COCSale");
+                });
+
+            modelBuilder.Entity("NamespaceGPT.Data.Models.COCUser", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Password")
+                        .IsRequired()
+                        .HasMaxLength(64)
+                        .HasColumnType("nvarchar(64)");
+
+                    b.Property<string>("Username")
+                        .IsRequired()
+                        .HasMaxLength(64)
+                        .HasColumnType("nvarchar(64)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("COCUser");
+                });
+
+            modelBuilder.Entity("NamespaceGPT.Data.Models.COCUserActivity", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("ActionType")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("UserId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("COCUserActivity");
+                });
+
+            modelBuilder.Entity("NamespaceGPT.Data.Models.SpartacusAccount", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -65,56 +391,10 @@ namespace NamespaceGPT_ASP.NET_Repository.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Account");
+                    b.ToTable("SpartacusAccount");
                 });
 
-            modelBuilder.Entity("NamespaceGPT.Data.Models.AdRecommendation", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<int>("ListingId")
-                        .HasColumnType("int");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("ListingId");
-
-                    b.ToTable("AdRecommendation");
-                });
-
-            modelBuilder.Entity("NamespaceGPT.Data.Models.BackInStockAlert", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<int>("MarketplaceId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("ProductId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("UserId")
-                        .HasColumnType("int");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("MarketplaceId");
-
-                    b.HasIndex("ProductId");
-
-                    b.HasIndex("UserId");
-
-                    b.ToTable("BackInStockAlerts");
-                });
-
-            modelBuilder.Entity("NamespaceGPT.Data.Models.Business", b =>
+            modelBuilder.Entity("NamespaceGPT.Data.Models.SpartacusBusiness", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -198,10 +478,10 @@ namespace NamespaceGPT_ASP.NET_Repository.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Business");
+                    b.ToTable("SpartacusBusiness");
                 });
 
-            modelBuilder.Entity("NamespaceGPT.Data.Models.Comment", b =>
+            modelBuilder.Entity("NamespaceGPT.Data.Models.SpartacusComment", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -230,10 +510,10 @@ namespace NamespaceGPT_ASP.NET_Repository.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Comment");
+                    b.ToTable("SpartacusComment");
                 });
 
-            modelBuilder.Entity("NamespaceGPT.Data.Models.FAQ", b =>
+            modelBuilder.Entity("NamespaceGPT.Data.Models.SpartacusFAQ", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -256,242 +536,7 @@ namespace NamespaceGPT_ASP.NET_Repository.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("FAQ");
-                });
-
-            modelBuilder.Entity("NamespaceGPT.Data.Models.FavouriteProduct", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<int>("ProductId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("UserId")
-                        .HasColumnType("int");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("ProductId");
-
-                    b.HasIndex("UserId");
-
-                    b.ToTable("FavouriteProduct");
-                });
-
-            modelBuilder.Entity("NamespaceGPT.Data.Models.Listing", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<int>("MarketplaceId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("Price")
-                        .HasColumnType("int");
-
-                    b.Property<int>("ProductId")
-                        .HasColumnType("int");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("MarketplaceId");
-
-                    b.HasIndex("ProductId");
-
-                    b.ToTable("Listing");
-                });
-
-            modelBuilder.Entity("NamespaceGPT.Data.Models.Marketplace", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<string>("Country")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("MarketplaceName")
-                        .IsRequired()
-                        .HasMaxLength(64)
-                        .HasColumnType("nvarchar(64)");
-
-                    b.Property<string>("WebsiteURL")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Marketplace");
-                });
-
-            modelBuilder.Entity("NamespaceGPT.Data.Models.NewProductAlert", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<int?>("MarketplaceId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("ProductId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("UserId")
-                        .HasColumnType("int");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("MarketplaceId");
-
-                    b.HasIndex("ProductId");
-
-                    b.HasIndex("UserId");
-
-                    b.ToTable("NewProductAlerts");
-                });
-
-            modelBuilder.Entity("NamespaceGPT.Data.Models.PriceDropAlert", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<int?>("MarketplaceId")
-                        .HasColumnType("int");
-
-                    b.Property<decimal>("NewPrice")
-                        .HasColumnType("decimal(18,2)");
-
-                    b.Property<decimal>("OldPrice")
-                        .HasColumnType("decimal(18,2)");
-
-                    b.Property<int>("ProductId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("UserId")
-                        .HasColumnType("int");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("MarketplaceId");
-
-                    b.HasIndex("ProductId");
-
-                    b.HasIndex("UserId");
-
-                    b.ToTable("PriceDropAlerts");
-                });
-
-            modelBuilder.Entity("NamespaceGPT.Data.Models.Product", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<string>("Attributes")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Brand")
-                        .IsRequired()
-                        .HasMaxLength(64)
-                        .HasColumnType("nvarchar(64)");
-
-                    b.Property<string>("Category")
-                        .IsRequired()
-                        .HasMaxLength(64)
-                        .HasColumnType("nvarchar(64)");
-
-                    b.Property<string>("Description")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("ImageURL")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasMaxLength(64)
-                        .HasColumnType("nvarchar(64)");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Product");
-                });
-
-            modelBuilder.Entity("NamespaceGPT.Data.Models.Review", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<string>("Description")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("ProductId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("Rating")
-                        .HasColumnType("int");
-
-                    b.Property<string>("Title")
-                        .IsRequired()
-                        .HasMaxLength(64)
-                        .HasColumnType("nvarchar(64)");
-
-                    b.Property<int>("UserId")
-                        .HasColumnType("int");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("ProductId");
-
-                    b.HasIndex("UserId");
-
-                    b.ToTable("Review");
-                });
-
-            modelBuilder.Entity("NamespaceGPT.Data.Models.Sale", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<int>("ListingId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("UserId")
-                        .HasColumnType("int");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("ListingId");
-
-                    b.HasIndex("UserId");
-
-                    b.ToTable("Sale");
+                    b.ToTable("SpartacusFAQ");
                 });
 
             modelBuilder.Entity("NamespaceGPT.Data.Models.SpartacusReview", b =>
@@ -538,52 +583,7 @@ namespace NamespaceGPT_ASP.NET_Repository.Migrations
                     b.ToTable("SpartacusReview");
                 });
 
-            modelBuilder.Entity("NamespaceGPT.Data.Models.User", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<string>("Password")
-                        .IsRequired()
-                        .HasMaxLength(64)
-                        .HasColumnType("nvarchar(64)");
-
-                    b.Property<string>("Username")
-                        .IsRequired()
-                        .HasMaxLength(64)
-                        .HasColumnType("nvarchar(64)");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("AppUser");
-                });
-
-            modelBuilder.Entity("NamespaceGPT.Data.Models.UserActivity", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<string>("ActionType")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("UserId")
-                        .HasColumnType("int");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("UserId");
-
-                    b.ToTable("UserActivity");
-                });
-
-            modelBuilder.Entity("NamespaceGPT_ASP.NET_Repository.Models.SpartacusModels.Post", b =>
+            modelBuilder.Entity("NamespaceGPT_ASP.NET_Repository.Models.SpartacusModels.SpartacusPost", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -616,12 +616,12 @@ namespace NamespaceGPT_ASP.NET_Repository.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Post");
+                    b.ToTable("SpartacusPost");
                 });
 
-            modelBuilder.Entity("NamespaceGPT.Data.Models.AdRecommendation", b =>
+            modelBuilder.Entity("NamespaceGPT.Data.Models.COCAdRecommendation", b =>
                 {
-                    b.HasOne("NamespaceGPT.Data.Models.Listing", "Listing")
+                    b.HasOne("NamespaceGPT.Data.Models.COCListing", "Listing")
                         .WithMany("AdRecommendations")
                         .HasForeignKey("ListingId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -630,21 +630,21 @@ namespace NamespaceGPT_ASP.NET_Repository.Migrations
                     b.Navigation("Listing");
                 });
 
-            modelBuilder.Entity("NamespaceGPT.Data.Models.BackInStockAlert", b =>
+            modelBuilder.Entity("NamespaceGPT.Data.Models.COCBackInStockAlert", b =>
                 {
-                    b.HasOne("NamespaceGPT.Data.Models.Marketplace", "Marketplace")
+                    b.HasOne("NamespaceGPT.Data.Models.COCMarketplace", "Marketplace")
                         .WithMany("BackInStockAlerts")
                         .HasForeignKey("MarketplaceId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("NamespaceGPT.Data.Models.Product", "Product")
+                    b.HasOne("NamespaceGPT.Data.Models.COCProduct", "Product")
                         .WithMany("BackInStockAlerts")
                         .HasForeignKey("ProductId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("NamespaceGPT.Data.Models.User", "User")
+                    b.HasOne("NamespaceGPT.Data.Models.COCUser", "User")
                         .WithMany("BackInStockAlerts")
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -657,15 +657,15 @@ namespace NamespaceGPT_ASP.NET_Repository.Migrations
                     b.Navigation("User");
                 });
 
-            modelBuilder.Entity("NamespaceGPT.Data.Models.FavouriteProduct", b =>
+            modelBuilder.Entity("NamespaceGPT.Data.Models.COCFavouriteProduct", b =>
                 {
-                    b.HasOne("NamespaceGPT.Data.Models.Product", "Product")
+                    b.HasOne("NamespaceGPT.Data.Models.COCProduct", "Product")
                         .WithMany("FavouriteProducts")
                         .HasForeignKey("ProductId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("NamespaceGPT.Data.Models.User", "User")
+                    b.HasOne("NamespaceGPT.Data.Models.COCUser", "User")
                         .WithMany("FavouriteProducts")
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -676,15 +676,15 @@ namespace NamespaceGPT_ASP.NET_Repository.Migrations
                     b.Navigation("User");
                 });
 
-            modelBuilder.Entity("NamespaceGPT.Data.Models.Listing", b =>
+            modelBuilder.Entity("NamespaceGPT.Data.Models.COCListing", b =>
                 {
-                    b.HasOne("NamespaceGPT.Data.Models.Marketplace", "Marketplace")
+                    b.HasOne("NamespaceGPT.Data.Models.COCMarketplace", "Marketplace")
                         .WithMany("Listings")
                         .HasForeignKey("MarketplaceId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("NamespaceGPT.Data.Models.Product", "Product")
+                    b.HasOne("NamespaceGPT.Data.Models.COCProduct", "Product")
                         .WithMany("Listings")
                         .HasForeignKey("ProductId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -695,19 +695,19 @@ namespace NamespaceGPT_ASP.NET_Repository.Migrations
                     b.Navigation("Product");
                 });
 
-            modelBuilder.Entity("NamespaceGPT.Data.Models.NewProductAlert", b =>
+            modelBuilder.Entity("NamespaceGPT.Data.Models.COCNewProductAlert", b =>
                 {
-                    b.HasOne("NamespaceGPT.Data.Models.Marketplace", null)
+                    b.HasOne("NamespaceGPT.Data.Models.COCMarketplace", null)
                         .WithMany("NewProductAlerts")
-                        .HasForeignKey("MarketplaceId");
+                        .HasForeignKey("COCMarketplaceId");
 
-                    b.HasOne("NamespaceGPT.Data.Models.Product", "Product")
+                    b.HasOne("NamespaceGPT.Data.Models.COCProduct", "Product")
                         .WithMany("NewProductAlerts")
                         .HasForeignKey("ProductId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("NamespaceGPT.Data.Models.User", "User")
+                    b.HasOne("NamespaceGPT.Data.Models.COCUser", "User")
                         .WithMany("NewProductAlerts")
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -718,19 +718,19 @@ namespace NamespaceGPT_ASP.NET_Repository.Migrations
                     b.Navigation("User");
                 });
 
-            modelBuilder.Entity("NamespaceGPT.Data.Models.PriceDropAlert", b =>
+            modelBuilder.Entity("NamespaceGPT.Data.Models.COCPriceDropAlert", b =>
                 {
-                    b.HasOne("NamespaceGPT.Data.Models.Marketplace", null)
+                    b.HasOne("NamespaceGPT.Data.Models.COCMarketplace", null)
                         .WithMany("PriceDropAlerts")
-                        .HasForeignKey("MarketplaceId");
+                        .HasForeignKey("COCMarketplaceId");
 
-                    b.HasOne("NamespaceGPT.Data.Models.Product", "Product")
+                    b.HasOne("NamespaceGPT.Data.Models.COCProduct", "Product")
                         .WithMany("PriceDropAlerts")
                         .HasForeignKey("ProductId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("NamespaceGPT.Data.Models.User", "User")
+                    b.HasOne("NamespaceGPT.Data.Models.COCUser", "User")
                         .WithMany("PriceDropAlerts")
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -741,15 +741,15 @@ namespace NamespaceGPT_ASP.NET_Repository.Migrations
                     b.Navigation("User");
                 });
 
-            modelBuilder.Entity("NamespaceGPT.Data.Models.Review", b =>
+            modelBuilder.Entity("NamespaceGPT.Data.Models.COCReview", b =>
                 {
-                    b.HasOne("NamespaceGPT.Data.Models.Product", "Product")
+                    b.HasOne("NamespaceGPT.Data.Models.COCProduct", "Product")
                         .WithMany("Reviews")
                         .HasForeignKey("ProductId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("NamespaceGPT.Data.Models.User", "User")
+                    b.HasOne("NamespaceGPT.Data.Models.COCUser", "User")
                         .WithMany("Review")
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -760,15 +760,15 @@ namespace NamespaceGPT_ASP.NET_Repository.Migrations
                     b.Navigation("User");
                 });
 
-            modelBuilder.Entity("NamespaceGPT.Data.Models.Sale", b =>
+            modelBuilder.Entity("NamespaceGPT.Data.Models.COCSale", b =>
                 {
-                    b.HasOne("NamespaceGPT.Data.Models.Listing", "Listing")
+                    b.HasOne("NamespaceGPT.Data.Models.COCListing", "Listing")
                         .WithMany("Sales")
                         .HasForeignKey("ListingId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("NamespaceGPT.Data.Models.User", "User")
+                    b.HasOne("NamespaceGPT.Data.Models.COCUser", "User")
                         .WithMany("Sales")
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -779,9 +779,9 @@ namespace NamespaceGPT_ASP.NET_Repository.Migrations
                     b.Navigation("User");
                 });
 
-            modelBuilder.Entity("NamespaceGPT.Data.Models.UserActivity", b =>
+            modelBuilder.Entity("NamespaceGPT.Data.Models.COCUserActivity", b =>
                 {
-                    b.HasOne("NamespaceGPT.Data.Models.User", "User")
+                    b.HasOne("NamespaceGPT.Data.Models.COCUser", "User")
                         .WithMany("UserActivities")
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -790,14 +790,14 @@ namespace NamespaceGPT_ASP.NET_Repository.Migrations
                     b.Navigation("User");
                 });
 
-            modelBuilder.Entity("NamespaceGPT.Data.Models.Listing", b =>
+            modelBuilder.Entity("NamespaceGPT.Data.Models.COCListing", b =>
                 {
                     b.Navigation("AdRecommendations");
 
                     b.Navigation("Sales");
                 });
 
-            modelBuilder.Entity("NamespaceGPT.Data.Models.Marketplace", b =>
+            modelBuilder.Entity("NamespaceGPT.Data.Models.COCMarketplace", b =>
                 {
                     b.Navigation("BackInStockAlerts");
 
@@ -808,7 +808,7 @@ namespace NamespaceGPT_ASP.NET_Repository.Migrations
                     b.Navigation("PriceDropAlerts");
                 });
 
-            modelBuilder.Entity("NamespaceGPT.Data.Models.Product", b =>
+            modelBuilder.Entity("NamespaceGPT.Data.Models.COCProduct", b =>
                 {
                     b.Navigation("BackInStockAlerts");
 
@@ -823,7 +823,7 @@ namespace NamespaceGPT_ASP.NET_Repository.Migrations
                     b.Navigation("Reviews");
                 });
 
-            modelBuilder.Entity("NamespaceGPT.Data.Models.User", b =>
+            modelBuilder.Entity("NamespaceGPT.Data.Models.COCUser", b =>
                 {
                     b.Navigation("BackInStockAlerts");
 

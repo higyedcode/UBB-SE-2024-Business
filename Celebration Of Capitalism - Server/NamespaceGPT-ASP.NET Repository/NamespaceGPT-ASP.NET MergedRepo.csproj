@@ -25,7 +25,7 @@
 
   <ItemGroup>
     <Folder Include="DTOs\SpartacusDTO\" />
-    <Folder Include="Models\SpartacusModels\" />
+    <Folder Include="Migrations\" />
   </ItemGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">

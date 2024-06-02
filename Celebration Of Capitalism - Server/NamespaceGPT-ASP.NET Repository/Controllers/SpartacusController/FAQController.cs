@@ -28,14 +28,14 @@ namespace NamespaceGPT_ASP.NET_Repository.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<FAQDTO>>> GetFAQs()
         {
-            return await context.FAQ.Select(element => BaseToDTOConverters.Converter_FAQToDTO(element)).ToListAsync();
+            return await context.SpartacusFAQ.Select(element => BaseToDTOConverters.Converter_FAQToDTO(element)).ToListAsync();
         }
 
         // GET: api/FAQs/5
         [HttpGet("{id}")]
         public async Task<ActionResult<FAQDTO>> GetFAQ(int id)
         {
-            var faq = await context.FAQ.FindAsync(id);
+            var faq = await context.SpartacusFAQ.FindAsync(id);
 
             if (faq == null)
             {
@@ -83,8 +83,8 @@ namespace NamespaceGPT_ASP.NET_Repository.Controllers
         [HttpPost]
         public async Task<ActionResult<FAQDTO>> PostFAQ(FAQDTO faqDTO)
         {
-            FAQ faqRef = DTOToBaseConverters.Converter_DTOToFAQ(faqDTO);
-            context.FAQ.Add(faqRef);
+            SpartacusFAQ faqRef = DTOToBaseConverters.Converter_DTOToFAQ(faqDTO);
+            context.SpartacusFAQ.Add(faqRef);
             await context.SaveChangesAsync();
 
             faqDTO.Id = faqRef.Id;
@@ -95,13 +95,13 @@ namespace NamespaceGPT_ASP.NET_Repository.Controllers
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteFAQ(int id)
         {
-            var faq = await context.FAQ.FindAsync(id);
+            var faq = await context.SpartacusFAQ.FindAsync(id);
             if (faq == null)
             {
                 return NotFound();
             }
 
-            context.FAQ.Remove(faq);
+            context.SpartacusFAQ.Remove(faq);
             await context.SaveChangesAsync();
 
             return NoContent();
@@ -109,7 +109,7 @@ namespace NamespaceGPT_ASP.NET_Repository.Controllers
 
         private bool FAQExists(int id)
         {
-            return context.FAQ.Any(e => e.Id == id);
+            return context.SpartacusFAQ.Any(e => e.Id == id);
         }
     }
 }

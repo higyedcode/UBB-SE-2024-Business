@@ -11,25 +11,25 @@ namespace NamespaceGPT_ASP.NET_Repository.DatabaseContext
         }
 
         // CELEBRATION OF CAPITALISM
-        public DbSet<User> AppUser { get; set; } = null!;
-        public DbSet<AdRecommendation> AdRecommendation { get; set; } = null!;
-        public DbSet<BackInStockAlert> BackInStockAlerts { get; set; } = null!;
-        public DbSet<FavouriteProduct> FavouriteProduct { get; set; } = null!;
-        public DbSet<Listing> Listing { get; set; } = null!;
-        public DbSet<Marketplace> Marketplace { get; set; } = null!;
-        public DbSet<NewProductAlert> NewProductAlerts { get; set; } = null!;
-        public DbSet<PriceDropAlert> PriceDropAlerts { get; set; } = null!;
-        public DbSet<Product> Product { get; set; } = null!;
-        public DbSet<Review> Review { get; set; } = null!;
-        public DbSet<UserActivity> UserActivity { get; set; } = null!;
-        public DbSet<Sale> Sale { get; set; } = default!;
+        public DbSet<COCUser> COCUser { get; set; } = null!;
+        public DbSet<COCAdRecommendation> COCAdRecommendation { get; set; } = null!;
+        public DbSet<COCBackInStockAlert> COCBackInStockAlerts { get; set; } = null!;
+        public DbSet<COCFavouriteProduct> COCFavouriteProduct { get; set; } = null!;
+        public DbSet<COCListing> COCListing { get; set; } = null!;
+        public DbSet<COCMarketplace> COCMarketplace { get; set; } = null!;
+        public DbSet<COCNewProductAlert> COCNewProductAlerts { get; set; } = null!;
+        public DbSet<COCPriceDropAlert> COCPriceDropAlerts { get; set; } = null!;
+        public DbSet<COCProduct> COCProduct { get; set; } = null!;
+        public DbSet<COCReview> COCReview { get; set; } = null!;
+        public DbSet<COCUserActivity> COCUserActivity { get; set; } = null!;
+        public DbSet<COCSale> COCSale { get; set; } = default!;
 
         // SPARTACUS
-        public DbSet<Account> Account { get; set; } = null!;
-        public DbSet<Business> Business { get; set; } = null!;
-        public DbSet<Comment> Comment { get; set; } = null!;
-        public DbSet<FAQ> FAQ { get; set; } = default!;
-        public DbSet<Post> Post { get; set; } = null!;
+        public DbSet<SpartacusAccount> SpartacusAccount { get; set; } = null!;
+        public DbSet<SpartacusBusiness> SpartacusBusiness { get; set; } = null!;
+        public DbSet<SpartacusComment> SpartacusComment { get; set; } = null!;
+        public DbSet<SpartacusFAQ> SpartacusFAQ { get; set; } = default!;
+        public DbSet<SpartacusPost> SpartacusPost { get; set; } = null!;
         public DbSet<SpartacusReview> SpartacusReview { get; set; } = null!;
     }
 }
