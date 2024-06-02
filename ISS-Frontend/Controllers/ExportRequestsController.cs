@@ -51,7 +51,7 @@ namespace ISS_Frontend.Controllers
         // POST: ExportRequests/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,AdvertisementStatisticsId,UserId,FontSize,FontIndex,ColorIndex,ImpressionsChecked,ClicksChecked,BuysChecked,TimeChecked,CtrChecked,DateChecked,SignatureChecked,RecipientChecked,RecipientInput,EmailButtonChecked,DownloadButtonChecked,OutputPath,EmailRecipient,SenderEmail,SenderPassword,SmtpServer,SmtpPort,EnableSsl,Subject,Message")] ExportRequest exportRequest)
+        public async Task<IActionResult> Create([Bind("AdvertisementStatisticsId,UserId,FontSize,ImpressionsChecked,EmailRecipient,Subject")] ExportRequest exportRequest)
         {
             if (ModelState.IsValid)
             {
@@ -141,6 +141,7 @@ namespace ISS_Frontend.Controllers
             ViewData["UserId"] = new SelectList(await _exportRequestService.GetUsersAsync(), "Id", "Id", exportRequest.UserId);
             return View(exportRequest);
         }
+
 
         // GET: ExportRequests/Delete/5
         public async Task<IActionResult> Delete(int? id)
