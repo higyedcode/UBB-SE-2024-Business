@@ -25,6 +25,11 @@ namespace Celebration_Of_Capitalism___The_Finale.Controllers
         // GET: FavouriteProducts
         public async Task<IActionResult> Index()
         {
+            if (!HttpContext.Session.Keys.Contains("userID"))
+            {
+                return View();
+            }
+
             int userID;
             try
             {
@@ -42,97 +47,6 @@ namespace Celebration_Of_Capitalism___The_Finale.Controllers
             }
 
             return View(favoriteProductList.ToList());
-        }
-
-        // GET: FavouriteProducts/Details/5
-        public async Task<IActionResult> Details(int? id)
-        {
-            if (id == null)
-            {
-                return NotFound();
-            }
-
-            //var favouriteProduct = await _context.FavouriteProduct
-            //    .FirstOrDefaultAsync(m => m.Id == id);
-            //if (favouriteProduct == null)
-            //{
-            //    return NotFound();
-            //}
-
-            return View(null);
-        }
-
-        // GET: FavouriteProducts/Create
-        public IActionResult Create()
-        {
-            return View();
-        }
-
-        // POST: FavouriteProducts/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,ProductId,UserId")] FavouriteProduct favouriteProduct)
-        {
-            if (ModelState.IsValid)
-            {
-                //_context.Add(favouriteProduct);
-                //await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
-            }
-            return View(favouriteProduct);
-        }
-
-        // GET: FavouriteProducts/Edit/5
-        public async Task<IActionResult> Edit(int? id)
-        {
-            if (id == null)
-            {
-                return NotFound();
-            }
-
-            //var favouriteProduct = await _context.FavouriteProduct.FindAsync(id);
-            //if (favouriteProduct == null)
-            //{
-            //    return NotFound();
-            //}
-            return View(null);
-        }
-
-        // POST: FavouriteProducts/Edit/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,ProductId,UserId")] FavouriteProduct favouriteProduct)
-        {
-            if (id != favouriteProduct.Id)
-            {
-                return NotFound();
-            }
-
-            if (ModelState.IsValid)
-            {
-                //try
-                //{
-                //    _context.Update(favouriteProduct);
-                //    await _context.SaveChangesAsync();
-                //}
-                //catch (DbUpdateConcurrencyException)
-                //{
-                //    if (!FavouriteProductExists(favouriteProduct.Id))
-                //    {
-                //        return NotFound();
-                //    }
-                //    else
-                //    {
-                //        throw;
-                //    }
-                //}
-                return RedirectToAction(nameof(Index));
-            }
-            return View(favouriteProduct);
         }
 
         // GET: FavouriteProducts/Delete/5
@@ -157,12 +71,6 @@ namespace Celebration_Of_Capitalism___The_Finale.Controllers
             favouriteProductService.DeleteFavouriteProductFromUser(favouriteProductService.GetFavouriteProduct((int)id));
 
             return RedirectToAction(nameof(Index));
-        }
-
-        private bool FavouriteProductExists(int id)
-        {
-            //return _context.FavouriteProduct.Any(e => e.Id == id);
-            return false;
         }
 
         public IActionResult MarkAsFavourite(int? id)

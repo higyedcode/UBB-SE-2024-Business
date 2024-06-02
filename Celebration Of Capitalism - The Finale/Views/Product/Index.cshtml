@@ -3,44 +3,57 @@
 	Layout = "_UserLayout";
 }
 
-<div class="container-fluid w-50">
-	<div class="row">
-		<div class="col-md-12">
-			<div>
-				@{
-					<!-- Product Image, Description, Favourite Button -->
-					<div class="row align-items-center">
-						<div class="col-md-3"><img src="@Model.ImageURL" class="w-100 h-100" /></div>
-						<div class="col-md-6">
-							<h3>@Model.Name</h3>
-							<h4>@Model.Brand</h4>
-							<p>@Model.Category</p>
-							<!-- TODO: there's no model.Price in the domain class? ... err... Maybe model.Attributes['Price']? -->
-							<h4>Price: Only @(Model.Attributes["price"])</h4>
+@using Microsoft.AspNetCore.Http
+@inject Microsoft.AspNetCore.Http.IHttpContextAccessor HttpContextAccessor
+
+@if (HttpContextAccessor.HttpContext.Session.Keys.Contains("userID"))
+{
+	<div class="container-fluid w-50">
+		<div class="row">
+			<div class="col-md-12">
+				<div>
+					@{
+						<!-- Product Image, Description, Favourite Button -->
+						<div class="row align-items-center">
+							<div class="col-md-3"><img src="@Model.ImageURL" class="w-100 h-100" /></div>
+							<div class="col-md-6">
+								<h3>@Model.Name</h3>
+								<h4>@Model.Brand</h4>
+								<p>@Model.Category</p>
+								<!-- TODO: there's no model.Price in the domain class? ... err... Maybe model.Attributes['Price']? -->
+								<h4>Price: Only @(Model.Attributes["price"])</h4>
+							</div>
+							<div class="col-md-3 ">
+								<!-- Dragos TODO: -->
+								<!-- Update AddToFavorite to whatever the actual method name in the FavoriteController is for this! -->
+								<!-- Also please update FormMethod.Get to whatever it actually is - Get or Post -->
+								<a class="btn btn-primary" asp-controller="FavouriteProducts" asp-action="MarkAsFavourite" asp-route-id="@Model.Id">Mark as favourite</a>
+							</div>
 						</div>
-						<div class="col-md-3 ">
-							<!-- Dragos TODO: -->
-							<!-- Update AddToFavorite to whatever the actual method name in the FavoriteController is for this! -->
-							<!-- Also please update FormMethod.Get to whatever it actually is - Get or Post -->
-							<a class="btn btn-primary" asp-controller="FavouriteProducts" asp-action="MarkAsFavourite" asp-route-id="@Model.Id">Mark as favourite</a>
+						<!-- Reviews Button, Compare? button... delete that if you want,  and Description -->
+						<div class="row align-items-center">
+							<div class="col-md-3">
+								<!-- Dan TODO: -->
+								<!-- Update the href="#" link to actually be whatever the Reviews page is for this product -->
+								<a class="btn btn-primary" asp-controller="Review" asp-action="Index" asp-route-id="@Model.Id">See reviews</a>
+								<!-- I do not know what 'Compare' is, it was in the reference layout -->
+								<!-- <a class="btn btn-primary" href="#" role="button">Compare</a> -->
+							</div>
+							<div class="col-md-9">
+								<h3>Product Description</h3>
+								<p>@Model.Description</p>
+							</div>
 						</div>
-					</div>
-					<!-- Reviews Button, Compare? button... delete that if you want,  and Description -->
-					<div class="row align-items-center">
-						<div class="col-md-3">
-							<!-- Dan TODO: -->
-							<!-- Update the href="#" link to actually be whatever the Reviews page is for this product -->
-							<a class="btn btn-primary" asp-controller="Review" asp-action="Index" asp-route-id="@Model.Id">See reviews</a>
-							<!-- I do not know what 'Compare' is, it was in the reference layout -->
-							<!-- <a class="btn btn-primary" href="#" role="button">Compare</a> -->
-						</div>
-						<div class="col-md-9">
-							<h3>Product Description</h3>
-							<p>@Model.Description</p>
-						</div>
-					</div>
-				}
+					}
+				</div>
 			</div>
 		</div>
 	</div>
-</div>
+}
+else
+{
+	Layout = "_Layout";
+	<div>
+		PERISH, CRIMINAL SCUM, GET HIT BY THE 403.
+	</div>
+}

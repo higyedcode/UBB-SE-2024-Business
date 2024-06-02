@@ -1,4 +1,5 @@
 using Celebration_Of_Capitalism___The_Finale.Services;
+using Celebration_Of_Capitalism___The_Finale.Services.Interfaces;
 
 namespace Celebration_Of_Capitalism___The_Finale
 {
