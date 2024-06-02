@@ -1,0 +1,32 @@
+﻿@{
+	ViewData["Title"] = "Index";
+}
+
+@model Celebration_Of_Capitalism___The_Finale.Models.User
+
+<div class="container-fluid w-50">
+	<div class="row">
+		<div class="col-md-12">
+			<h1>Here you can Sign Up</h1>
+			@using (Html.BeginForm("RegisterAndRedirect", "Register", FormMethod.Get))
+			{
+				<div class="form-group">
+					@Html.Label("Username:")
+					@Html.TextBoxFor(model => model.Username, new { Class = "form-control" })
+				</div>
+				<div class="form-group">
+					@Html.Label("Password:")
+					@Html.PasswordFor(model => model.Password, new { Class = "form-control" })
+				</div>
+				<button type="submit" class="btn btn-primary mx-auto d-block m-3">REGISTER</button>
+			}
+			@using (Html.BeginForm("LoginRedirect", "Register"))
+			{
+				<div>
+					@Html.Label("Already have an account? Sign in")
+					<button type="submit" class="btn btn-primary mx-auto d-block m-3">SIGN IN</button>
+				</div>
+			}
+		</div>
+	</div>
+</div>
