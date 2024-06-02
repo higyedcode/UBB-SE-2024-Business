@@ -4,11 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-using Iss.Entity;
+using ISS_Frontend.Entity;
 
-namespace Iss.Service
+namespace ISS_Frontend.Service
 {
-    public interface ICollaborationService
+    internal interface ICollaborationService
     {
         public void AddCollaboration(Collaboration collaboration);
         public List<Collaboration> GetCollaborationForAdAccount();

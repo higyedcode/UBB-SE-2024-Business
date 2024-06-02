@@ -116,7 +116,7 @@
 </table>
 <br />
 <h3>My AdSets</h3>
-<a asp-action="Create" asp-controller="AdSet">Create a new add set</a>
+<a asp-action="Create" asp-controller="AdSets">Create a new add set</a>
 <table class="table table-bordered">
     <thead>
         <tr>
@@ -157,7 +157,10 @@
 </table>
 <br />
 <h3>My Campaigns</h3>
-<a asp-action="Create" asp-controller="Campaign">Create a new campaign</a>
+@foreach (var item in Model)
+{
+    <a asp-action="Create" asp-controller="Campaigns" asp-route-adAccountId="@item.AdAccountId">Create a new campaign</a>
+}
 <table class="table table-bordered">
     <thead>
         <tr>
@@ -181,9 +184,9 @@
                     <td>@campaign.Duration</td>
                     <td>@campaign.AdAccountId</td>
                     <td>
-                        @* <a asp-action="Edit" asp-controller="Ads" asp-route-name="@adSet.Name">Edit</a> |
-                        <a asp-action="Details" asp-controller="Ads" asp-route-name="@adSet.AdAccountId">Details</a> |
-                        <a asp-action="Remove" asp-controller="Ads" asp-route-name="@adSet.AdAccountId">Remove</a> *@
+                        <a asp-action="Edit" asp-controller="Campaigns" asp-route-id="@campaign.CampaignName">Edit</a> |
+                        <a asp-action="Details" asp-controller="Campaigns" asp-route-id="@campaign.CampaignName">Details</a> |
+                        <a asp-action="Delete" asp-controller="Campaigns" asp-route-id="@campaign.CampaignName">Delete</a>
                     </td>
                     
                 </tr>
