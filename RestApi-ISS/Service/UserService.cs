@@ -20,12 +20,12 @@ namespace RestApi_ISS.Service
         }
         public void LoginUser(string username, string password)
         {
-            AppUser user = userRepository.GetUser(username, password);
+            User user = userRepository.GetUser(username, password);
             if (user != null)
             {
-                User.AppUser.GetInstance().Id = user.Id;
-                User.AppUser.GetInstance().Username = user.Username;
-                User.AppUser.GetInstance().Password = user.Password;
+                User.User.GetInstance().Id = user.Id;
+                User.User.GetInstance().Username = user.Name;
+                User.User.GetInstance().Password = user.Password;
             }
             else
             {

@@ -10,11 +10,11 @@ namespace RestApi_ISS.Repository
     {
         private DatabaseContext databaseContext = new DatabaseContext();
 
-        public AppUser GetUser(string username, string password)
+        public User GetUser(string username, string password)
         {
-            AppUser user = null;
-            user = databaseContext.AppUser
-                .Where(userr => userr.Username == username &&
+            User user = null;
+            user = databaseContext.User
+                .Where(userr => userr.Name == username &&
                 userr.Password == password)
                 .FirstOrDefault();
             return user;
