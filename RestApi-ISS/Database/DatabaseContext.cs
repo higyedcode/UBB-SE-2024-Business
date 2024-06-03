@@ -125,9 +125,6 @@ namespace Iss.Database
             modelBuilder.Entity<BankAccount>()
                 .Property(i => i.Id)
                 .ValueGeneratedOnAdd();
-
-            modelBuilder.Entity<AdminViewModel>()
-                .HasNoKey();
         }
     }
 }
