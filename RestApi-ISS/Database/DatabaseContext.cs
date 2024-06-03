@@ -60,8 +60,8 @@ namespace Iss.Database
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            // optionsBuilder.UseSqlServer("Data Source = .\\SQLEXPRESS; Initial Catalog = db_ISS; Integrated Security = True; TrustServerCertificate=True;");
-            optionsBuilder.UseSqlServer("Data Source=DESKTOP-MAIN;Initial Catalog=FinalVersionDatabase;Integrated Security=true;TrustServerCertificate=Yes;Encrypt=False;");
+             optionsBuilder.UseSqlServer("Data Source = .\\SQLEXPRESS; Initial Catalog = db_ISS; Integrated Security = True; TrustServerCertificate=True;");
+            // optionsBuilder.UseSqlServer("Data Source=DESKTOP-MAIN;Initial Catalog=FinalVersionDatabase;Integrated Security=true;TrustServerCertificate=Yes;Encrypt=False;");
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -125,6 +125,9 @@ namespace Iss.Database
             modelBuilder.Entity<BankAccount>()
                 .Property(i => i.Id)
                 .ValueGeneratedOnAdd();
+
+            modelBuilder.Entity<AdminViewModel>()
+                .HasNoKey();
         }
     }
 }

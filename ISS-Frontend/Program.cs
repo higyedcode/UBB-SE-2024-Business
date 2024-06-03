@@ -80,6 +80,11 @@ app.MapControllerRoute(
     pattern:"BankAccountDetails",
     defaults: new { controller = "PaymentsAndBillings", action = "BankAccountDetails" });
 
+app.MapControllerRoute(
+    name:"AdminMainPage",
+    pattern: "AdminMainPage",
+    defaults: new { controller = "Admin", action = "AdminMainPage" });
+
 
 var spaPath = "/app";
 if (app.Environment.IsDevelopment())
