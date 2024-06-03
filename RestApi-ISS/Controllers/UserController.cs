@@ -12,11 +12,6 @@ using RestApi_ISS.Service;
 
 namespace RestApi_ISS.Controllers
 {
-    public class LoginRequest
-    {
-        public string Username { get; set; }
-        public string Password { get; set; }
-    }
     [Route("api/[controller]")]
     [ApiController]
     public class UserController : ControllerBase
@@ -27,18 +22,25 @@ namespace RestApi_ISS.Controllers
         {
             this.userService = userService;
         }
+
         [HttpPost("login")]
-        public ActionResult Login([FromBody] LoginRequest loginRequest)
+        public ActionResult Login([FromBody] UserLoginModel userLoginModel)
         {
             try
             {
-                userService.LoginUser(loginRequest.Username, loginRequest.Password);
+                userService.LoginUser(userLoginModel.Username, userLoginModel.Password);
                 return Ok("Login successful.");
             }
             catch (InvalidOperationException ex)
             {
                 return Unauthorized(ex.Message);
             }
+        }
+
+        public class UserLoginModel
+        {
+            public string Username { get; set; }
+            public string Password { get; set; }
         }
     }
 }

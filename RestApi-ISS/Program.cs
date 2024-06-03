@@ -30,6 +30,8 @@ builder.Services.AddScoped<InterfaceBankAccountService, BankAccountService>();
 
 builder.Services.AddScoped<DataEncryptionService>();
 
+builder.Services.AddScoped<IUserRepository, UserRepository>();
+builder.Services.AddScoped<IUserService, UserService>();
 
 builder.Services.AddScoped<IProductRepository, ProductRepository>();
 builder.Services.AddScoped<IProductService, ProductService>();

@@ -13,7 +13,7 @@ namespace RestApi_ISS.Repository
         public User GetUser(string username, string password)
         {
             User user = null;
-            user = databaseContext.User
+            user = databaseContext.Users
                 .Where(userr => userr.Name == username &&
                 userr.Password == password)
                 .FirstOrDefault();

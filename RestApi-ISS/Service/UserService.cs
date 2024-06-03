@@ -8,6 +8,7 @@ namespace RestApi_ISS.Service
     public class UserService : IUserService
     {
         private IUserRepository userRepository;
+        private User user;
 
         public UserService(IUserRepository userRepository)
         {
@@ -20,12 +21,12 @@ namespace RestApi_ISS.Service
         }
         public void LoginUser(string username, string password)
         {
-            User user = userRepository.GetUser(username, password);
-            if (user != null)
+            User getUser = userRepository.GetUser(username, password);
+            if (getUser != null)
             {
-                User.User.GetInstance().Id = user.Id;
-                User.User.GetInstance().Username = user.Name;
-                User.User.GetInstance().Password = user.Password;
+                user.Id = getUser.Id;
+                user.Name = getUser.Name;
+                user.Password = getUser.Password;
             }
             else
             {

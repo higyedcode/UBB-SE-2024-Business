@@ -103,5 +103,6 @@ namespace Iss.Database
                 .ValueGeneratedOnAdd();
         }
         public DbSet<Iss.User.User> User { get; set; } = default!;
+        public DbSet<Iss.User.User> Users { get; set; } = default!;
     }
 }
