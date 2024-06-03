@@ -50,51 +50,19 @@ namespace RestApi_ISS.Controllers
             }
         }
 
-        /*[HttpPost("{adSetName}/ads/{adName}")]
-        public IActionResult AddAdToAdSet(string adSetName, string adName)
+        [HttpDelete("{user}/reviews/{review}")]
+        public IActionResult DeleteReview(string user, string review)
         {
             try
             {
-                // Retrieve adSet and ad from repository based on IDs
-                AdSet adSet = reviewService.GetAdSetByName(new AdSet() { Name = adSetName });
-                Ad ad = adService.GetAdByName(adName);
-
-                if (adSet == null || ad == null)
-                {
-                    return NotFound("Ad set or ad not found.");
-                }
-
-                reviewService.AddAdToAdSet(adSet, ad);
-                return Ok("Ad added to ad set successfully.");
+                reviewService.DeleteReview(user, review);
+                return Ok("Review deleted successfully.");
             }
             catch (Exception ex)
             {
-                return StatusCode(500, $"Failed to add ad to ad set: {ex.Message}");
+                return StatusCode(500, $"Failed to delete review: {ex.Message}");
             }
-        }*/
-
-        /*[HttpDelete("{adSetName}/ads/{adName}")]
-        public IActionResult RemoveAdFromAdSet(string adSetName, string adName)
-        {
-            try
-            {
-                // Retrieve adSet and ad from repository based on IDs
-                AdSet adSet = reviewService.GetAdSetByName(new AdSet() { Name = adSetName });
-                Ad ad = adService.GetAdByName(adName);
-
-                if (adSet == null || ad == null)
-                {
-                    return NotFound("Ad set or ad not found.");
-                }
-
-                reviewService.RemoveAdFromAdSet(adSet, ad);
-                return Ok("Ad removed from ad set successfully.");
-            }
-            catch (Exception ex)
-            {
-                return StatusCode(500, $"Failed to remove ad from ad set: {ex.Message}");
-            }
-        }*/
+        }
 
         [HttpGet("getallReviews")]
         public IActionResult GetReviews()

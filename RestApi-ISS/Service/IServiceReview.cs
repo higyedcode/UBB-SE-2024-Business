@@ -8,5 +8,6 @@ namespace Iss.Services
         List<ReviewClass> GetAllReviews();
 
         void AddReview(string user, string review);
+        void DeleteReview(string user, string review);
     }
 }

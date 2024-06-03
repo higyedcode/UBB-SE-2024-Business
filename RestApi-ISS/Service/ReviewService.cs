@@ -44,5 +44,14 @@ namespace Backend.Services
         {
             return this.reviewRepository.GetReviewList();
         }
+
+        public void DeleteReview(string user, string review)
+        {
+            ReviewClass reviewToDelete = this.reviewRepository.GetReviewByUserAndReview(user, review);
+            if (reviewToDelete != null)
+            {
+                this.reviewRepository.DeleteReview(reviewToDelete);
+            }
+        }
     }
 }
