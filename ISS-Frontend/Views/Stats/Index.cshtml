@@ -1,0 +1,96 @@
+﻿@{
+    ViewBag.Title = "Ad Engagement";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container">
+    <h2>Ad Engagement</h2>
+    <div class="row">
+        <div class="col-md-2">
+            <button id="EngagementButton" class="btn btn-primary btn-block">Ad Engagement</button>
+            <button id="ClicksButton" class="btn btn-primary btn-block">Ad Clicks</button>
+            <button id="ImpressionsButton" class="btn btn-primary btn-block">Ad Impressions</button>
+            <button id="CTRButton" class="btn btn-primary btn-block">Ad CTR</button>
+            <button id="PurchasesButton" class="btn btn-primary btn-block">Ad -> Purchases</button>
+            <button id="EngagementTypesButton" class="btn btn-primary btn-block">Ad Engagement Types</button>
+            <button id="BackButton" class="btn btn-secondary btn-block">Back</button>
+        </div>
+        <div class="col-md-10">
+            <canvas id="CurrentPlot" width="800" height="460" style="background-color: aqua;"></canvas>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            let ctx = document.getElementById('CurrentPlot').getContext('2d');
+            let chart;
+
+            function renderChart(data, title, xLabel, yLabel, yMax) {
+                if (chart) {
+                    chart.destroy();
+                }
+                chart = new Chart(ctx, {
+                    type: 'bar',
+                    data: {
+                        labels: data.labels,
+                        datasets: [{
+                            label: title,
+                            data: data.values,
+                            backgroundColor: 'rgba(0, 123, 255, 0.5)',
+                            borderColor: 'rgba(0, 123, 255, 1)',
+                            borderWidth: 1
+                        }]
+                    },
+                    options: {
+                        scales: {
+                            x: { title: { display: true, text: xLabel } },
+                            y: { title: { display: true, text: yLabel }, max: yMax }
+                        }
+                    }
+                });
+            }
+
+            function loadData(url, title, xLabel, yLabel, yMax) {
+                fetch(url)
+                    .then(response => response.json())
+                    .then(data => {
+                        renderChart(data, title, xLabel, yLabel, yMax);
+                    });
+            }
+
+            document.getElementById('EngagementButton').addEventListener('click', () => {
+                loadData('@Url.Action("GetEngagementData")', 'Ad Engagement throughout the day', 'Hour of the day', 'Engagement on a scale from 1 to 10', 10);
+            });
+
+            document.getElementById('ClicksButton').addEventListener('click', () => {
+                loadData('@Url.Action("GetClicksData")', 'Ad Clicks in the last 24 days', 'Days ago', 'Number of clicks', 1000);
+            });
+
+            document.getElementById('ImpressionsButton').addEventListener('click', () => {
+                loadData('@Url.Action("GetImpressionsData")', 'Ad Impressions in the last 24 days', 'Days ago', 'Number of impressions', 10000);
+            });
+
+            document.getElementById('CTRButton').addEventListener('click', () => {
+                loadData('@Url.Action("GetCTRData")', 'Click-through rate in the last 24 days', 'Days ago', 'CTR', 1);
+            });
+
+            document.getElementById('PurchasesButton').addEventListener('click', () => {
+                loadData('@Url.Action("GetPurchasesData")', 'Purchases in the last 24 days', 'Days ago', 'Number of purchases', 500);
+            });
+
+            document.getElementById('EngagementTypesButton').addEventListener('click', () => {
+                loadData('@Url.Action("GetEngagementTypesData")', 'Engagement types in the last 24 days', '', '', 1);
+            });
+
+            document.getElementById('BackButton').addEventListener('click', () => {
+                window.location.href = '@Url.Action("Index", "Home")';
+            });
+
+            // Load initial chart
+            loadData('@Url.Action("GetEngagementData")', 'Ad Engagement throughout the day', 'Hour of the day', 'Engagement on a scale from 1 to 10', 10);
+        });
+    </script>
+}
