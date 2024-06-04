@@ -1,0 +1,29 @@
+{
+  "Files": [
+    {
+      "Id": "D:\\UBB\\Semester 4\\Software Engineering\\Assignment6\\UBB-SE-2024-921-2\\server\\NamespaceGPT-ASP.NET Repository\\wwwroot\\help.html",
+      "PackagePath": "staticwebassets\\help.html"
+    },
+    {
+      "Id": "D:\\UBB\\Semester 4\\Software Engineering\\Assignment6\\UBB-SE-2024-921-2\\server\\NamespaceGPT-ASP.NET Repository\\wwwroot\\index.html",
+      "PackagePath": "staticwebassets\\index.html"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.NamespaceGPT-ASP.NET Repository.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.NamespaceGPT-ASP.NET Repository.props",
+      "PackagePath": "build\\NamespaceGPT-ASP.NET Repository.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.NamespaceGPT-ASP.NET Repository.props",
+      "PackagePath": "buildMultiTargeting\\NamespaceGPT-ASP.NET Repository.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.NamespaceGPT-ASP.NET Repository.props",
+      "PackagePath": "buildTransitive\\NamespaceGPT-ASP.NET Repository.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

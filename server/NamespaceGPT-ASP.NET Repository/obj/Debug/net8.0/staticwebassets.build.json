@@ -1,0 +1,58 @@
+{
+  "Version": 1,
+  "Hash": "ArbFQHjkmgyyFbYzyoOOlKQXmKVSRiGqldLad8TEMqE=",
+  "Source": "NamespaceGPT-ASP.NET Repository",
+  "BasePath": "_content/NamespaceGPT-ASP.NET Repository",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "NamespaceGPT-ASP.NET Repository\\wwwroot",
+      "Source": "NamespaceGPT-ASP.NET Repository",
+      "ContentRoot": "D:\\UBB\\Semester 4\\Software Engineering\\Assignment6\\UBB-SE-2024-921-2\\server\\NamespaceGPT-ASP.NET Repository\\wwwroot\\",
+      "BasePath": "_content/NamespaceGPT-ASP.NET Repository",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "D:\\UBB\\Semester 4\\Software Engineering\\Assignment6\\UBB-SE-2024-921-2\\server\\NamespaceGPT-ASP.NET Repository\\wwwroot\\help.html",
+      "SourceId": "NamespaceGPT-ASP.NET Repository",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\UBB\\Semester 4\\Software Engineering\\Assignment6\\UBB-SE-2024-921-2\\server\\NamespaceGPT-ASP.NET Repository\\wwwroot\\",
+      "BasePath": "_content/NamespaceGPT-ASP.NET Repository",
+      "RelativePath": "help.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\help.html"
+    },
+    {
+      "Identity": "D:\\UBB\\Semester 4\\Software Engineering\\Assignment6\\UBB-SE-2024-921-2\\server\\NamespaceGPT-ASP.NET Repository\\wwwroot\\index.html",
+      "SourceId": "NamespaceGPT-ASP.NET Repository",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\UBB\\Semester 4\\Software Engineering\\Assignment6\\UBB-SE-2024-921-2\\server\\NamespaceGPT-ASP.NET Repository\\wwwroot\\",
+      "BasePath": "_content/NamespaceGPT-ASP.NET Repository",
+      "RelativePath": "index.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\index.html"
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+@NamespaceGPT_ASP.NET_Repository_HostAddress = http://localhost:5286
+
+GET {{NamespaceGPT_ASP.NET_Repository_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

@@ -1,0 +1,747 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\UBB\\Semester 4\\Software Engineering\\Assignment6\\UBB-SE-2024-921-2\\server\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{B0D9C7C6-DE0A-4E22-BD61-B4241B51EC76}|NamespaceGPT-ASP.NET Repository\\NamespaceGPT-ASP.NET Repository.csproj|D:\\UBB\\Semester 4\\Software Engineering\\Assignment6\\UBB-SE-2024-921-2\\server\\namespacegpt-asp.net repository\\utils\\dtotobaseconverters.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B0D9C7C6-DE0A-4E22-BD61-B4241B51EC76}|NamespaceGPT-ASP.NET Repository\\NamespaceGPT-ASP.NET Repository.csproj|solutionrelative:namespacegpt-asp.net repository\\utils\\dtotobaseconverters.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B0D9C7C6-DE0A-4E22-BD61-B4241B51EC76}|NamespaceGPT-ASP.NET Repository\\NamespaceGPT-ASP.NET Repository.csproj|D:\\UBB\\Semester 4\\Software Engineering\\Assignment6\\UBB-SE-2024-921-2\\server\\namespacegpt-asp.net repository\\utils\\basetodtoconverters.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B0D9C7C6-DE0A-4E22-BD61-B4241B51EC76}|NamespaceGPT-ASP.NET Repository\\NamespaceGPT-ASP.NET Repository.csproj|solutionrelative:namespacegpt-asp.net repository\\utils\\basetodtoconverters.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B0D9C7C6-DE0A-4E22-BD61-B4241B51EC76}|NamespaceGPT-ASP.NET Repository\\NamespaceGPT-ASP.NET Repository.csproj|d:\\ubb\\semester 4\\software engineering\\assignment6\\ubb-se-2024-921-2\\server\\namespacegpt-asp.net repository\\models\\spartacusmodels\\business.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B0D9C7C6-DE0A-4E22-BD61-B4241B51EC76}|NamespaceGPT-ASP.NET Repository\\NamespaceGPT-ASP.NET Repository.csproj|solutionrelative:namespacegpt-asp.net repository\\models\\spartacusmodels\\business.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B0D9C7C6-DE0A-4E22-BD61-B4241B51EC76}|NamespaceGPT-ASP.NET Repository\\NamespaceGPT-ASP.NET Repository.csproj|D:\\UBB\\Semester 4\\Software Engineering\\Assignment6\\UBB-SE-2024-921-2\\server\\namespacegpt-asp.net repository\\controllers\\spartacuscontroller\\businesscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B0D9C7C6-DE0A-4E22-BD61-B4241B51EC76}|NamespaceGPT-ASP.NET Repository\\NamespaceGPT-ASP.NET Repository.csproj|solutionrelative:namespacegpt-asp.net repository\\controllers\\spartacuscontroller\\businesscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B0D9C7C6-DE0A-4E22-BD61-B4241B51EC76}|NamespaceGPT-ASP.NET Repository\\NamespaceGPT-ASP.NET Repository.csproj|D:\\UBB\\Semester 4\\Software Engineering\\Assignment6\\UBB-SE-2024-921-2\\server\\namespacegpt-asp.net repository\\controllers\\spartacuscontroller\\commentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B0D9C7C6-DE0A-4E22-BD61-B4241B51EC76}|NamespaceGPT-ASP.NET Repository\\NamespaceGPT-ASP.NET Repository.csproj|solutionrelative:namespacegpt-asp.net repository\\controllers\\spartacuscontroller\\commentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B0D9C7C6-DE0A-4E22-BD61-B4241B51EC76}|NamespaceGPT-ASP.NET Repository\\NamespaceGPT-ASP.NET Repository.csproj|D:\\UBB\\Semester 4\\Software Engineering\\Assignment6\\UBB-SE-2024-921-2\\server\\namespacegpt-asp.net repository\\controllers\\spartacuscontroller\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B0D9C7C6-DE0A-4E22-BD61-B4241B51EC76}|NamespaceGPT-ASP.NET Repository\\NamespaceGPT-ASP.NET Repository.csproj|solutionrelative:namespacegpt-asp.net repository\\controllers\\spartacuscontroller\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B0D9C7C6-DE0A-4E22-BD61-B4241B51EC76}|NamespaceGPT-ASP.NET Repository\\NamespaceGPT-ASP.NET Repository.csproj|D:\\UBB\\Semester 4\\Software Engineering\\Assignment6\\UBB-SE-2024-921-2\\server\\namespacegpt-asp.net repository\\dtos\\spartacusdto\\bussinessdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B0D9C7C6-DE0A-4E22-BD61-B4241B51EC76}|NamespaceGPT-ASP.NET Repository\\NamespaceGPT-ASP.NET Repository.csproj|solutionrelative:namespacegpt-asp.net repository\\dtos\\spartacusdto\\bussinessdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\UBB\\Semester 4\\Software Engineering\\Assignment6\\UBB-SE-2024-921-2\\server\\NamespaceGPT-ASP.NET Repository\\Migrations\\20240603203712_Nume.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:NamespaceGPT-ASP.NET Repository\\Migrations\\20240603203712_Nume.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B0D9C7C6-DE0A-4E22-BD61-B4241B51EC76}|NamespaceGPT-ASP.NET Repository\\NamespaceGPT-ASP.NET Repository.csproj|D:\\UBB\\Semester 4\\Software Engineering\\Assignment6\\UBB-SE-2024-921-2\\server\\namespacegpt-asp.net repository\\migrations\\projectdbcontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B0D9C7C6-DE0A-4E22-BD61-B4241B51EC76}|NamespaceGPT-ASP.NET Repository\\NamespaceGPT-ASP.NET Repository.csproj|solutionrelative:namespacegpt-asp.net repository\\migrations\\projectdbcontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B0D9C7C6-DE0A-4E22-BD61-B4241B51EC76}|NamespaceGPT-ASP.NET Repository\\NamespaceGPT-ASP.NET Repository.csproj|D:\\UBB\\Semester 4\\Software Engineering\\Assignment6\\UBB-SE-2024-921-2\\server\\namespacegpt-asp.net repository\\controllers\\spartacuscontroller\\faqcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B0D9C7C6-DE0A-4E22-BD61-B4241B51EC76}|NamespaceGPT-ASP.NET Repository\\NamespaceGPT-ASP.NET Repository.csproj|solutionrelative:namespacegpt-asp.net repository\\controllers\\spartacuscontroller\\faqcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B0D9C7C6-DE0A-4E22-BD61-B4241B51EC76}|NamespaceGPT-ASP.NET Repository\\NamespaceGPT-ASP.NET Repository.csproj|D:\\UBB\\Semester 4\\Software Engineering\\Assignment6\\UBB-SE-2024-921-2\\server\\namespacegpt-asp.net repository\\models\\favouriteproduct.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B0D9C7C6-DE0A-4E22-BD61-B4241B51EC76}|NamespaceGPT-ASP.NET Repository\\NamespaceGPT-ASP.NET Repository.csproj|solutionrelative:namespacegpt-asp.net repository\\models\\favouriteproduct.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B0D9C7C6-DE0A-4E22-BD61-B4241B51EC76}|NamespaceGPT-ASP.NET Repository\\NamespaceGPT-ASP.NET Repository.csproj|D:\\UBB\\Semester 4\\Software Engineering\\Assignment6\\UBB-SE-2024-921-2\\server\\namespacegpt-asp.net repository\\dtos\\spartacusdto\\accountlogindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B0D9C7C6-DE0A-4E22-BD61-B4241B51EC76}|NamespaceGPT-ASP.NET Repository\\NamespaceGPT-ASP.NET Repository.csproj|solutionrelative:namespacegpt-asp.net repository\\dtos\\spartacusdto\\accountlogindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B0D9C7C6-DE0A-4E22-BD61-B4241B51EC76}|NamespaceGPT-ASP.NET Repository\\NamespaceGPT-ASP.NET Repository.csproj|D:\\UBB\\Semester 4\\Software Engineering\\Assignment6\\UBB-SE-2024-921-2\\server\\namespacegpt-asp.net repository\\dtos\\spartacusdto\\accountdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B0D9C7C6-DE0A-4E22-BD61-B4241B51EC76}|NamespaceGPT-ASP.NET Repository\\NamespaceGPT-ASP.NET Repository.csproj|solutionrelative:namespacegpt-asp.net repository\\dtos\\spartacusdto\\accountdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B0D9C7C6-DE0A-4E22-BD61-B4241B51EC76}|NamespaceGPT-ASP.NET Repository\\NamespaceGPT-ASP.NET Repository.csproj|D:\\UBB\\Semester 4\\Software Engineering\\Assignment6\\UBB-SE-2024-921-2\\server\\namespacegpt-asp.net repository\\controllers\\reviewscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B0D9C7C6-DE0A-4E22-BD61-B4241B51EC76}|NamespaceGPT-ASP.NET Repository\\NamespaceGPT-ASP.NET Repository.csproj|solutionrelative:namespacegpt-asp.net repository\\controllers\\reviewscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B0D9C7C6-DE0A-4E22-BD61-B4241B51EC76}|NamespaceGPT-ASP.NET Repository\\NamespaceGPT-ASP.NET Repository.csproj|D:\\UBB\\Semester 4\\Software Engineering\\Assignment6\\UBB-SE-2024-921-2\\server\\namespacegpt-asp.net repository\\models\\pricedropalert.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B0D9C7C6-DE0A-4E22-BD61-B4241B51EC76}|NamespaceGPT-ASP.NET Repository\\NamespaceGPT-ASP.NET Repository.csproj|solutionrelative:namespacegpt-asp.net repository\\models\\pricedropalert.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B0D9C7C6-DE0A-4E22-BD61-B4241B51EC76}|NamespaceGPT-ASP.NET Repository\\NamespaceGPT-ASP.NET Repository.csproj|D:\\UBB\\Semester 4\\Software Engineering\\Assignment6\\UBB-SE-2024-921-2\\server\\namespacegpt-asp.net repository\\namespacegpt-asp.net repository.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{B0D9C7C6-DE0A-4E22-BD61-B4241B51EC76}|NamespaceGPT-ASP.NET Repository\\NamespaceGPT-ASP.NET Repository.csproj|solutionrelative:namespacegpt-asp.net repository\\namespacegpt-asp.net repository.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B0D9C7C6-DE0A-4E22-BD61-B4241B51EC76}|NamespaceGPT-ASP.NET Repository\\NamespaceGPT-ASP.NET Repository.csproj|D:\\UBB\\Semester 4\\Software Engineering\\Assignment6\\UBB-SE-2024-921-2\\server\\namespacegpt-asp.net repository\\controllers\\spartacuscontroller\\spartacusreviewcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B0D9C7C6-DE0A-4E22-BD61-B4241B51EC76}|NamespaceGPT-ASP.NET Repository\\NamespaceGPT-ASP.NET Repository.csproj|solutionrelative:namespacegpt-asp.net repository\\controllers\\spartacuscontroller\\spartacusreviewcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B0D9C7C6-DE0A-4E22-BD61-B4241B51EC76}|NamespaceGPT-ASP.NET Repository\\NamespaceGPT-ASP.NET Repository.csproj|D:\\UBB\\Semester 4\\Software Engineering\\Assignment6\\UBB-SE-2024-921-2\\server\\namespacegpt-asp.net repository\\controllers\\spartacuscontroller\\postcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B0D9C7C6-DE0A-4E22-BD61-B4241B51EC76}|NamespaceGPT-ASP.NET Repository\\NamespaceGPT-ASP.NET Repository.csproj|solutionrelative:namespacegpt-asp.net repository\\controllers\\spartacuscontroller\\postcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B0D9C7C6-DE0A-4E22-BD61-B4241B51EC76}|NamespaceGPT-ASP.NET Repository\\NamespaceGPT-ASP.NET Repository.csproj|D:\\UBB\\Semester 4\\Software Engineering\\Assignment6\\UBB-SE-2024-921-2\\server\\namespacegpt-asp.net repository\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{B0D9C7C6-DE0A-4E22-BD61-B4241B51EC76}|NamespaceGPT-ASP.NET Repository\\NamespaceGPT-ASP.NET Repository.csproj|solutionrelative:namespacegpt-asp.net repository\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B0D9C7C6-DE0A-4E22-BD61-B4241B51EC76}|NamespaceGPT-ASP.NET Repository\\NamespaceGPT-ASP.NET Repository.csproj|D:\\UBB\\Semester 4\\Software Engineering\\Assignment6\\UBB-SE-2024-921-2\\server\\namespacegpt-asp.net repository\\dtos\\reviewdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B0D9C7C6-DE0A-4E22-BD61-B4241B51EC76}|NamespaceGPT-ASP.NET Repository\\NamespaceGPT-ASP.NET Repository.csproj|solutionrelative:namespacegpt-asp.net repository\\dtos\\reviewdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B0D9C7C6-DE0A-4E22-BD61-B4241B51EC76}|NamespaceGPT-ASP.NET Repository\\NamespaceGPT-ASP.NET Repository.csproj|D:\\UBB\\Semester 4\\Software Engineering\\Assignment6\\UBB-SE-2024-921-2\\server\\namespacegpt-asp.net repository\\dtos\\productdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B0D9C7C6-DE0A-4E22-BD61-B4241B51EC76}|NamespaceGPT-ASP.NET Repository\\NamespaceGPT-ASP.NET Repository.csproj|solutionrelative:namespacegpt-asp.net repository\\dtos\\productdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B0D9C7C6-DE0A-4E22-BD61-B4241B51EC76}|NamespaceGPT-ASP.NET Repository\\NamespaceGPT-ASP.NET Repository.csproj|D:\\UBB\\Semester 4\\Software Engineering\\Assignment6\\UBB-SE-2024-921-2\\server\\namespacegpt-asp.net repository\\dtos\\pricedropalertdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B0D9C7C6-DE0A-4E22-BD61-B4241B51EC76}|NamespaceGPT-ASP.NET Repository\\NamespaceGPT-ASP.NET Repository.csproj|solutionrelative:namespacegpt-asp.net repository\\dtos\\pricedropalertdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B0D9C7C6-DE0A-4E22-BD61-B4241B51EC76}|NamespaceGPT-ASP.NET Repository\\NamespaceGPT-ASP.NET Repository.csproj|D:\\UBB\\Semester 4\\Software Engineering\\Assignment6\\UBB-SE-2024-921-2\\server\\namespacegpt-asp.net repository\\dtos\\ialert.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B0D9C7C6-DE0A-4E22-BD61-B4241B51EC76}|NamespaceGPT-ASP.NET Repository\\NamespaceGPT-ASP.NET Repository.csproj|solutionrelative:namespacegpt-asp.net repository\\dtos\\ialert.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B0D9C7C6-DE0A-4E22-BD61-B4241B51EC76}|NamespaceGPT-ASP.NET Repository\\NamespaceGPT-ASP.NET Repository.csproj|D:\\UBB\\Semester 4\\Software Engineering\\Assignment6\\UBB-SE-2024-921-2\\server\\namespacegpt-asp.net repository\\models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B0D9C7C6-DE0A-4E22-BD61-B4241B51EC76}|NamespaceGPT-ASP.NET Repository\\NamespaceGPT-ASP.NET Repository.csproj|solutionrelative:namespacegpt-asp.net repository\\models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B0D9C7C6-DE0A-4E22-BD61-B4241B51EC76}|NamespaceGPT-ASP.NET Repository\\NamespaceGPT-ASP.NET Repository.csproj|D:\\UBB\\Semester 4\\Software Engineering\\Assignment6\\UBB-SE-2024-921-2\\server\\namespacegpt-asp.net repository\\models\\newproductalert.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B0D9C7C6-DE0A-4E22-BD61-B4241B51EC76}|NamespaceGPT-ASP.NET Repository\\NamespaceGPT-ASP.NET Repository.csproj|solutionrelative:namespacegpt-asp.net repository\\models\\newproductalert.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B0D9C7C6-DE0A-4E22-BD61-B4241B51EC76}|NamespaceGPT-ASP.NET Repository\\NamespaceGPT-ASP.NET Repository.csproj|D:\\UBB\\Semester 4\\Software Engineering\\Assignment6\\UBB-SE-2024-921-2\\server\\namespacegpt-asp.net repository\\models\\marketplace.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B0D9C7C6-DE0A-4E22-BD61-B4241B51EC76}|NamespaceGPT-ASP.NET Repository\\NamespaceGPT-ASP.NET Repository.csproj|solutionrelative:namespacegpt-asp.net repository\\models\\marketplace.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B0D9C7C6-DE0A-4E22-BD61-B4241B51EC76}|NamespaceGPT-ASP.NET Repository\\NamespaceGPT-ASP.NET Repository.csproj|D:\\UBB\\Semester 4\\Software Engineering\\Assignment6\\UBB-SE-2024-921-2\\server\\namespacegpt-asp.net repository\\models\\ialert.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B0D9C7C6-DE0A-4E22-BD61-B4241B51EC76}|NamespaceGPT-ASP.NET Repository\\NamespaceGPT-ASP.NET Repository.csproj|solutionrelative:namespacegpt-asp.net repository\\models\\ialert.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B0D9C7C6-DE0A-4E22-BD61-B4241B51EC76}|NamespaceGPT-ASP.NET Repository\\NamespaceGPT-ASP.NET Repository.csproj|D:\\UBB\\Semester 4\\Software Engineering\\Assignment6\\UBB-SE-2024-921-2\\server\\namespacegpt-asp.net repository\\models\\backinstockalert.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B0D9C7C6-DE0A-4E22-BD61-B4241B51EC76}|NamespaceGPT-ASP.NET Repository\\NamespaceGPT-ASP.NET Repository.csproj|solutionrelative:namespacegpt-asp.net repository\\models\\backinstockalert.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B0D9C7C6-DE0A-4E22-BD61-B4241B51EC76}|NamespaceGPT-ASP.NET Repository\\NamespaceGPT-ASP.NET Repository.csproj|D:\\UBB\\Semester 4\\Software Engineering\\Assignment6\\UBB-SE-2024-921-2\\server\\namespacegpt-asp.net repository\\models\\listing.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B0D9C7C6-DE0A-4E22-BD61-B4241B51EC76}|NamespaceGPT-ASP.NET Repository\\NamespaceGPT-ASP.NET Repository.csproj|solutionrelative:namespacegpt-asp.net repository\\models\\listing.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B0D9C7C6-DE0A-4E22-BD61-B4241B51EC76}|NamespaceGPT-ASP.NET Repository\\NamespaceGPT-ASP.NET Repository.csproj|D:\\UBB\\Semester 4\\Software Engineering\\Assignment6\\UBB-SE-2024-921-2\\server\\namespacegpt-asp.net repository\\databasecontext\\projectdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B0D9C7C6-DE0A-4E22-BD61-B4241B51EC76}|NamespaceGPT-ASP.NET Repository\\NamespaceGPT-ASP.NET Repository.csproj|solutionrelative:namespacegpt-asp.net repository\\databasecontext\\projectdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B0D9C7C6-DE0A-4E22-BD61-B4241B51EC76}|NamespaceGPT-ASP.NET Repository\\NamespaceGPT-ASP.NET Repository.csproj|D:\\UBB\\Semester 4\\Software Engineering\\Assignment6\\UBB-SE-2024-921-2\\server\\namespacegpt-asp.net repository\\models\\review.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B0D9C7C6-DE0A-4E22-BD61-B4241B51EC76}|NamespaceGPT-ASP.NET Repository\\NamespaceGPT-ASP.NET Repository.csproj|solutionrelative:namespacegpt-asp.net repository\\models\\review.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B0D9C7C6-DE0A-4E22-BD61-B4241B51EC76}|NamespaceGPT-ASP.NET Repository\\NamespaceGPT-ASP.NET Repository.csproj|D:\\UBB\\Semester 4\\Software Engineering\\Assignment6\\UBB-SE-2024-921-2\\server\\namespacegpt-asp.net repository\\models\\sale.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B0D9C7C6-DE0A-4E22-BD61-B4241B51EC76}|NamespaceGPT-ASP.NET Repository\\NamespaceGPT-ASP.NET Repository.csproj|solutionrelative:namespacegpt-asp.net repository\\models\\sale.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B0D9C7C6-DE0A-4E22-BD61-B4241B51EC76}|NamespaceGPT-ASP.NET Repository\\NamespaceGPT-ASP.NET Repository.csproj|D:\\UBB\\Semester 4\\Software Engineering\\Assignment6\\UBB-SE-2024-921-2\\server\\namespacegpt-asp.net repository\\controllers\\salescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B0D9C7C6-DE0A-4E22-BD61-B4241B51EC76}|NamespaceGPT-ASP.NET Repository\\NamespaceGPT-ASP.NET Repository.csproj|solutionrelative:namespacegpt-asp.net repository\\controllers\\salescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B0D9C7C6-DE0A-4E22-BD61-B4241B51EC76}|NamespaceGPT-ASP.NET Repository\\NamespaceGPT-ASP.NET Repository.csproj|D:\\UBB\\Semester 4\\Software Engineering\\Assignment6\\UBB-SE-2024-921-2\\server\\namespacegpt-asp.net repository\\dtos\\spartacusdto\\commentdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B0D9C7C6-DE0A-4E22-BD61-B4241B51EC76}|NamespaceGPT-ASP.NET Repository\\NamespaceGPT-ASP.NET Repository.csproj|solutionrelative:namespacegpt-asp.net repository\\dtos\\spartacusdto\\commentdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B0D9C7C6-DE0A-4E22-BD61-B4241B51EC76}|NamespaceGPT-ASP.NET Repository\\NamespaceGPT-ASP.NET Repository.csproj|D:\\UBB\\Semester 4\\Software Engineering\\Assignment6\\UBB-SE-2024-921-2\\server\\namespacegpt-asp.net repository\\controllers\\adrecommendationscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B0D9C7C6-DE0A-4E22-BD61-B4241B51EC76}|NamespaceGPT-ASP.NET Repository\\NamespaceGPT-ASP.NET Repository.csproj|solutionrelative:namespacegpt-asp.net repository\\controllers\\adrecommendationscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B0D9C7C6-DE0A-4E22-BD61-B4241B51EC76}|NamespaceGPT-ASP.NET Repository\\NamespaceGPT-ASP.NET Repository.csproj|D:\\UBB\\Semester 4\\Software Engineering\\Assignment6\\UBB-SE-2024-921-2\\server\\namespacegpt-asp.net repository\\controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B0D9C7C6-DE0A-4E22-BD61-B4241B51EC76}|NamespaceGPT-ASP.NET Repository\\NamespaceGPT-ASP.NET Repository.csproj|solutionrelative:namespacegpt-asp.net repository\\controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B0D9C7C6-DE0A-4E22-BD61-B4241B51EC76}|NamespaceGPT-ASP.NET Repository\\NamespaceGPT-ASP.NET Repository.csproj|D:\\UBB\\Semester 4\\Software Engineering\\Assignment6\\UBB-SE-2024-921-2\\server\\namespacegpt-asp.net repository\\controllers\\listingscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B0D9C7C6-DE0A-4E22-BD61-B4241B51EC76}|NamespaceGPT-ASP.NET Repository\\NamespaceGPT-ASP.NET Repository.csproj|solutionrelative:namespacegpt-asp.net repository\\controllers\\listingscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B0D9C7C6-DE0A-4E22-BD61-B4241B51EC76}|NamespaceGPT-ASP.NET Repository\\NamespaceGPT-ASP.NET Repository.csproj|D:\\UBB\\Semester 4\\Software Engineering\\Assignment6\\UBB-SE-2024-921-2\\server\\namespacegpt-asp.net repository\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B0D9C7C6-DE0A-4E22-BD61-B4241B51EC76}|NamespaceGPT-ASP.NET Repository\\NamespaceGPT-ASP.NET Repository.csproj|solutionrelative:namespacegpt-asp.net repository\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B0D9C7C6-DE0A-4E22-BD61-B4241B51EC76}|NamespaceGPT-ASP.NET Repository\\NamespaceGPT-ASP.NET Repository.csproj|D:\\UBB\\Semester 4\\Software Engineering\\Assignment6\\UBB-SE-2024-921-2\\server\\namespacegpt-asp.net repository\\controllers\\backinstockalertscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B0D9C7C6-DE0A-4E22-BD61-B4241B51EC76}|NamespaceGPT-ASP.NET Repository\\NamespaceGPT-ASP.NET Repository.csproj|solutionrelative:namespacegpt-asp.net repository\\controllers\\backinstockalertscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B0D9C7C6-DE0A-4E22-BD61-B4241B51EC76}|NamespaceGPT-ASP.NET Repository\\NamespaceGPT-ASP.NET Repository.csproj|D:\\UBB\\Semester 4\\Software Engineering\\Assignment6\\UBB-SE-2024-921-2\\server\\namespacegpt-asp.net repository\\controllers\\newproductalertscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B0D9C7C6-DE0A-4E22-BD61-B4241B51EC76}|NamespaceGPT-ASP.NET Repository\\NamespaceGPT-ASP.NET Repository.csproj|solutionrelative:namespacegpt-asp.net repository\\controllers\\newproductalertscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B0D9C7C6-DE0A-4E22-BD61-B4241B51EC76}|NamespaceGPT-ASP.NET Repository\\NamespaceGPT-ASP.NET Repository.csproj|D:\\UBB\\Semester 4\\Software Engineering\\Assignment6\\UBB-SE-2024-921-2\\server\\namespacegpt-asp.net repository\\controllers\\pricedropalertscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B0D9C7C6-DE0A-4E22-BD61-B4241B51EC76}|NamespaceGPT-ASP.NET Repository\\NamespaceGPT-ASP.NET Repository.csproj|solutionrelative:namespacegpt-asp.net repository\\controllers\\pricedropalertscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B0D9C7C6-DE0A-4E22-BD61-B4241B51EC76}|NamespaceGPT-ASP.NET Repository\\NamespaceGPT-ASP.NET Repository.csproj|D:\\UBB\\Semester 4\\Software Engineering\\Assignment6\\UBB-SE-2024-921-2\\server\\namespacegpt-asp.net repository\\dtos\\marketplacedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B0D9C7C6-DE0A-4E22-BD61-B4241B51EC76}|NamespaceGPT-ASP.NET Repository\\NamespaceGPT-ASP.NET Repository.csproj|solutionrelative:namespacegpt-asp.net repository\\dtos\\marketplacedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B0D9C7C6-DE0A-4E22-BD61-B4241B51EC76}|NamespaceGPT-ASP.NET Repository\\NamespaceGPT-ASP.NET Repository.csproj|D:\\UBB\\Semester 4\\Software Engineering\\Assignment6\\UBB-SE-2024-921-2\\server\\namespacegpt-asp.net repository\\controllers\\favouriteproductscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B0D9C7C6-DE0A-4E22-BD61-B4241B51EC76}|NamespaceGPT-ASP.NET Repository\\NamespaceGPT-ASP.NET Repository.csproj|solutionrelative:namespacegpt-asp.net repository\\controllers\\favouriteproductscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B0D9C7C6-DE0A-4E22-BD61-B4241B51EC76}|NamespaceGPT-ASP.NET Repository\\NamespaceGPT-ASP.NET Repository.csproj|D:\\UBB\\Semester 4\\Software Engineering\\Assignment6\\UBB-SE-2024-921-2\\server\\namespacegpt-asp.net repository\\dtos\\adrecommendationdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B0D9C7C6-DE0A-4E22-BD61-B4241B51EC76}|NamespaceGPT-ASP.NET Repository\\NamespaceGPT-ASP.NET Repository.csproj|solutionrelative:namespacegpt-asp.net repository\\dtos\\adrecommendationdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B0D9C7C6-DE0A-4E22-BD61-B4241B51EC76}|NamespaceGPT-ASP.NET Repository\\NamespaceGPT-ASP.NET Repository.csproj|D:\\UBB\\Semester 4\\Software Engineering\\Assignment6\\UBB-SE-2024-921-2\\server\\NamespaceGPT-ASP.NET Repository\\Migrations\\20240603204054_RemoveFK.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B0D9C7C6-DE0A-4E22-BD61-B4241B51EC76}|NamespaceGPT-ASP.NET Repository\\NamespaceGPT-ASP.NET Repository.csproj|solutionrelative:NamespaceGPT-ASP.NET Repository\\Migrations\\20240603204054_RemoveFK.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Business.cs",
+              "DocumentMoniker": "D:\\UBB\\Semester 4\\Software Engineering\\Assignment6\\UBB-SE-2024-921-2\\server\\NamespaceGPT-ASP.NET Repository\\Models\\SpartacusModels\\Business.cs",
+              "RelativeDocumentMoniker": "NamespaceGPT-ASP.NET Repository\\Models\\SpartacusModels\\Business.cs",
+              "ToolTip": "D:\\UBB\\Semester 4\\Software Engineering\\Assignment6\\UBB-SE-2024-921-2\\server\\NamespaceGPT-ASP.NET Repository\\Models\\SpartacusModels\\Business.cs",
+              "RelativeToolTip": "NamespaceGPT-ASP.NET Repository\\Models\\SpartacusModels\\Business.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAASAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-03T21:30:39.953Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{e1b7d1f8-9b3c-49b1-8f4f-bfc63a88835d}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "DTOToBaseConverters.cs",
+              "DocumentMoniker": "D:\\UBB\\Semester 4\\Software Engineering\\Assignment6\\UBB-SE-2024-921-2\\server\\NamespaceGPT-ASP.NET Repository\\Utils\\DTOToBaseConverters.cs",
+              "RelativeDocumentMoniker": "NamespaceGPT-ASP.NET Repository\\Utils\\DTOToBaseConverters.cs",
+              "ToolTip": "D:\\UBB\\Semester 4\\Software Engineering\\Assignment6\\UBB-SE-2024-921-2\\server\\NamespaceGPT-ASP.NET Repository\\Utils\\DTOToBaseConverters.cs",
+              "RelativeToolTip": "NamespaceGPT-ASP.NET Repository\\Utils\\DTOToBaseConverters.cs",
+              "ViewState": "AQIAAB8AAAAAAAAAAADwvy0AAAAqAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-03T20:47:05.925Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "ReviewsController.cs",
+              "DocumentMoniker": "D:\\UBB\\Semester 4\\Software Engineering\\Assignment6\\UBB-SE-2024-921-2\\server\\NamespaceGPT-ASP.NET Repository\\Controllers\\ReviewsController.cs",
+              "RelativeDocumentMoniker": "NamespaceGPT-ASP.NET Repository\\Controllers\\ReviewsController.cs",
+              "ToolTip": "D:\\UBB\\Semester 4\\Software Engineering\\Assignment6\\UBB-SE-2024-921-2\\server\\NamespaceGPT-ASP.NET Repository\\Controllers\\ReviewsController.cs",
+              "RelativeToolTip": "NamespaceGPT-ASP.NET Repository\\Controllers\\ReviewsController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAiAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-21T17:18:29.661Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "CommentController.cs",
+              "DocumentMoniker": "D:\\UBB\\Semester 4\\Software Engineering\\Assignment6\\UBB-SE-2024-921-2\\server\\NamespaceGPT-ASP.NET Repository\\Controllers\\SpartacusController\\CommentController.cs",
+              "RelativeDocumentMoniker": "NamespaceGPT-ASP.NET Repository\\Controllers\\SpartacusController\\CommentController.cs",
+              "ToolTip": "D:\\UBB\\Semester 4\\Software Engineering\\Assignment6\\UBB-SE-2024-921-2\\server\\NamespaceGPT-ASP.NET Repository\\Controllers\\SpartacusController\\CommentController.cs",
+              "RelativeToolTip": "NamespaceGPT-ASP.NET Repository\\Controllers\\SpartacusController\\CommentController.cs",
+              "ViewState": "AQIAAA8AAAAAAAAAAAAAABoAAAAQAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-21T17:44:50.853Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "SpartacusReviewController.cs",
+              "DocumentMoniker": "D:\\UBB\\Semester 4\\Software Engineering\\Assignment6\\UBB-SE-2024-921-2\\server\\NamespaceGPT-ASP.NET Repository\\Controllers\\SpartacusController\\SpartacusReviewController.cs",
+              "RelativeDocumentMoniker": "NamespaceGPT-ASP.NET Repository\\Controllers\\SpartacusController\\SpartacusReviewController.cs",
+              "ToolTip": "D:\\UBB\\Semester 4\\Software Engineering\\Assignment6\\UBB-SE-2024-921-2\\server\\NamespaceGPT-ASP.NET Repository\\Controllers\\SpartacusController\\SpartacusReviewController.cs",
+              "RelativeToolTip": "NamespaceGPT-ASP.NET Repository\\Controllers\\SpartacusController\\SpartacusReviewController.cs",
+              "ViewState": "AQIAABQAAAAAAAAAAAAAwBEAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-21T20:23:46.38Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "IAlert.cs",
+              "DocumentMoniker": "D:\\UBB\\Semester 4\\Software Engineering\\Assignment6\\UBB-SE-2024-921-2\\server\\NamespaceGPT-ASP.NET Repository\\DTOs\\IAlert.cs",
+              "RelativeDocumentMoniker": "NamespaceGPT-ASP.NET Repository\\DTOs\\IAlert.cs",
+              "ToolTip": "D:\\UBB\\Semester 4\\Software Engineering\\Assignment6\\UBB-SE-2024-921-2\\server\\NamespaceGPT-ASP.NET Repository\\DTOs\\IAlert.cs",
+              "RelativeToolTip": "NamespaceGPT-ASP.NET Repository\\DTOs\\IAlert.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-21T19:22:12.284Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "Product.cs",
+              "DocumentMoniker": "D:\\UBB\\Semester 4\\Software Engineering\\Assignment6\\UBB-SE-2024-921-2\\server\\NamespaceGPT-ASP.NET Repository\\Models\\Product.cs",
+              "RelativeDocumentMoniker": "NamespaceGPT-ASP.NET Repository\\Models\\Product.cs",
+              "ToolTip": "D:\\UBB\\Semester 4\\Software Engineering\\Assignment6\\UBB-SE-2024-921-2\\server\\NamespaceGPT-ASP.NET Repository\\Models\\Product.cs",
+              "RelativeToolTip": "NamespaceGPT-ASP.NET Repository\\Models\\Product.cs",
+              "ViewState": "AQIAAAUAAAAAAAAAAAAxwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-21T18:02:47.458Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "PriceDropAlert.cs",
+              "DocumentMoniker": "D:\\UBB\\Semester 4\\Software Engineering\\Assignment6\\UBB-SE-2024-921-2\\server\\NamespaceGPT-ASP.NET Repository\\Models\\PriceDropAlert.cs",
+              "RelativeDocumentMoniker": "NamespaceGPT-ASP.NET Repository\\Models\\PriceDropAlert.cs",
+              "ToolTip": "D:\\UBB\\Semester 4\\Software Engineering\\Assignment6\\UBB-SE-2024-921-2\\server\\NamespaceGPT-ASP.NET Repository\\Models\\PriceDropAlert.cs",
+              "RelativeToolTip": "NamespaceGPT-ASP.NET Repository\\Models\\PriceDropAlert.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-21T18:55:10.574Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "BusinessController.cs",
+              "DocumentMoniker": "D:\\UBB\\Semester 4\\Software Engineering\\Assignment6\\UBB-SE-2024-921-2\\server\\NamespaceGPT-ASP.NET Repository\\Controllers\\SpartacusController\\BusinessController.cs",
+              "RelativeDocumentMoniker": "NamespaceGPT-ASP.NET Repository\\Controllers\\SpartacusController\\BusinessController.cs",
+              "ToolTip": "D:\\UBB\\Semester 4\\Software Engineering\\Assignment6\\UBB-SE-2024-921-2\\server\\NamespaceGPT-ASP.NET Repository\\Controllers\\SpartacusController\\BusinessController.cs",
+              "RelativeToolTip": "NamespaceGPT-ASP.NET Repository\\Controllers\\SpartacusController\\BusinessController.cs",
+              "ViewState": "AQIAACwAAAAAAAAAAAAwwDYAAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-21T17:41:00.399Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "BussinessDTO.cs",
+              "DocumentMoniker": "D:\\UBB\\Semester 4\\Software Engineering\\Assignment6\\UBB-SE-2024-921-2\\server\\NamespaceGPT-ASP.NET Repository\\DTOs\\SpartacusDTO\\BussinessDTO.cs",
+              "RelativeDocumentMoniker": "NamespaceGPT-ASP.NET Repository\\DTOs\\SpartacusDTO\\BussinessDTO.cs",
+              "ToolTip": "D:\\UBB\\Semester 4\\Software Engineering\\Assignment6\\UBB-SE-2024-921-2\\server\\NamespaceGPT-ASP.NET Repository\\DTOs\\SpartacusDTO\\BussinessDTO.cs",
+              "RelativeToolTip": "NamespaceGPT-ASP.NET Repository\\DTOs\\SpartacusDTO\\BussinessDTO.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAowAwAAAAvAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-03T19:22:14.973Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "BaseToDTOConverters.cs",
+              "DocumentMoniker": "D:\\UBB\\Semester 4\\Software Engineering\\Assignment6\\UBB-SE-2024-921-2\\server\\NamespaceGPT-ASP.NET Repository\\Utils\\BaseToDTOConverters.cs",
+              "RelativeDocumentMoniker": "NamespaceGPT-ASP.NET Repository\\Utils\\BaseToDTOConverters.cs",
+              "ToolTip": "D:\\UBB\\Semester 4\\Software Engineering\\Assignment6\\UBB-SE-2024-921-2\\server\\NamespaceGPT-ASP.NET Repository\\Utils\\BaseToDTOConverters.cs",
+              "RelativeToolTip": "NamespaceGPT-ASP.NET Repository\\Utils\\BaseToDTOConverters.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAD4AAAAvAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-21T18:59:38.953Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "AccountController.cs",
+              "DocumentMoniker": "D:\\UBB\\Semester 4\\Software Engineering\\Assignment6\\UBB-SE-2024-921-2\\server\\NamespaceGPT-ASP.NET Repository\\Controllers\\SpartacusController\\AccountController.cs",
+              "RelativeDocumentMoniker": "NamespaceGPT-ASP.NET Repository\\Controllers\\SpartacusController\\AccountController.cs",
+              "ToolTip": "D:\\UBB\\Semester 4\\Software Engineering\\Assignment6\\UBB-SE-2024-921-2\\server\\NamespaceGPT-ASP.NET Repository\\Controllers\\SpartacusController\\AccountController.cs",
+              "RelativeToolTip": "NamespaceGPT-ASP.NET Repository\\Controllers\\SpartacusController\\AccountController.cs",
+              "ViewState": "AQIAAEcAAAAAAAAAAAAswE4AAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-21T17:32:20.839Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "20240603203712_Nume.cs",
+              "DocumentMoniker": "D:\\UBB\\Semester 4\\Software Engineering\\Assignment6\\UBB-SE-2024-921-2\\server\\NamespaceGPT-ASP.NET Repository\\Migrations\\20240603203712_Nume.cs",
+              "RelativeDocumentMoniker": "NamespaceGPT-ASP.NET Repository\\Migrations\\20240603203712_Nume.cs",
+              "ToolTip": "D:\\UBB\\Semester 4\\Software Engineering\\Assignment6\\UBB-SE-2024-921-2\\server\\NamespaceGPT-ASP.NET Repository\\Migrations\\20240603203712_Nume.cs",
+              "RelativeToolTip": "NamespaceGPT-ASP.NET Repository\\Migrations\\20240603203712_Nume.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAkAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-03T20:37:12.975Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "ProjectDBContextModelSnapshot.cs",
+              "DocumentMoniker": "D:\\UBB\\Semester 4\\Software Engineering\\Assignment6\\UBB-SE-2024-921-2\\server\\NamespaceGPT-ASP.NET Repository\\Migrations\\ProjectDBContextModelSnapshot.cs",
+              "RelativeDocumentMoniker": "NamespaceGPT-ASP.NET Repository\\Migrations\\ProjectDBContextModelSnapshot.cs",
+              "ToolTip": "D:\\UBB\\Semester 4\\Software Engineering\\Assignment6\\UBB-SE-2024-921-2\\server\\NamespaceGPT-ASP.NET Repository\\Migrations\\ProjectDBContextModelSnapshot.cs",
+              "RelativeToolTip": "NamespaceGPT-ASP.NET Repository\\Migrations\\ProjectDBContextModelSnapshot.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-03T20:40:06.211Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 44,
+              "Title": "20240603204054_RemoveFK.cs",
+              "DocumentMoniker": "D:\\UBB\\Semester 4\\Software Engineering\\Assignment6\\UBB-SE-2024-921-2\\server\\NamespaceGPT-ASP.NET Repository\\Migrations\\20240603204054_RemoveFK.cs",
+              "RelativeDocumentMoniker": "NamespaceGPT-ASP.NET Repository\\Migrations\\20240603204054_RemoveFK.cs",
+              "ToolTip": "D:\\UBB\\Semester 4\\Software Engineering\\Assignment6\\UBB-SE-2024-921-2\\server\\NamespaceGPT-ASP.NET Repository\\Migrations\\20240603204054_RemoveFK.cs",
+              "RelativeToolTip": "NamespaceGPT-ASP.NET Repository\\Migrations\\20240603204054_RemoveFK.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-03T20:40:54.476Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "AccountDTO.cs",
+              "DocumentMoniker": "D:\\UBB\\Semester 4\\Software Engineering\\Assignment6\\UBB-SE-2024-921-2\\server\\NamespaceGPT-ASP.NET Repository\\DTOs\\SpartacusDTO\\AccountDTO.cs",
+              "RelativeDocumentMoniker": "NamespaceGPT-ASP.NET Repository\\DTOs\\SpartacusDTO\\AccountDTO.cs",
+              "ToolTip": "D:\\UBB\\Semester 4\\Software Engineering\\Assignment6\\UBB-SE-2024-921-2\\server\\NamespaceGPT-ASP.NET Repository\\DTOs\\SpartacusDTO\\AccountDTO.cs",
+              "RelativeToolTip": "NamespaceGPT-ASP.NET Repository\\DTOs\\SpartacusDTO\\AccountDTO.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-01T16:16:05.984Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "FavouriteProduct.cs",
+              "DocumentMoniker": "D:\\UBB\\Semester 4\\Software Engineering\\Assignment6\\UBB-SE-2024-921-2\\server\\NamespaceGPT-ASP.NET Repository\\Models\\FavouriteProduct.cs",
+              "RelativeDocumentMoniker": "NamespaceGPT-ASP.NET Repository\\Models\\FavouriteProduct.cs",
+              "ToolTip": "D:\\UBB\\Semester 4\\Software Engineering\\Assignment6\\UBB-SE-2024-921-2\\server\\NamespaceGPT-ASP.NET Repository\\Models\\FavouriteProduct.cs",
+              "RelativeToolTip": "NamespaceGPT-ASP.NET Repository\\Models\\FavouriteProduct.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAhAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-01T16:23:44.332Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "FAQController.cs",
+              "DocumentMoniker": "D:\\UBB\\Semester 4\\Software Engineering\\Assignment6\\UBB-SE-2024-921-2\\server\\NamespaceGPT-ASP.NET Repository\\Controllers\\SpartacusController\\FAQController.cs",
+              "RelativeDocumentMoniker": "NamespaceGPT-ASP.NET Repository\\Controllers\\SpartacusController\\FAQController.cs",
+              "ToolTip": "D:\\UBB\\Semester 4\\Software Engineering\\Assignment6\\UBB-SE-2024-921-2\\server\\NamespaceGPT-ASP.NET Repository\\Controllers\\SpartacusController\\FAQController.cs",
+              "RelativeToolTip": "NamespaceGPT-ASP.NET Repository\\Controllers\\SpartacusController\\FAQController.cs",
+              "ViewState": "AQIAAEoAAAAAAAAAAAAUwFcAAAAtAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-21T18:10:20.944Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "AccountLoginDTO.cs",
+              "DocumentMoniker": "D:\\UBB\\Semester 4\\Software Engineering\\Assignment6\\UBB-SE-2024-921-2\\server\\NamespaceGPT-ASP.NET Repository\\DTOs\\SpartacusDTO\\AccountLoginDTO.cs",
+              "RelativeDocumentMoniker": "NamespaceGPT-ASP.NET Repository\\DTOs\\SpartacusDTO\\AccountLoginDTO.cs",
+              "ToolTip": "D:\\UBB\\Semester 4\\Software Engineering\\Assignment6\\UBB-SE-2024-921-2\\server\\NamespaceGPT-ASP.NET Repository\\DTOs\\SpartacusDTO\\AccountLoginDTO.cs",
+              "RelativeToolTip": "NamespaceGPT-ASP.NET Repository\\DTOs\\SpartacusDTO\\AccountLoginDTO.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-01T16:15:43.034Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "ProductDTO.cs",
+              "DocumentMoniker": "D:\\UBB\\Semester 4\\Software Engineering\\Assignment6\\UBB-SE-2024-921-2\\server\\NamespaceGPT-ASP.NET Repository\\DTOs\\ProductDTO.cs",
+              "RelativeDocumentMoniker": "NamespaceGPT-ASP.NET Repository\\DTOs\\ProductDTO.cs",
+              "ToolTip": "D:\\UBB\\Semester 4\\Software Engineering\\Assignment6\\UBB-SE-2024-921-2\\server\\NamespaceGPT-ASP.NET Repository\\DTOs\\ProductDTO.cs",
+              "RelativeToolTip": "NamespaceGPT-ASP.NET Repository\\DTOs\\ProductDTO.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-21T19:22:16.386Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "NamespaceGPT-ASP.NET Repository.csproj",
+              "DocumentMoniker": "D:\\UBB\\Semester 4\\Software Engineering\\Assignment6\\UBB-SE-2024-921-2\\server\\NamespaceGPT-ASP.NET Repository\\NamespaceGPT-ASP.NET Repository.csproj",
+              "RelativeDocumentMoniker": "NamespaceGPT-ASP.NET Repository\\NamespaceGPT-ASP.NET Repository.csproj",
+              "ToolTip": "D:\\UBB\\Semester 4\\Software Engineering\\Assignment6\\UBB-SE-2024-921-2\\server\\NamespaceGPT-ASP.NET Repository\\NamespaceGPT-ASP.NET Repository.csproj",
+              "RelativeToolTip": "NamespaceGPT-ASP.NET Repository\\NamespaceGPT-ASP.NET Repository.csproj",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACIAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-05-21T16:16:47.482Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\UBB\\Semester 4\\Software Engineering\\Assignment6\\UBB-SE-2024-921-2\\server\\NamespaceGPT-ASP.NET Repository\\appsettings.json",
+              "RelativeDocumentMoniker": "NamespaceGPT-ASP.NET Repository\\appsettings.json",
+              "ToolTip": "D:\\UBB\\Semester 4\\Software Engineering\\Assignment6\\UBB-SE-2024-921-2\\server\\NamespaceGPT-ASP.NET Repository\\appsettings.json",
+              "RelativeToolTip": "NamespaceGPT-ASP.NET Repository\\appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAA1AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-05-21T16:12:14.362Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "PostController.cs",
+              "DocumentMoniker": "D:\\UBB\\Semester 4\\Software Engineering\\Assignment6\\UBB-SE-2024-921-2\\server\\NamespaceGPT-ASP.NET Repository\\Controllers\\SpartacusController\\PostController.cs",
+              "RelativeDocumentMoniker": "NamespaceGPT-ASP.NET Repository\\Controllers\\SpartacusController\\PostController.cs",
+              "ToolTip": "D:\\UBB\\Semester 4\\Software Engineering\\Assignment6\\UBB-SE-2024-921-2\\server\\NamespaceGPT-ASP.NET Repository\\Controllers\\SpartacusController\\PostController.cs",
+              "RelativeToolTip": "NamespaceGPT-ASP.NET Repository\\Controllers\\SpartacusController\\PostController.cs",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-21T18:10:45.813Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "ReviewDTO.cs",
+              "DocumentMoniker": "D:\\UBB\\Semester 4\\Software Engineering\\Assignment6\\UBB-SE-2024-921-2\\server\\NamespaceGPT-ASP.NET Repository\\DTOs\\ReviewDTO.cs",
+              "RelativeDocumentMoniker": "NamespaceGPT-ASP.NET Repository\\DTOs\\ReviewDTO.cs",
+              "ToolTip": "D:\\UBB\\Semester 4\\Software Engineering\\Assignment6\\UBB-SE-2024-921-2\\server\\NamespaceGPT-ASP.NET Repository\\DTOs\\ReviewDTO.cs",
+              "RelativeToolTip": "NamespaceGPT-ASP.NET Repository\\DTOs\\ReviewDTO.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAjAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-21T18:05:10.483Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "PriceDropAlertDTO.cs",
+              "DocumentMoniker": "D:\\UBB\\Semester 4\\Software Engineering\\Assignment6\\UBB-SE-2024-921-2\\server\\NamespaceGPT-ASP.NET Repository\\DTOs\\PriceDropAlertDTO.cs",
+              "RelativeDocumentMoniker": "NamespaceGPT-ASP.NET Repository\\DTOs\\PriceDropAlertDTO.cs",
+              "ToolTip": "D:\\UBB\\Semester 4\\Software Engineering\\Assignment6\\UBB-SE-2024-921-2\\server\\NamespaceGPT-ASP.NET Repository\\DTOs\\PriceDropAlertDTO.cs",
+              "RelativeToolTip": "NamespaceGPT-ASP.NET Repository\\DTOs\\PriceDropAlertDTO.cs",
+              "ViewState": "AQIAABsAAAAAAAAAAAAmwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-21T19:22:13.324Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "IAlert.cs",
+              "DocumentMoniker": "D:\\UBB\\Semester 4\\Software Engineering\\Assignment6\\UBB-SE-2024-921-2\\server\\NamespaceGPT-ASP.NET Repository\\Models\\IAlert.cs",
+              "RelativeDocumentMoniker": "NamespaceGPT-ASP.NET Repository\\Models\\IAlert.cs",
+              "ToolTip": "D:\\UBB\\Semester 4\\Software Engineering\\Assignment6\\UBB-SE-2024-921-2\\server\\NamespaceGPT-ASP.NET Repository\\Models\\IAlert.cs",
+              "RelativeToolTip": "NamespaceGPT-ASP.NET Repository\\Models\\IAlert.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-21T18:03:26.615Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "BackInStockAlert.cs",
+              "DocumentMoniker": "D:\\UBB\\Semester 4\\Software Engineering\\Assignment6\\UBB-SE-2024-921-2\\server\\NamespaceGPT-ASP.NET Repository\\Models\\BackInStockAlert.cs",
+              "RelativeDocumentMoniker": "NamespaceGPT-ASP.NET Repository\\Models\\BackInStockAlert.cs",
+              "ToolTip": "D:\\UBB\\Semester 4\\Software Engineering\\Assignment6\\UBB-SE-2024-921-2\\server\\NamespaceGPT-ASP.NET Repository\\Models\\BackInStockAlert.cs",
+              "RelativeToolTip": "NamespaceGPT-ASP.NET Repository\\Models\\BackInStockAlert.cs",
+              "ViewState": "AQIAAAsAAAAAAAAAAAAQwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-21T18:03:34.32Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "Listing.cs",
+              "DocumentMoniker": "D:\\UBB\\Semester 4\\Software Engineering\\Assignment6\\UBB-SE-2024-921-2\\server\\NamespaceGPT-ASP.NET Repository\\Models\\Listing.cs",
+              "RelativeDocumentMoniker": "NamespaceGPT-ASP.NET Repository\\Models\\Listing.cs",
+              "ToolTip": "D:\\UBB\\Semester 4\\Software Engineering\\Assignment6\\UBB-SE-2024-921-2\\server\\NamespaceGPT-ASP.NET Repository\\Models\\Listing.cs",
+              "RelativeToolTip": "NamespaceGPT-ASP.NET Repository\\Models\\Listing.cs",
+              "ViewState": "AQIAAA0AAAAAAAAAAAAgwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-21T19:14:48.644Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "Marketplace.cs",
+              "DocumentMoniker": "D:\\UBB\\Semester 4\\Software Engineering\\Assignment6\\UBB-SE-2024-921-2\\server\\NamespaceGPT-ASP.NET Repository\\Models\\Marketplace.cs",
+              "RelativeDocumentMoniker": "NamespaceGPT-ASP.NET Repository\\Models\\Marketplace.cs",
+              "ToolTip": "D:\\UBB\\Semester 4\\Software Engineering\\Assignment6\\UBB-SE-2024-921-2\\server\\NamespaceGPT-ASP.NET Repository\\Models\\Marketplace.cs",
+              "RelativeToolTip": "NamespaceGPT-ASP.NET Repository\\Models\\Marketplace.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-21T18:02:02.882Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "NewProductAlert.cs",
+              "DocumentMoniker": "D:\\UBB\\Semester 4\\Software Engineering\\Assignment6\\UBB-SE-2024-921-2\\server\\NamespaceGPT-ASP.NET Repository\\Models\\NewProductAlert.cs",
+              "RelativeDocumentMoniker": "NamespaceGPT-ASP.NET Repository\\Models\\NewProductAlert.cs",
+              "ToolTip": "D:\\UBB\\Semester 4\\Software Engineering\\Assignment6\\UBB-SE-2024-921-2\\server\\NamespaceGPT-ASP.NET Repository\\Models\\NewProductAlert.cs",
+              "RelativeToolTip": "NamespaceGPT-ASP.NET Repository\\Models\\NewProductAlert.cs",
+              "ViewState": "AQIAAAsAAAAAAAAAAAAQwA4AAAAfAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-21T17:15:24.815Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "Review.cs",
+              "DocumentMoniker": "D:\\UBB\\Semester 4\\Software Engineering\\Assignment6\\UBB-SE-2024-921-2\\server\\NamespaceGPT-ASP.NET Repository\\Models\\Review.cs",
+              "RelativeDocumentMoniker": "NamespaceGPT-ASP.NET Repository\\Models\\Review.cs",
+              "ToolTip": "D:\\UBB\\Semester 4\\Software Engineering\\Assignment6\\UBB-SE-2024-921-2\\server\\NamespaceGPT-ASP.NET Repository\\Models\\Review.cs",
+              "RelativeToolTip": "NamespaceGPT-ASP.NET Repository\\Models\\Review.cs",
+              "ViewState": "AQIAAAsAAAAAAAAAAAA9wAoAAAA1AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-21T18:22:58.039Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "Sale.cs",
+              "DocumentMoniker": "D:\\UBB\\Semester 4\\Software Engineering\\Assignment6\\UBB-SE-2024-921-2\\server\\NamespaceGPT-ASP.NET Repository\\Models\\Sale.cs",
+              "RelativeDocumentMoniker": "NamespaceGPT-ASP.NET Repository\\Models\\Sale.cs",
+              "ToolTip": "D:\\UBB\\Semester 4\\Software Engineering\\Assignment6\\UBB-SE-2024-921-2\\server\\NamespaceGPT-ASP.NET Repository\\Models\\Sale.cs",
+              "RelativeToolTip": "NamespaceGPT-ASP.NET Repository\\Models\\Sale.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-21T18:54:56.715Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "ProjectDBContext.cs",
+              "DocumentMoniker": "D:\\UBB\\Semester 4\\Software Engineering\\Assignment6\\UBB-SE-2024-921-2\\server\\NamespaceGPT-ASP.NET Repository\\DatabaseContext\\ProjectDBContext.cs",
+              "RelativeDocumentMoniker": "NamespaceGPT-ASP.NET Repository\\DatabaseContext\\ProjectDBContext.cs",
+              "ToolTip": "D:\\UBB\\Semester 4\\Software Engineering\\Assignment6\\UBB-SE-2024-921-2\\server\\NamespaceGPT-ASP.NET Repository\\DatabaseContext\\ProjectDBContext.cs",
+              "RelativeToolTip": "NamespaceGPT-ASP.NET Repository\\DatabaseContext\\ProjectDBContext.cs",
+              "ViewState": "AQIAAAsAAAAAAAAAAAAgwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-21T17:55:36.616Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "CommentDTO.cs",
+              "DocumentMoniker": "D:\\UBB\\Semester 4\\Software Engineering\\Assignment6\\UBB-SE-2024-921-2\\server\\NamespaceGPT-ASP.NET Repository\\DTOs\\SpartacusDTO\\CommentDTO.cs",
+              "RelativeDocumentMoniker": "NamespaceGPT-ASP.NET Repository\\DTOs\\SpartacusDTO\\CommentDTO.cs",
+              "ToolTip": "D:\\UBB\\Semester 4\\Software Engineering\\Assignment6\\UBB-SE-2024-921-2\\server\\NamespaceGPT-ASP.NET Repository\\DTOs\\SpartacusDTO\\CommentDTO.cs",
+              "RelativeToolTip": "NamespaceGPT-ASP.NET Repository\\DTOs\\SpartacusDTO\\CommentDTO.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-21T17:54:52.581Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "ListingsController.cs",
+              "DocumentMoniker": "D:\\UBB\\Semester 4\\Software Engineering\\Assignment6\\UBB-SE-2024-921-2\\server\\NamespaceGPT-ASP.NET Repository\\Controllers\\ListingsController.cs",
+              "RelativeDocumentMoniker": "NamespaceGPT-ASP.NET Repository\\Controllers\\ListingsController.cs",
+              "ToolTip": "D:\\UBB\\Semester 4\\Software Engineering\\Assignment6\\UBB-SE-2024-921-2\\server\\NamespaceGPT-ASP.NET Repository\\Controllers\\ListingsController.cs",
+              "RelativeToolTip": "NamespaceGPT-ASP.NET Repository\\Controllers\\ListingsController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-21T17:33:33.265Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "SalesController.cs",
+              "DocumentMoniker": "D:\\UBB\\Semester 4\\Software Engineering\\Assignment6\\UBB-SE-2024-921-2\\server\\NamespaceGPT-ASP.NET Repository\\Controllers\\SalesController.cs",
+              "RelativeDocumentMoniker": "NamespaceGPT-ASP.NET Repository\\Controllers\\SalesController.cs",
+              "ToolTip": "D:\\UBB\\Semester 4\\Software Engineering\\Assignment6\\UBB-SE-2024-921-2\\server\\NamespaceGPT-ASP.NET Repository\\Controllers\\SalesController.cs",
+              "RelativeToolTip": "NamespaceGPT-ASP.NET Repository\\Controllers\\SalesController.cs",
+              "ViewState": "AQIAAE0AAAAAAAAAAAAIwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-21T17:22:09.137Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "UsersController.cs",
+              "DocumentMoniker": "D:\\UBB\\Semester 4\\Software Engineering\\Assignment6\\UBB-SE-2024-921-2\\server\\NamespaceGPT-ASP.NET Repository\\Controllers\\UsersController.cs",
+              "RelativeDocumentMoniker": "NamespaceGPT-ASP.NET Repository\\Controllers\\UsersController.cs",
+              "ToolTip": "D:\\UBB\\Semester 4\\Software Engineering\\Assignment6\\UBB-SE-2024-921-2\\server\\NamespaceGPT-ASP.NET Repository\\Controllers\\UsersController.cs",
+              "RelativeToolTip": "NamespaceGPT-ASP.NET Repository\\Controllers\\UsersController.cs",
+              "ViewState": "AQIAAHEAAAAAAAAAAAAAAHEAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-21T17:22:03.747Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "ProductsController.cs",
+              "DocumentMoniker": "D:\\UBB\\Semester 4\\Software Engineering\\Assignment6\\UBB-SE-2024-921-2\\server\\NamespaceGPT-ASP.NET Repository\\Controllers\\ProductsController.cs",
+              "RelativeDocumentMoniker": "NamespaceGPT-ASP.NET Repository\\Controllers\\ProductsController.cs",
+              "ToolTip": "D:\\UBB\\Semester 4\\Software Engineering\\Assignment6\\UBB-SE-2024-921-2\\server\\NamespaceGPT-ASP.NET Repository\\Controllers\\ProductsController.cs",
+              "RelativeToolTip": "NamespaceGPT-ASP.NET Repository\\Controllers\\ProductsController.cs",
+              "ViewState": "AQIAACMAAAAAAAAAAAAwwHAAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-21T17:21:57.537Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "AdRecommendationsController.cs",
+              "DocumentMoniker": "D:\\UBB\\Semester 4\\Software Engineering\\Assignment6\\UBB-SE-2024-921-2\\server\\NamespaceGPT-ASP.NET Repository\\Controllers\\AdRecommendationsController.cs",
+              "RelativeDocumentMoniker": "NamespaceGPT-ASP.NET Repository\\Controllers\\AdRecommendationsController.cs",
+              "ToolTip": "D:\\UBB\\Semester 4\\Software Engineering\\Assignment6\\UBB-SE-2024-921-2\\server\\NamespaceGPT-ASP.NET Repository\\Controllers\\AdRecommendationsController.cs",
+              "RelativeToolTip": "NamespaceGPT-ASP.NET Repository\\Controllers\\AdRecommendationsController.cs",
+              "ViewState": "AQIAACwAAAAAAAAAAAAwwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-21T17:18:26.271Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
+              "Title": "BackInStockAlertsController.cs",
+              "DocumentMoniker": "D:\\UBB\\Semester 4\\Software Engineering\\Assignment6\\UBB-SE-2024-921-2\\server\\NamespaceGPT-ASP.NET Repository\\Controllers\\BackInStockAlertsController.cs",
+              "RelativeDocumentMoniker": "NamespaceGPT-ASP.NET Repository\\Controllers\\BackInStockAlertsController.cs",
+              "ToolTip": "D:\\UBB\\Semester 4\\Software Engineering\\Assignment6\\UBB-SE-2024-921-2\\server\\NamespaceGPT-ASP.NET Repository\\Controllers\\BackInStockAlertsController.cs",
+              "RelativeToolTip": "NamespaceGPT-ASP.NET Repository\\Controllers\\BackInStockAlertsController.cs",
+              "ViewState": "AQIAAGsAAAAAAAAAAAA8wB8AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-21T17:21:14.56Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 39,
+              "Title": "NewProductAlertsController.cs",
+              "DocumentMoniker": "D:\\UBB\\Semester 4\\Software Engineering\\Assignment6\\UBB-SE-2024-921-2\\server\\NamespaceGPT-ASP.NET Repository\\Controllers\\NewProductAlertsController.cs",
+              "RelativeDocumentMoniker": "NamespaceGPT-ASP.NET Repository\\Controllers\\NewProductAlertsController.cs",
+              "ToolTip": "D:\\UBB\\Semester 4\\Software Engineering\\Assignment6\\UBB-SE-2024-921-2\\server\\NamespaceGPT-ASP.NET Repository\\Controllers\\NewProductAlertsController.cs",
+              "RelativeToolTip": "NamespaceGPT-ASP.NET Repository\\Controllers\\NewProductAlertsController.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-21T17:18:31.011Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 40,
+              "Title": "PriceDropAlertsController.cs",
+              "DocumentMoniker": "D:\\UBB\\Semester 4\\Software Engineering\\Assignment6\\UBB-SE-2024-921-2\\server\\NamespaceGPT-ASP.NET Repository\\Controllers\\PriceDropAlertsController.cs",
+              "RelativeDocumentMoniker": "NamespaceGPT-ASP.NET Repository\\Controllers\\PriceDropAlertsController.cs",
+              "ToolTip": "D:\\UBB\\Semester 4\\Software Engineering\\Assignment6\\UBB-SE-2024-921-2\\server\\NamespaceGPT-ASP.NET Repository\\Controllers\\PriceDropAlertsController.cs",
+              "RelativeToolTip": "NamespaceGPT-ASP.NET Repository\\Controllers\\PriceDropAlertsController.cs",
+              "ViewState": "AQIAADIAAAAAAAAAAAAIwFAAAAASAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-21T17:15:49.384Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 41,
+              "Title": "MarketplaceDTO.cs",
+              "DocumentMoniker": "D:\\UBB\\Semester 4\\Software Engineering\\Assignment6\\UBB-SE-2024-921-2\\server\\NamespaceGPT-ASP.NET Repository\\DTOs\\MarketplaceDTO.cs",
+              "RelativeDocumentMoniker": "NamespaceGPT-ASP.NET Repository\\DTOs\\MarketplaceDTO.cs",
+              "ToolTip": "D:\\UBB\\Semester 4\\Software Engineering\\Assignment6\\UBB-SE-2024-921-2\\server\\NamespaceGPT-ASP.NET Repository\\DTOs\\MarketplaceDTO.cs",
+              "RelativeToolTip": "NamespaceGPT-ASP.NET Repository\\DTOs\\MarketplaceDTO.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-21T17:15:37.056Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 42,
+              "Title": "FavouriteProductsController.cs",
+              "DocumentMoniker": "D:\\UBB\\Semester 4\\Software Engineering\\Assignment6\\UBB-SE-2024-921-2\\server\\NamespaceGPT-ASP.NET Repository\\Controllers\\FavouriteProductsController.cs",
+              "RelativeDocumentMoniker": "NamespaceGPT-ASP.NET Repository\\Controllers\\FavouriteProductsController.cs",
+              "ToolTip": "D:\\UBB\\Semester 4\\Software Engineering\\Assignment6\\UBB-SE-2024-921-2\\server\\NamespaceGPT-ASP.NET Repository\\Controllers\\FavouriteProductsController.cs",
+              "RelativeToolTip": "NamespaceGPT-ASP.NET Repository\\Controllers\\FavouriteProductsController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAABEAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-21T16:13:49.561Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 43,
+              "Title": "AdRecommendationDTO.cs",
+              "DocumentMoniker": "D:\\UBB\\Semester 4\\Software Engineering\\Assignment6\\UBB-SE-2024-921-2\\server\\NamespaceGPT-ASP.NET Repository\\DTOs\\AdRecommendationDTO.cs",
+              "RelativeDocumentMoniker": "NamespaceGPT-ASP.NET Repository\\DTOs\\AdRecommendationDTO.cs",
+              "ToolTip": "D:\\UBB\\Semester 4\\Software Engineering\\Assignment6\\UBB-SE-2024-921-2\\server\\NamespaceGPT-ASP.NET Repository\\DTOs\\AdRecommendationDTO.cs",
+              "RelativeToolTip": "NamespaceGPT-ASP.NET Repository\\DTOs\\AdRecommendationDTO.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-21T16:13:42.96Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
