@@ -1,0 +1,73 @@
+﻿@model ISS_Frontend.Entity.Request
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Request</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="CollaborationTitle" class="control-label"></label>
+                <input asp-for="CollaborationTitle" class="form-control" />
+                <span asp-validation-for="CollaborationTitle" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AdOverview" class="control-label"></label>
+                <input asp-for="AdOverview" class="form-control" />
+                <span asp-validation-for="AdOverview" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ContentRequirements" class="control-label"></label>
+                <input asp-for="ContentRequirements" class="form-control" />
+                <span asp-validation-for="ContentRequirements" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Compensation" class="control-label"></label>
+                <input asp-for="Compensation" class="form-control" />
+                <span asp-validation-for="Compensation" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="StartDate" class="control-label"></label>
+                <input asp-for="StartDate" class="form-control" />
+                <span asp-validation-for="StartDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="EndDate" class="control-label"></label>
+                <input asp-for="EndDate" class="form-control" />
+                <span asp-validation-for="EndDate" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="InfluencerAccept" /> @Html.DisplayNameFor(model => model.InfluencerAccept)
+                </label>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="AdAccountAccept" /> @Html.DisplayNameFor(model => model.AdAccountAccept)
+                </label>
+            </div>
+            <div class="form-group">
+                <label asp-for="AdAccountId" class="control-label"></label>
+                <select asp-for="AdAccountId" class ="form-control" asp-items="ViewBag.AdAccountId"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="InfluencerId" class="control-label"></label>
+                <select asp-for="InfluencerId" class ="form-control" asp-items="ViewBag.InfluencerId"></select>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+

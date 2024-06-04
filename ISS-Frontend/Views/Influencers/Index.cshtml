@@ -1,0 +1,47 @@
+﻿@model IEnumerable<ISS_Frontend.Entity.Influencer>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.InfluencerName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FollowerCount)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CollaborationPrice)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.InfluencerName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FollowerCount)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CollaborationPrice)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.InfluencerId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.InfluencerId">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.InfluencerId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

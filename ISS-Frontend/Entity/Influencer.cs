@@ -8,7 +8,7 @@ namespace ISS_Frontend.Entity
 {
     public class Influencer
     {
-        public string InfluencerId { get; set; }
+        public int InfluencerId { get; set; }
         public string InfluencerName { get; set; }
         public int FollowerCount { get; set; }
         public int CollaborationPrice { get; set; }
@@ -18,7 +18,7 @@ namespace ISS_Frontend.Entity
         {
         }
 
-        public Influencer(string userId, string name, int followerCount, int collaborationPrice)
+        public Influencer(int userId, string name, int followerCount, int collaborationPrice)
         {
             this.InfluencerId = userId;
             this.InfluencerName = name;

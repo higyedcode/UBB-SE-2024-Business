@@ -8,7 +8,7 @@ using ISS_Frontend.Entity;
 
 namespace ISS_Frontend.Service
 {
-    internal interface ICollaborationService
+    public interface ICollaborationService
     {
         public void AddCollaboration(Collaboration collaboration);
         public List<Collaboration> GetCollaborationForAdAccount();
