@@ -1,5 +1,4 @@
 ﻿@model ISS_Frontend.Entity.FAQ
-
 @{
     ViewData["Title"] = "Create";
 }
@@ -24,7 +23,18 @@
             </div>
             <div class="form-group">
                 <label asp-for="Topic" class="control-label"></label>
-                <input asp-for="Topic" class="form-control" />
+                <select asp-for="Topic" class="form-control">
+                    <option value="">Select a Topic</option>
+                    <option value="Topic1">General</option>
+                    <option value="Topic2">Shipping</option>
+                    <option value="Topic3">Services</option>
+                    <option value="Topic4">Policies	</option>
+                    <option value="Topic5">Account</option>
+                    <option value="Topic6">Payments</option>
+                    <option value="Topic6">Orders</option>
+
+                    
+                </select>
                 <span asp-validation-for="Topic" class="text-danger"></span>
             </div>
             <div class="form-group">
@@ -39,5 +49,7 @@
 </div>
 
 @section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
 }
