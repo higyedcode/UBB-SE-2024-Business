@@ -10,6 +10,7 @@ using Iss.Entity;
 using Iss.Repository;
 
 using Microsoft.Data.SqlClient;
+using RestApi_ISS.Entity;
 
 namespace Iss.Repository
 {
@@ -48,11 +49,38 @@ namespace Iss.Repository
                 string name = row["Name"].ToString();
                 int followers = Convert.ToInt32(row["FollowerCount"]);
                 int price = Convert.ToInt32(row["CollaborationPrice"]);
-                Influencer influencer = new Influencer(id, name, followers, price);
+                Influencer influencer = new Influencer(int.Parse(id), name, followers, price);
                 influencers.Add(influencer);
             }
 
             return influencers;
+        }
+
+        public void AddInfluencer(Influencer influencer)
+        {
+            databaseContext.Influencer.Add(influencer);
+            databaseContext.SaveChanges();
+        }
+
+        public void DeleteInfluencer(int id)
+        {
+            var influencerToDelete = databaseContext.Influencer.Find(id);
+            if (influencerToDelete != null)
+            {
+                databaseContext.Influencer.Remove(influencerToDelete);
+                databaseContext.SaveChanges();
+            }
+        }
+
+        public Influencer GetInfluencerById(int id)
+        {
+            return databaseContext.Influencer.FirstOrDefault(i => i.InfluencerId == id);
+        }
+
+        public void UpdateInfluencer(Influencer influencer)
+        {
+            databaseContext.Influencer.Update(influencer);
+            databaseContext.SaveChanges();
         }
     }
 }
