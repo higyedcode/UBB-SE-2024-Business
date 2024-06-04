@@ -17,13 +17,26 @@ namespace RestApi_ISS.Controllers
             this.influencerService = service;
         }
 
-        [HttpGet("GetAllInfluencers")]
+        [HttpGet("getAllInfluencers")]
         public IActionResult GetAllInfluencers()
         {
             try
             {
                 var influencers = influencerService.GetInfluencers();
                 return Ok(influencers);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+        [HttpGet("{id}")]
+        public IActionResult GetInfluencerById(int id)
+        {
+            try
+            {
+                var influencer = influencerService.GetInfluencerById(id);
+                return Ok(influencer);
             }
             catch (Exception ex)
             {
@@ -56,6 +69,20 @@ namespace RestApi_ISS.Controllers
             catch (Exception ex)
             {
                 return BadRequest(ex.Message);
+            }
+        }
+
+        [HttpPost("update")]
+        public IActionResult UpdateRequest([FromBody] Influencer influencer)
+        {
+            try
+            {
+                influencerService.UpdateInfluencer(influencer);
+                return Ok("influencer updated successfully.");
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, $"Failed to update influencer: {ex.Message}");
             }
         }
     }
