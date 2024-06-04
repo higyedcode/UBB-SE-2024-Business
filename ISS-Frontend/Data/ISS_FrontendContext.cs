@@ -27,5 +27,8 @@ namespace ISS_Frontend.Data
         public DbSet<ISS_Frontend.Entity.AdSet> AdSet { get; set; } = default!;
         public DbSet<ISS_Frontend.Entity.Campaign> Campaign { get; set; } = default!;
         public DbSet<ISS_Frontend.Entity.AdminViewModel> AdminViewModels { get; set; } = default!;
+        public DbSet<ISS_Frontend.Entity.Collaboration> Collaboration { get; set; } = default!;
+        public DbSet<ISS_Frontend.Entity.Request> Request { get; set; } = default!;
+        public DbSet<ISS_Frontend.Entity.Influencer> Influencer { get; set; } = default!;
     }
 }

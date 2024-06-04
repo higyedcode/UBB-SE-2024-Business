@@ -1,0 +1,77 @@
+﻿@model IEnumerable<ISS_Frontend.Entity.Collaboration>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.CollaborationTitle)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.StartDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Status)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ContentRequirement)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AdOverview)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CollaborationFee)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EndDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.InfluencerId)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.CollaborationTitle)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.StartDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Status)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ContentRequirement)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AdOverview)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CollaborationFee)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EndDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.InfluencerId)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.CollaborationId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.CollaborationId">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.CollaborationId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

@@ -11,5 +11,9 @@ namespace Iss.Repository
     public interface IInfluencerRepository
     {
         public List<Influencer> GetInfluencers();
+        public Influencer GetInfluencerById(int id);
+        public void AddInfluencer(Influencer influencer);
+        public void DeleteInfluencer(int id);
+        public void UpdateInfluencer(Influencer influencer);
     }
 }

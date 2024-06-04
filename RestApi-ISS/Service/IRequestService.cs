@@ -8,7 +8,7 @@ using Iss.Entity;
 
 namespace Iss.Service
 {
-    internal interface IRequestService
+    public interface IRequestService
     {
         public void AddRequest(Request requestToAdd);
         public void DeleteRequest(Request requestToDelete);
