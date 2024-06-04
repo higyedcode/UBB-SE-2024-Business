@@ -10,56 +10,88 @@
         <p style="font-size: 1.5em; margin-bottom: 20px;">What is the return policy?</p>
         <button onclick="showTextField('return-policy')">Answer</button>
         <div id="return-policy" style="display:none;">
-            <textarea rows="4" cols="50" placeholder="Provide your answer here..."></textarea>
+            <form asp-action="Answer" method="post">
+                <textarea name="answer" rows="4" cols="50" placeholder="Provide your answer here..."></textarea>
+                <input type="hidden" name="id" value="1" />
+                <button type="submit">Save Answer</button>
+            </form>
         </div>
     </div>
     <div>
         <p style="font-size: 1.5em; margin-bottom: 20px;">How do I reset my password?</p>
         <button onclick="showTextField('reset-password')">Answer</button>
         <div id="reset-password" style="display:none;">
-            <textarea rows="4" cols="50" placeholder="Provide your answer here..."></textarea>
+            <form asp-action="Answer" method="post">
+                <textarea name="answer" rows="4" cols="50" placeholder="Provide your answer here..."></textarea>
+                <input type="hidden" name="id" value="2" />
+                <button type="submit">Save Answer</button>
+            </form>
         </div>
     </div>
     <div>
         <p style="font-size: 1.5em; margin-bottom: 20px;">Where are you located?</p>
         <button onclick="showTextField('location')">Answer</button>
         <div id="location" style="display:none;">
-            <textarea rows="4" cols="50" placeholder="Provide your answer here..."></textarea>
+            <form asp-action="Answer" method="post">
+                <textarea name="answer" rows="4" cols="50" placeholder="Provide your answer here..."></textarea>
+                <input type="hidden" name="id" value="3" />
+                <button type="submit">Save Answer</button>
+            </form>
         </div>
     </div>
     <div>
         <p style="font-size: 1.5em; margin-bottom: 20px;">What payment methods do you accept?</p>
         <button onclick="showTextField('payment-methods')">Answer</button>
         <div id="payment-methods" style="display:none;">
-            <textarea rows="4" cols="50" placeholder="Provide your answer here..."></textarea>
+            <form asp-action="Answer" method="post">
+                <textarea name="answer" rows="4" cols="50" placeholder="Provide your answer here..."></textarea>
+                <input type="hidden" name="id" value="4" />
+                <button type="submit">Save Answer</button>
+            </form>
         </div>
     </div>
     <div>
         <p style="font-size: 1.5em; margin-bottom: 20px;">How can I track my order?</p>
         <button onclick="showTextField('track-order')">Answer</button>
         <div id="track-order" style="display:none;">
-            <textarea rows="4" cols="50" placeholder="Provide your answer here..."></textarea>
+            <form asp-action="Answer" method="post">
+                <textarea name="answer" rows="4" cols="50" placeholder="Provide your answer here..."></textarea>
+                <input type="hidden" name="id" value="5" />
+                <button type="submit">Save Answer</button>
+            </form>
         </div>
     </div>
     <div>
         <p style="font-size: 1.5em; margin-bottom: 20px;">Do you offer gift wrapping?</p>
         <button onclick="showTextField('gift-wrapping')">Answer</button>
         <div id="gift-wrapping" style="display:none;">
-            <textarea rows="4" cols="50" placeholder="Provide your answer here..."></textarea>
+            <form asp-action="Answer" method="post">
+                <textarea name="answer" rows="4" cols="50" placeholder="Provide your answer here..."></textarea>
+                <input type="hidden" name="id" value="6" />
+                <button type="submit">Save Answer</button>
+            </form>
         </div>
     </div>
     <div>
         <p style="font-size: 1.5em; margin-bottom: 20px;">What are your business hours?</p>
         <button onclick="showTextField('business-hours')">Answer</button>
         <div id="business-hours" style="display:none;">
-            <textarea rows="4" cols="50" placeholder="Provide your answer here..."></textarea>
+            <form asp-action="Answer" method="post">
+                <textarea name="answer" rows="4" cols="50" placeholder="Provide your answer here..."></textarea>
+                <input type="hidden" name="id" value="7" />
+                <button type="submit">Save Answer</button>
+            </form>
         </div>
     </div>
     <div>
         <p style="font-size: 1.5em; margin-bottom: 20px;">Can I change my shipping address?</p>
         <button onclick="showTextField('change-shipping-address')">Answer</button>
         <div id="change-shipping-address" style="display:none;">
-            <textarea rows="4" cols="50" placeholder="Provide your answer here..."></textarea>
+            <form asp-action="Answer" method="post">
+                <textarea name="answer" rows="4" cols="50" placeholder="Provide your answer here..."></textarea>
+                <input type="hidden" name="id" value="8" />
+                <button type="submit">Save Answer</button>
+            </form>
         </div>
     </div>
 </div>
@@ -74,3 +106,4 @@
         }
     }
 </script>
+

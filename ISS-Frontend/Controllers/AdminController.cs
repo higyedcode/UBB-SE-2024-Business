@@ -158,5 +158,82 @@ namespace ISS_Frontend.Controllers
         {
             return _context.AdminViewModels.Any(e => e.Id == id);
         }
+
+        // GET: Admin/Answer/5
+        public async Task<IActionResult> Answer(int? id)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
+
+            if (_context == null)
+            {
+                return View("AdminMainPage");
+            }
+
+            try
+            {
+                var testConnection = await _context.AdminViewModels.FirstOrDefaultAsync();
+            }
+            catch
+            {
+                return View("AdminMainPage");
+            }
+
+            var adminViewModel = await _context.AdminViewModels
+                .FirstOrDefaultAsync(m => m.Id == id);
+            if (adminViewModel == null)
+            {
+                return NotFound();
+            }
+
+            return View(adminViewModel);
+        }
+
+        // POST: Admin/Answer/5
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Answer(int id, [Bind("Answer")] string answer)
+        {
+            if (string.IsNullOrEmpty(answer))
+            {
+                return BadRequest("Answer cannot be empty.");
+            }
+
+            if (_context == null)
+            {
+                return View("AdminMainPage");
+            }
+
+            try
+            {
+                var testConnection = await _context.AdminViewModels.FirstOrDefaultAsync();
+            }
+            catch
+            {
+                return View("AdminMainPage");
+            }
+
+            var adminViewModel = await _context.AdminViewModels
+                .FirstOrDefaultAsync(m => m.Id == id);
+            if (adminViewModel == null)
+            {
+                return NotFound();
+            }
+
+            if (adminViewModel.Answers == null)
+            {
+                adminViewModel.Answers = new List<string>();
+            }
+
+            adminViewModel.Answers.Add(answer);
+            _context.Update(adminViewModel);
+            await _context.SaveChangesAsync();
+
+            return RedirectToAction(nameof(Details), new { id = adminViewModel.Id });
+        }
+
+
     }
 }
