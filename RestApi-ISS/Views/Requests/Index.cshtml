@@ -1,0 +1,89 @@
+﻿@model IEnumerable<Iss.Entity.Request>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.CollaborationTitle)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AdOverview)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ContentRequirements)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Compensation)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.StartDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EndDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.InfluencerAccept)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AdAccountAccept)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AdAccount)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Influencer)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.CollaborationTitle)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AdOverview)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ContentRequirements)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Compensation)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.StartDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EndDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.InfluencerAccept)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AdAccountAccept)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AdAccount.AdAccountId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Influencer.InfluencerId)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.RequestId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.RequestId">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.RequestId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
