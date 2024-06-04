@@ -26,7 +26,7 @@ namespace ISS_Frontend.Service
 
         public void DeleteRequest(int id)
         {
-            var response = httpClient.DeleteAsync($"api/Request/{id}").Result;
+            var response = httpClient.DeleteAsync($"api/Requests/{id}").Result;
             if (!response.IsSuccessStatusCode)
             {
                 throw new Exception($"Failed to delete request: {response.ReasonPhrase}");
